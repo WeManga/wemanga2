@@ -48,7 +48,7 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
         {/* Hero Section avec l'image des personnages d'anime */}
         <div className="relative h-[70vh] overflow-hidden">
           <img
-            src="/ChatGPT Image 29 juil. 2025, 02_10_36.png"
+            src="/chatgpt-image.png.png"
             alt="WeManga - Anime Heroes"
             className="w-full h-full object-cover"
           />
