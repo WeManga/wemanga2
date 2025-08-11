@@ -1,11 +1,12 @@
+// src/components/HomePage.tsx
 import React, { useState, useEffect } from 'react';
-import { Play, Info, Star, Calendar } from 'lucide-react';
 import { Anime, ContinueWatching } from '../types';
 import { animes } from '../data/animes';
 import { getContinueWatching } from '../utils/cookies';
 import Footer from './Footer';
 import AdBanner from './AdBanner';
 import UpcomingEpisodes from './UpcomingEpisodes';
+import { X } from 'lucide-react'; // ⬅ ajout de l’icône croix
 
 interface HomePageProps {
   filter: 'all' | 'serie' | 'film';
@@ -14,39 +15,63 @@ interface HomePageProps {
   searchQuery?: string;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail, searchQuery = '' }) => {
+const HomePage: React.FC<HomePageProps> = ({
+  filter,
+  onPlayAnime,
+  onAnimeDetail,
+  searchQuery = ''
+}) => {
   const [continueWatchingData, setContinueWatchingData] = useState<ContinueWatching[]>([]);
 
   useEffect(() => {
     setContinueWatchingData(getContinueWatching());
   }, []);
 
-  // Filtrage par type et recherche
+  // Handler pour supprimer une entrée
+  const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
+    const current = getContinueWatching();
+    const updated = current.filter(
+      item =>
+        item.animeId !== animeId ||
+        item.seasonId !== seasonId ||
+        item.episodeId !== episodeId
+    );
+    localStorage.setItem("continueWatching", JSON.stringify(updated));
+    setContinueWatchingData(updated);
+  };
+
+  // Filtrage par type + recherche
   const filteredAnimes = animes.filter(anime => {
-    const matchesFilter = filter === 'all' || anime.type === filter;
-    const matchesSearch = searchQuery === '' || 
+    const matchesFilter = filter === 'all' || anime.type === filter; // ✅ corrigé
+    const matchesSearch =
+      searchQuery === '' ||
       anime.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       anime.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       anime.genre.some(g => g.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesFilter && matchesSearch;
   });
 
-  // Continue Watching — recherche via animeTitle
+  // 📺 Reprendre le visionnage via IDs
   const continueWatchingAnimes = continueWatchingData
     .map(item => {
-      const anime = animes.find(a => a.title === item.animeTitle);
-      return anime ? { anime, progress: item.progress } : null;
+      const anime = animes.find(a => a.id === item.animeId);
+      if (!anime) return null;
+      const season = anime.seasons.find(s => s.id === item.seasonId);
+      if (!season) return null;
+      const episode = season.episodes.find(e => e.id === item.episodeId);
+      if (!episode) return null;
+      return { anime, season, episode, progress: item.progress };
     })
-    .filter(item => item !== null)
+    .filter(Boolean)
     .slice(0, 6);
 
-  const nouveautes = filteredAnimes.filter(anime => anime.category === 'nouveaute');
-  const classiques = filteredAnimes.filter(anime => anime.category === 'classique');
+  const nouveautes = filteredAnimes.filter(a => a.category === 'nouveaute');
+  const classiques = filteredAnimes.filter(a => a.category === 'classique');
 
   return (
     <div className="min-h-screen bg-black">
       <div className="pt-20">
-        {/* Hero Section */}
+        {/* HERO */}
         <div className="relative h-[70vh] overflow-hidden">
           <img
             src="/chatgpt-image.png.png"
@@ -65,195 +90,137 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
         </div>
 
         <div className="max-w-7xl mx-auto px-8 py-12">
-          {/* Résultats de recherche */}
+
+          {/* RECHERCHE */}
           {searchQuery && (
             <section className="mb-16">
               <h2 className="text-white text-3xl font-bold mb-8 text-center">
                 🔍 Résultats pour "{searchQuery}"
               </h2>
               {filteredAnimes.length > 0 ? (
-                <div className="flex overflow-x-auto scrollbar-hide gap-6 pb-4 justify-center md:justify-start md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {filteredAnimes.map(anime => (
                     <div
                       key={anime.id}
-                      className="group relative bg-gray-900 rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:z-10 cursor-pointer flex-shrink-0 w-64 md:w-auto"
                       onClick={() => onAnimeDetail(anime)}
+                      className="bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
                     >
-                      <div className="relative aspect-[3/4] overflow-hidden">
-                        <img
-                          src={anime.poster}
-                          alt={anime.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <div className="flex space-x-3">
-                            <button
-                              onClick={(e) => { e.stopPropagation(); onPlayAnime(anime); }}
-                              className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-colors duration-200"
-                            >
-                              <Play size={24} fill="white" />
-                            </button>
-                            <button
-                              onClick={(e) => { e.stopPropagation(); onAnimeDetail(anime); }}
-                              className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors duration-200"
-                            >
-                              <Info size={24} />
-                            </button>
-                          </div>
-                        </div>
-                        <div className="absolute top-3 right-3">
-                          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                            anime.type === 'serie' ? 'bg-blue-600 text-white' : 'bg-purple-600 text-white'
-                          }`}>
-                            {anime.type === 'serie' ? 'SÉRIE' : 'FILM'}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-white font-bold text-xl mb-3 line-clamp-1">{anime.title}</h3>
-                        <div className="flex items-center justify-between text-sm text-gray-400 mb-3">
-                          <div className="flex items-center space-x-2"><Calendar size={14} /><span>{anime.year}</span></div>
-                          <div className="flex items-center space-x-1"><Star size={14} className="text-yellow-500" fill="currentColor" /><span className="text-yellow-500 font-medium">{anime.rating}</span></div>
-                        </div>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {anime.genre.slice(0, 3).map((g, i) => (
-                            <span key={i} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">{g}</span>
-                          ))}
-                        </div>
-                        <p className="text-gray-400 text-sm line-clamp-3 mb-4">{anime.description}</p>
-                        {anime.type === 'serie' && (
-                          <div className="flex items-center justify-between text-xs text-gray-500">
-                            <span>{anime.seasons.length} saison{anime.seasons.length > 1 ? 's' : ''}</span>
-                            <span>{anime.seasons.reduce((t, s) => t + s.episodes.length, 0)} épisodes</span>
-                          </div>
-                        )}
+                      <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
+                      <div className="p-4">
+                        <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                        <p className="text-gray-400 text-sm">{anime.year} • {anime.genre.join(', ')}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               ) : (
-                <div className="text-center py-20">
-                  <div className="text-gray-400 text-xl mb-4">Aucun résultat trouvé</div>
-                  <p className="text-gray-500">Essayez avec d'autres mots-clés</p>
-                </div>
+                <div className="text-center py-20 text-gray-400">Aucun résultat trouvé</div>
               )}
             </section>
           )}
 
-          {/* Section Reprenez votre visionnage */}
+          {/* 📺 CONTINUE WATCHING */}
           {!searchQuery && continueWatchingAnimes.length > 0 && (
             <section className="mb-16">
-              <h2 className="text-white text-3xl font-bold mb-8 text-center">Reprenez votre visionnage</h2>
-              <div className="overflow-x-auto scrollbar-hide pb-4">
-                <div className="flex gap-6 justify-start px-4 md:px-0 md:justify-center lg:justify-start">
-                  {continueWatchingAnimes.map(({ anime, progress }) => (
-                    <div
-                      key={`continue-${anime.id}`}
-                      className="group relative bg-gray-900 rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:z-10 cursor-pointer flex-shrink-0 w-48 md:w-56"
-                      onClick={() => onAnimeDetail(anime)}
+              <h2 className="text-white text-3xl font-bold mb-8 text-center">
+                📺 Reprenez votre visionnage
+              </h2>
+              <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
+                {continueWatchingAnimes.map(({ anime, season, episode, progress }, idx) => (
+                  <div
+                    key={`cw-${idx}`}
+                    className="bg-gray-900 rounded-xl overflow-hidden flex-shrink-0 w-56 hover:scale-105 transition-transform relative"
+                  >
+                    {/* BOUTON CROIX */}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleRemoveContinueWatching(anime.id, season.id, episode.id);
+                      }}
+                      className="absolute top-2 right-2 bg-black/60 hover:bg-red-600 text-white rounded-full p-1 z-10"
+                      title="Retirer de la liste"
                     >
-                      <div className="relative aspect-[3/4] overflow-hidden">
-                        <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
-                          <div className="h-full bg-red-600 transition-all duration-300" style={{ width: `${progress * 100}%` }} />
+                      <X size={14} />
+                    </button>
+
+                    <div onClick={() => onAnimeDetail(anime)}>
+                      <div className="relative aspect-[3/4]">
+                        <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover" />
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
+                          <div
+                            className="h-full bg-red-600"
+                            style={{ width: `${(progress ?? 0) * 100}%` }}
+                          />
                         </div>
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <div className="flex space-x-3">
-                            <button onClick={(e) => { e.stopPropagation(); onPlayAnime(anime); }} className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-colors duration-200"><Play size={20} fill="white" /></button>
-                            <button onClick={(e) => { e.stopPropagation(); onAnimeDetail(anime); }} className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors duration-200"><Info size={20} /></button>
-                          </div>
+                        <div className="absolute top-2 left-2 bg-orange-600 px-2 py-1 rounded text-xs font-bold">
+                          {season.title} - {episode.title}
                         </div>
-                        <div className="absolute top-2 left-2"><span className="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-semibold">CONTINUER</span></div>
-                        <div className="absolute top-2 right-2"><span className={`px-2 py-1 rounded text-xs font-medium ${anime.type === 'serie' ? 'bg-blue-600 text-white' : 'bg-purple-600 text-white'}`}>{anime.type === 'serie' ? 'SÉRIE' : 'FILM'}</span></div>
                       </div>
                       <div className="p-4">
-                        <h3 className="text-white font-bold text-sm mb-2 line-clamp-1">{anime.title}</h3>
-                        <div className="flex items-center justify-between text-xs text-gray-400 mb-2"><div className="flex items-center space-x-1"><Calendar size={12} /><span>{anime.year}</span></div><div className="flex items-center space-x-1"><Star size={12} className="text-yellow-500" fill="currentColor" /><span className="text-yellow-500 font-medium">{anime.rating}</span></div></div>
-                        <div className="text-xs text-gray-500">Progression: {Math.round(progress * 100)}%</div>
+                        <h3 className="text-white font-bold truncate">{anime.title}</h3>
+                        <p className="text-xs text-gray-400 truncate">{episode.title}</p>
+                        <p className="text-xs text-gray-500">
+                          Progression : {Math.round((progress ?? 0) * 100)}%
+                        </p>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </section>
           )}
 
+          {/* BANDEAU PUB haut */}
           <AdBanner id="homeTop" />
+
+          {/* EPISODES À VENIR */}
           {!searchQuery && <UpcomingEpisodes />}
 
-          {/* Section Nouveautés */}
+          {/* NOUVEAUTÉS */}
           {!searchQuery && nouveautes.length > 0 && (
             <section className="mb-16">
               <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
-              <div className="overflow-x-auto scrollbar-hide pb-4 md:overflow-visible">
-                <div className="flex gap-6 justify-start px-4 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
-                  {nouveautes.map(anime => (
-                    <div key={anime.id} className="group relative bg-gray-900 rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:z-10 cursor-pointer flex-shrink-0 w-64 md:w-auto" onClick={() => onAnimeDetail(anime)}>
-                      <div className="relative aspect-[3/4] overflow-hidden">
-                        <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <div className="flex space-x-3">
-                            <button onClick={(e) => { e.stopPropagation(); onPlayAnime(anime); }} className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-colors duration-200"><Play size={24} fill="white" /></button>
-                            <button onClick={(e) => { e.stopPropagation(); onAnimeDetail(anime); }} className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors duration-200"><Info size={24} /></button>
-                          </div>
-                        </div>
-                        <div className="absolute top-3 left-3"><span className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">NOUVEAU</span></div>
-                        <div className="absolute top-3 right-3"><span className={`px-2 py-1 rounded text-xs font-medium ${anime.type === 'serie' ? 'bg-blue-600 text-white' : 'bg-purple-600 text-white'}`}>{anime.type === 'serie' ? 'SÉRIE' : 'FILM'}</span></div>
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-white font-bold text-xl mb-3 line-clamp-1">{anime.title}</h3>
-                        <div className="flex items-center justify-between text-sm text-gray-400 mb-3"><div className="flex items-center space-x-2"><Calendar size={14} /><span>{anime.year}</span></div><div className="flex items-center space-x-1"><Star size={14} className="text-yellow-500" fill="currentColor" /><span className="text-yellow-500 font-medium">{anime.rating}</span></div></div>
-                        <div className="flex flex-wrap gap-2 mb-4">{anime.genre.slice(0, 3).map((g, i) => (<span key={i} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">{g}</span>))}</div>
-                        <p className="text-gray-400 text-sm line-clamp-3 mb-4">{anime.description}</p>
-                        {anime.type === 'serie' && (<div className="flex items-center justify-between text-xs text-gray-500"><span>{anime.seasons.length} saison{anime.seasons.length > 1 ? 's' : ''}</span><span>{anime.seasons.reduce((t, s) => t + s.episodes.length, 0)} épisodes</span></div>)}
-                      </div>
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {nouveautes.map(anime => (
+                  <div
+                    key={anime.id}
+                    onClick={() => onAnimeDetail(anime)}
+                    className="bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
+                  >
+                    <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
+                    <div className="p-4">
+                      <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                      <p className="text-gray-400 text-sm">{anime.year} • {anime.genre.join(', ')}</p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </section>
           )}
 
+          {/* PUB */}
           <AdBanner id="homeClassics" />
 
-          {/* Section Classiques */}
+          {/* CLASSIQUES */}
           {!searchQuery && classiques.length > 0 && (
             <section>
               <h2 className="text-white text-3xl font-bold mb-8 text-center">Les Classiques</h2>
-              <div className="overflow-x-auto scrollbar-hide pb-4 md:overflow-visible">
-                <div className="flex gap-6 justify-start px-4 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
-                  {classiques.map(anime => (
-                    <div key={anime.id} className="group relative bg-gray-900 rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:z-10 cursor-pointer flex-shrink-0 w-64 md:w-auto" onClick={() => onAnimeDetail(anime)}>
-                      <div className="relative aspect-[3/4] overflow-hidden">
-                        <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <div className="flex space-x-3">
-                            <button onClick={(e) => { e.stopPropagation(); onPlayAnime(anime); }} className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-colors duration-200"><Play size={24} fill="white" /></button>
-                            <button onClick={(e) => { e.stopPropagation(); onAnimeDetail(anime); }} className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors duration-200"><Info size={24} /></button>
-                          </div>
-                        </div>
-                        <div className="absolute top-3 left-3"><span className="bg-yellow-600 text-white px-3 py-1 rounded-full text-xs font-semibold">CLASSIQUE</span></div>
-                        <div className="absolute top-3 right-3"><span className={`px-3 py-1 rounded-full text-xs font-semibold ${anime.type === 'serie' ? 'bg-blue-600 text-white' : 'bg-purple-600 text-white'}`}>{anime.type === 'serie' ? 'SÉRIE' : 'FILM'}</span></div>
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-white font-bold text-xl mb-3 line-clamp-1">{anime.title}</h3>
-                        <div className="flex items-center justify-between text-sm text-gray-400 mb-3"><div className="flex items-center space-x-2"><Calendar size={14} /><span>{anime.year}</span></div><div className="flex items-center space-x-1"><Star size={14} className="text-yellow-500" fill="currentColor" /><span className="text-yellow-500 font-medium">{anime.rating}</span></div></div>
-                        <div className="flex flex-wrap gap-2 mb-4">{anime.genre.slice(0, 3).map((g, i) => (<span key={i} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">{g}</span>))}</div>
-                        <p className="text-gray-400 text-sm line-clamp-3 mb-4">{anime.description}</p>
-                        {anime.type === 'serie' && (<div className="flex items-center justify-between text-xs text-gray-500"><span>{anime.seasons.length} saison{anime.seasons.length > 1 ? 's' : ''}</span><span>{anime.seasons.reduce((t, s) => t + s.episodes.length, 0)} épisodes</span></div>)}
-                      </div>
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {classiques.map(anime => (
+                  <div
+                    key={anime.id}
+                    onClick={() => onAnimeDetail(anime)}
+                    className="bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
+                  >
+                    <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
+                    <div className="p-4">
+                      <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                      <p className="text-gray-400 text-sm">{anime.year} • {anime.genre.join(', ')}</p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </section>
-          )}
-
-          {!searchQuery && nouveautes.length === 0 && classiques.length === 0 && (
-            <div className="text-center py-20">
-              <div className="text-gray-400 text-xl mb-4">Aucun contenu disponible</div>
-              <p className="text-gray-500">Revenez bientôt pour découvrir de nouveaux animes !</p>
-            </div>
           )}
         </div>
 
