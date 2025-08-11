@@ -7,15 +7,15 @@ import AnimeDetail from './components/AnimeDetail';
 import VideoPlayer from './components/VideoPlayer';
 import SeriesPage from './components/SeriesPage';
 import FilmsPage from './components/FilmsPage';
+import CatalogPage from './components/CatalogPage';
 import { Anime, Episode, Season } from './types';
-import { animes } from './data/animes';
 import { saveContinueWatching } from './utils/cookies';
 
-type AppState = 'home' | 'series' | 'films' | 'detail' | 'player';
+type AppState = 'home' | 'series' | 'films' | 'catalog' | 'detail' | 'player';
 
 function App() {
   const [currentState, setCurrentState] = useState<AppState>('home');
-  const [filter, setFilter] = useState<'all' | 'serie' | 'film'>('all');
+  const [filter, setFilter] = useState<'all' | 'serie' | 'film' | 'catalog'>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedAnime, setSelectedAnime] = useState<Anime | null>(null);
   const [selectedEpisode, setSelectedEpisode] = useState<Episode | null>(null);
@@ -33,10 +33,18 @@ function App() {
     scrollToTop();
   };
 
-  const handleFilterChange = (newFilter: 'all' | 'serie' | 'film') => {
+  const handleFilterChange = (newFilter: 'all' | 'serie' | 'film' | 'catalog') => {
     setFilter(newFilter);
     setSearchQuery('');
-    setCurrentState(newFilter === 'serie' ? 'series' : newFilter === 'film' ? 'films' : 'home');
+    setCurrentState(
+      newFilter === 'serie'
+        ? 'series'
+        : newFilter === 'film'
+        ? 'films'
+        : newFilter === 'catalog'
+        ? 'catalog'
+        : 'home'
+    );
     scrollToTop();
   };
 
@@ -93,9 +101,8 @@ function App() {
   const handleProgress = (progress: number) => {
     if (selectedAnime && selectedSeason && selectedEpisode) {
       saveContinueWatching({
-        animeId: selectedAnime.id,
-        seasonId: selectedSeason.id,
-        episodeId: selectedEpisode.id,
+        animeTitle: selectedAnime.title,
+        episodeTitle: selectedEpisode.title,
         progress,
         timestamp: Date.now(),
       });
@@ -141,6 +148,14 @@ function App() {
         />
       )}
 
+      {currentState === 'catalog' && (
+        <CatalogPage
+          searchQuery={searchQuery}
+          onPlayAnime={handlePlayAnime}
+          onAnimeDetail={handleAnimeDetail}
+        />
+      )}
+
       {currentState === 'detail' && selectedAnime && (
         <AnimeDetail
           anime={selectedAnime}
@@ -149,10 +164,12 @@ function App() {
         />
       )}
 
-      {currentState === 'player' && selectedEpisode && selectedSeason && (
+      {/* PLAYER */}
+      {currentState === 'player' && selectedEpisode && selectedSeason && selectedAnime && (
         <VideoPlayer
           episode={selectedEpisode}
           season={selectedSeason}
+          animeTitle={selectedAnime.title} // ✅ ajout
           onBack={handleBack}
           onNextEpisode={handleNextEpisode}
           onPreviousEpisode={handlePreviousEpisode}
