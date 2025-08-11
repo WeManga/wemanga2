@@ -2,25 +2,27 @@ import React, { useEffect, useRef } from "react";
 import { Episode, Season } from "../types";
 import AdBanner from "./AdBanner";
 import ScrollingMessage from "./ScrollingMessage";
-import { saveContinueWatching } from "../utils/cookies"; // ajout pour sauvegarde auto
+import { saveContinueWatching } from "../utils/cookies";
 
 interface VideoPlayerProps {
+  animeId: number;
+  animeTitle: string;
   episode: Episode;
   season: Season;
-  animeTitle: string; // ajouté pour pouvoir sauvegarder
   onBack: () => void;
   onNextEpisode: () => void;
   onPreviousEpisode: () => void;
   hasNextEpisode: boolean;
   hasPreviousEpisode: boolean;
   onProgress: (progress: number) => void;
-  progress?: number; // pour reprendre la progression
+  progress?: number;
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
+  animeId,
+  animeTitle,
   episode,
   season,
-  animeTitle,
   onBack,
   onNextEpisode,
   onPreviousEpisode,
@@ -44,25 +46,51 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   const videoType = getVideoType(episode.videoUrl);
 
+  // Sauvegarde au démontage — fonctionne même pour les iframes
+  useEffect(() => {
+    return () => {
+      if (animeId && season && episode) {
+        saveContinueWatching({
+          animeId,
+          seasonId: season.id,
+          episodeId: episode.id,
+          animeTitle,
+          episodeTitle: episode.title,
+          progress: progress && progress > 0 ? progress : 0.2,
+          timestamp: Date.now(),
+        });
+      }
+    };
+  }, [animeId, animeTitle, season, episode, progress]);
+
+  // Gestion HTML5 video + sauvegarde régulière
   useEffect(() => {
     const videoEl = videoRef.current;
     if (!videoEl || videoType !== "video") return;
 
-    // Positionnement initial si progression connue
-    if (progress && !isNaN(progress) && videoEl.duration) {
-      videoEl.currentTime = progress * videoEl.duration;
+    const setInitialTime = () => {
+      if (progress && !isNaN(progress) && videoEl.duration > 0) {
+        videoEl.currentTime = progress * videoEl.duration;
+      }
+    };
+
+    if (videoEl.readyState >= 1) {
+      setInitialTime();
+    } else {
+      videoEl.addEventListener("loadedmetadata", setInitialTime);
     }
 
     let lastSave = 0;
-
     const handleTimeUpdate = () => {
       const currentProgress = videoEl.currentTime / videoEl.duration;
       if (!isNaN(currentProgress)) {
         onProgress(currentProgress);
 
-        // Sauvegarde toutes les 5 secondes max
-        if (Date.now() - lastSave > 5000) {
+        if (Date.now() - lastSave > 5000 && currentProgress > 0.01) {
           saveContinueWatching({
+            animeId,
+            seasonId: season.id,
+            episodeId: episode.id,
             animeTitle,
             episodeTitle: episode.title,
             progress: currentProgress,
@@ -76,8 +104,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     videoEl.addEventListener("timeupdate", handleTimeUpdate);
     return () => {
       videoEl.removeEventListener("timeupdate", handleTimeUpdate);
+      videoEl.removeEventListener("loadedmetadata", setInitialTime);
     };
-  }, [onProgress, videoType, progress, animeTitle, episode.title]);
+  }, [onProgress, videoType, progress, animeId, animeTitle, season, episode]);
 
   const getEmbedUrl = () => {
     try {
