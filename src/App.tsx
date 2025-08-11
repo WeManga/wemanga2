@@ -1,4 +1,3 @@
-// src/App.tsx
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import ScrollingMessage from './components/ScrollingMessage';
@@ -23,6 +22,7 @@ function App() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
+  /** Navigation */
   const handleHomeClick = () => {
     setCurrentState('home');
     setFilter('all');
@@ -54,6 +54,7 @@ function App() {
     scrollToTop();
   };
 
+  /** Lecture */
   const handlePlayAnime = (anime: Anime) => {
     const firstSeason = anime.seasons[0];
     const firstEpisode = firstSeason.episodes[0];
@@ -82,6 +83,7 @@ function App() {
     scrollToTop();
   };
 
+  /** Épisodes suivants / précédents */
   const handleNextEpisode = () => {
     if (!selectedEpisode || !selectedSeason) return;
     const index = selectedSeason.episodes.findIndex(ep => ep.id === selectedEpisode.id);
@@ -98,14 +100,20 @@ function App() {
     }
   };
 
+  /** Sauvegarde progression */
   const handleProgress = (progress: number) => {
     if (selectedAnime && selectedSeason && selectedEpisode) {
-      saveContinueWatching({
-        animeTitle: selectedAnime.title,
-        episodeTitle: selectedEpisode.title,
-        progress,
-        timestamp: Date.now(),
-      });
+      if (progress > 0.01) {
+        saveContinueWatching({
+          animeId: selectedAnime.id,
+          seasonId: selectedSeason.id,
+          episodeId: selectedEpisode.id,
+          animeTitle: selectedAnime.title,
+          episodeTitle: selectedEpisode.title,
+          progress,
+          timestamp: Date.now(),
+        });
+      }
     }
   };
 
@@ -123,6 +131,7 @@ function App() {
         </>
       )}
 
+      {/* Pages */}
       {currentState === 'home' && (
         <HomePage
           filter={filter}
@@ -164,12 +173,12 @@ function App() {
         />
       )}
 
-      {/* PLAYER */}
       {currentState === 'player' && selectedEpisode && selectedSeason && selectedAnime && (
         <VideoPlayer
+          animeId={selectedAnime.id}
+          animeTitle={selectedAnime.title}
           episode={selectedEpisode}
           season={selectedSeason}
-          animeTitle={selectedAnime.title} // ✅ ajout
           onBack={handleBack}
           onNextEpisode={handleNextEpisode}
           onPreviousEpisode={handlePreviousEpisode}
