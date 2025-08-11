@@ -1,13 +1,22 @@
-import { ContinueWatching } from '../types';
+// utils/cookies.ts
+export interface ContinueWatching {
+  animeTitle: string;
+  episodeTitle: string;
+  progress: number;
+  timestamp: number;
+}
 
 const CONTINUE_WATCHING_KEY = 'continueWatching';
 
 export const saveContinueWatching = (data: ContinueWatching): void => {
   try {
     const existingData = getContinueWatching();
+
+    // ✅ Comparaison stricte avec ===
     const updatedData = existingData.filter(item => 
-      !(item.animeId === data.animeId && item.seasonId === data.seasonId && item.episodeId === data.episodeId)
+      !(item.animeTitle === data.animeTitle && item.episodeTitle === data.episodeTitle)
     );
+
     updatedData.unshift(data);
     localStorage.setItem(CONTINUE_WATCHING_KEY, JSON.stringify(updatedData.slice(0, 10)));
   } catch (error) {
@@ -25,12 +34,15 @@ export const getContinueWatching = (): ContinueWatching[] => {
   }
 };
 
-export const removeContinueWatching = (animeId: number, seasonId: number, episodeId: number): void => {
+export const removeContinueWatching = (animeTitle: string, episodeTitle: string): void => {
   try {
     const existingData = getContinueWatching();
+
+    // ✅ Comparaison stricte
     const filteredData = existingData.filter(item => 
-      !(item.animeId === animeId && item.seasonId === seasonId && item.episodeId === episodeId)
+      !(item.animeTitle === animeTitle && item.episodeTitle === episodeTitle)
     );
+
     localStorage.setItem(CONTINUE_WATCHING_KEY, JSON.stringify(filteredData));
   } catch (error) {
     console.error('Error removing continue watching data:', error);
