@@ -1,29 +1,33 @@
-// ...imports identiques
 import React, { useEffect, useRef } from "react";
 import { Episode, Season } from "../types";
 import AdBanner from "./AdBanner";
 import ScrollingMessage from "./ScrollingMessage";
+import { saveContinueWatching } from "../utils/cookies"; // ajout pour sauvegarde auto
 
 interface VideoPlayerProps {
   episode: Episode;
   season: Season;
+  animeTitle: string; // ajouté pour pouvoir sauvegarder
   onBack: () => void;
   onNextEpisode: () => void;
   onPreviousEpisode: () => void;
   hasNextEpisode: boolean;
   hasPreviousEpisode: boolean;
   onProgress: (progress: number) => void;
+  progress?: number; // pour reprendre la progression
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   episode,
   season,
+  animeTitle,
   onBack,
   onNextEpisode,
   onPreviousEpisode,
   hasNextEpisode,
   hasPreviousEpisode,
   onProgress,
+  progress,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const bannerUrl = season?.banner || episode.thumbnail || "";
@@ -44,16 +48,36 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     const videoEl = videoRef.current;
     if (!videoEl || videoType !== "video") return;
 
+    // Positionnement initial si progression connue
+    if (progress && !isNaN(progress) && videoEl.duration) {
+      videoEl.currentTime = progress * videoEl.duration;
+    }
+
+    let lastSave = 0;
+
     const handleTimeUpdate = () => {
-      const progress = videoEl.currentTime / videoEl.duration;
-      if (progress && !isNaN(progress)) onProgress(progress);
+      const currentProgress = videoEl.currentTime / videoEl.duration;
+      if (!isNaN(currentProgress)) {
+        onProgress(currentProgress);
+
+        // Sauvegarde toutes les 5 secondes max
+        if (Date.now() - lastSave > 5000) {
+          saveContinueWatching({
+            animeTitle,
+            episodeTitle: episode.title,
+            progress: currentProgress,
+            timestamp: Date.now(),
+          });
+          lastSave = Date.now();
+        }
+      }
     };
 
     videoEl.addEventListener("timeupdate", handleTimeUpdate);
     return () => {
       videoEl.removeEventListener("timeupdate", handleTimeUpdate);
     };
-  }, [onProgress, videoType]);
+  }, [onProgress, videoType, progress, animeTitle, episode.title]);
 
   const getEmbedUrl = () => {
     try {
@@ -79,10 +103,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   return (
     <div className="bg-black min-h-screen text-white font-sans pb-10">
-      {/* Message déroulant */}
       <ScrollingMessage />
 
-      {/* Bouton retour */}
       <div className="px-6 pt-14">
         <button
           onClick={onBack}
@@ -92,7 +114,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         </button>
       </div>
 
-      {/* Bannière visuelle */}
       {bannerUrl && (
         <div
           className="w-full h-[220px] mt-4 mb-4"
@@ -104,17 +125,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         />
       )}
 
-      {/* Bannière pub avant le lecteur */}
       <AdBanner id="playerTop" />
 
-      {/* Titre de l’épisode */}
       <div className="flex justify-center mb-6">
         <div className="bg-black/70 px-6 py-2 rounded-lg text-xl font-semibold shadow-md">
           {episode.title}
         </div>
       </div>
 
-      {/* Lecteur vidéo */}
       <div className="w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-[#111] shadow-lg">
         <div className="relative pb-[56.25%]">
           {videoType === "video" && (
@@ -155,23 +173,21 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           )}
         </div>
 
-        {/* Navigation épisodes */}
         <div className="flex justify-between items-center px-4 py-3 bg-[#222]">
           <button
             onClick={onPreviousEpisode}
             disabled={!hasPreviousEpisode}
             className={`px-4 py-2 rounded-md text-white font-medium ${
-              hasPreviousEpisode ? 'bg-red-600 hover:bg-red-700' : 'bg-gray-700 cursor-not-allowed'
+              hasPreviousEpisode ? "bg-red-600 hover:bg-red-700" : "bg-gray-700 cursor-not-allowed"
             }`}
           >
             ← Épisode précédent
           </button>
-
           <button
             onClick={onNextEpisode}
             disabled={!hasNextEpisode}
             className={`px-4 py-2 rounded-md text-white font-medium ${
-              hasNextEpisode ? 'bg-red-600 hover:bg-red-700' : 'bg-gray-700 cursor-not-allowed'
+              hasNextEpisode ? "bg-red-600 hover:bg-red-700" : "bg-gray-700 cursor-not-allowed"
             }`}
           >
             Épisode suivant →
@@ -179,7 +195,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         </div>
       </div>
 
-      {/* Bannière pub après le lecteur */}
       <AdBanner id="playerBottom" />
     </div>
   );
