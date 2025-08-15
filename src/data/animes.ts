@@ -499,7 +499,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "Terminé", // ou "Terminé"
-    category: "nouveaute"
+    category: "nouveaute",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5952240" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5959678" },
