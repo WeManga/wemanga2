@@ -176,27 +176,44 @@ const HomePage: React.FC<HomePageProps> = ({
           {/* EPISODES À VENIR */}
           {!searchQuery && <UpcomingEpisodes />}
 
-          {/* NOUVEAUTÉS */}
-          {!searchQuery && nouveautes.length > 0 && (
-            <section className="mb-16">
-              <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {nouveautes.map(anime => (
-                  <div
-                    key={anime.id}
-                    onClick={() => onAnimeDetail(anime)}
-                    className="bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
-                  >
-                    <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
-                    <div className="p-4">
-                      <h3 className="text-xl font-bold text-white">{anime.title}</h3>
-                      <p className="text-gray-400 text-sm">{anime.year} • {anime.genre.join(', ')}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
+{/* NOUVEAUTÉS */}
+{!searchQuery && nouveautes.length > 0 && (
+  <section className="mb-16">
+    <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
+    
+    <div 
+      className="
+        flex gap-4 overflow-x-auto 
+        md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+        md:gap-8
+        scrollbar-hide
+      "
+    >
+      {nouveautes.map(anime => (
+        <div
+          key={anime.id}
+          onClick={() => onAnimeDetail(anime)}
+          className="bg-gray-900 w-48 md:w-auto flex-shrink-0 
+                     rounded-xl overflow-hidden 
+                     hover:scale-105 transition-transform cursor-pointer"
+        >
+          <img 
+            src={anime.poster} 
+            alt={anime.title} 
+            className="w-full h-64 object-cover" 
+          />
+          <div className="p-4">
+            <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+            <p className="text-gray-400 text-sm">
+              {anime.year} • {anime.genre.join(', ')}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
 
           {/* PUB */}
           <AdBanner id="homeClassics" />
