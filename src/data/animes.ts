@@ -489,6 +489,29 @@ const animeConfigs: SimpleAnimeConfig[] = [
       // ... plus d'épisodes si nécessaire
     ]
 },
+    {
+    title: "DANDADAN S2",
+    description: "Momo Ayase et Ken Takakura (surnommé Okarun) sont deux lycéens diamétralement opposés : Momo est persuadée de l’existence des fantômes, mais refuse de croire aux extraterrestres. Okarun croit fermement aux aliens et rejette tout ce qui touche aux esprits. Pour trancher ce débat, ils conviennent d’un défi : Momo se rendra dans un hôpital réputé pour abriter des créatures extraterrestres, tandis qu’Okarun explorera un tunnel hanté. Chacun fait une rencontre inattendue... qui va bouleverser leur vision du monde et les lier de manière indissociable. C’est le point de départ d’une aventure déjantée, mêlant romance, paranormal et situations totalement inédites.",
+    poster: "https://fr.web.img6.acsta.net/img/8a/81/8a819234254d8b886c9eac0db480fb48.jpg",
+    banner: "https://www.catsuka.com/interf/breves/dandadan_s2_prerelease.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2025,
+    rating: 9,
+    type: "serie", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    category: "nouveaute"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5952240" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5959678" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5966920" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5973704" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5979355" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5985105" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5990643" },
+
+      // ... plus d'épisodes si nécessaire
+    ]
+},
   {
     title: "Death Note",
     description: "Un carnet maléfique (Death Note) tombe entre les mains de Light Yagami, un adolescent de 17 ans. Ce cahier a un pouvoir maléfique : si quelqu'un note un nom sur ses pages, la personne en question meurt quelques secondes plus tard.",
