@@ -13,6 +13,7 @@ interface SimpleEpisodeConfig {
 interface SimpleSeasonConfig {
   number: number;
   title?: string;
+  category?: 'nouveaute' | 'classique';
   episodes: SimpleEpisodeConfig[];
 }
 
@@ -2631,6 +2632,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
       {
         number: 11,
         title: "Saga 11 (Egg Head)",
+        category: "nouveaute",
         episodes: [
  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5390006" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5398100" },
