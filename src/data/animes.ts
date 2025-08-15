@@ -490,7 +490,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
         ]
       },
             {
-        number: ,
+        number: 3,
         title: "Saison 3",
         episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826614" },
