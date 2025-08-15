@@ -3843,7 +3843,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   ]
 },
 */
-]}
+];
 
 // Génération automatique des animes à partir des configurations
 export const animes: Anime[] = animeConfigs.map((config, index) =>
