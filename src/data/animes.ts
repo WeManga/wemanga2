@@ -3245,6 +3245,32 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5511308" },
     ]
 },
+  {
+    title: "Solo Leveling S2",
+    description: "Intriguée par Jinwoo, Cha Hae-in rejoint le donjon. À l'intérieur, la troupe de Kihoon arrive face au boss, qui compte ne faire qu'une bouchée d'eux.",
+    poster: "https://m.media-amazon.com/images/I/81ZAC67DE1S.jpg",
+    banner: "https://www.superpouvoir.com/wp-content/uploads/2025/03/solo-leveling-saison-2-jinwoo-e1743362300963.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5806748" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5812653" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5819532" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5826552" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5834007" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5839458" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845865" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5851984" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5857932" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5864065" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5869318" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877505" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5885451" },
+    ]
+},
 {
   title: "Dragon Ball Z",
   description: "Dragon Ball Z est un anime qui se déroule cinq années après le mariage de Son Goku et de Chichi. Tous deux sont parents de Son Gohan. Mais tout va basculer lorsque Raditz va débarquer sur Terre pour retrouver son fils, Son Goku.",
