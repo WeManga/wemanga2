@@ -576,7 +576,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-    category: "nouveaute"
+    category: "nouveaute",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://sendvid.com/o5ovrbxk" },
       { title: "Épisode 2", videoUrl: "https://sendvid.com/ariluppd" },
@@ -595,7 +595,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8.5,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-        category: "classique",
+    category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955114" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955115" },
