@@ -541,6 +541,32 @@ const animeConfigs: SimpleAnimeConfig[] = [
                 ]
 },
   {
+    title: "Kaiju No.8 S1",
+    description: "Kaiju no 8 se déroule dans un monde dans lequel des monstres nommés kaiju provoquent régulièrement des désastres. Le Japon est le pays avec le taux d'attaques de kaiju le plus élevé au monde et, pour les combattre, il crée la Force de défense anti-Kaiju (日本防衛隊, Nihon bōei-tai, lit. « Force de défense japonaise »).",
+    poster: "https://fr.web.img6.acsta.net/img/77/07/77079c0a800097522800816954373303.jpg",
+    banner: "https://i0.wp.com/www.cinechos.com/wp-content/uploads/2024/06/poster-kaiju-no-8-edited.webp",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2025,
+    rating: 8,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5503649" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5510925" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5518047" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/8taamsgk" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5532677" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5538940" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5545176" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5551613" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5557152" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5563936" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5588347" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5595357" },
+      // ... plus d'épisodes
+    ]
+},
+  {
     title: "MY HERO ACADEMIA S1",
     description: "Les pouvoirs d'Izuku Midoriya, élève en troisième au collège Oridera, ne se sont pas manifestés, et ne le feront probablement jamais. L'an prochain, il doit entrer au lycée. Et bien qu'il n'ait aucun Alter, il vise le lycée Yuei, une académie réputée qui a formé les plus grands super-héros...",
     poster: "https://www.manga-news.com/public/images/pix/dvd/2548/my-hero-academia-anime-visuel-2.jpg",
