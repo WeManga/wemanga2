@@ -3220,6 +3220,31 @@ const animeConfigs: SimpleAnimeConfig[] = [
 
   ]
 },
+  {
+    title: "Solo Leveling S1",
+    description: "Sung Jin Woo, un chasseur de portails de rang E, considéré comme le plus faible de tous, se rend avec une équipe dans un donjon de rang D. Cependant, alors qu'ils se retrouvent piégé dans une salle avec des monstres qui ne sont pas du tout du niveau du donjon, Jin Woo succombe.",
+    poster: "https://fr.web.img5.acsta.net/pictures/23/09/11/09/25/4087505.jpg",
+    banner: "https://a.storyblok.com/f/178900/960x540/11b5912604/poster_solo_leveling_16_9.png",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2024,
+    rating: 9,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406687" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5415193" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5421450" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5428347" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5435958" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5444965" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5453272" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5470652" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5479612" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5496084" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5504016" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5511308" },
+    ]
+},
 {
   title: "Dragon Ball Z",
   description: "Dragon Ball Z est un anime qui se déroule cinq années après le mariage de Son Goku et de Chichi. Tous deux sont parents de Son Gohan. Mais tout va basculer lorsque Raditz va débarquer sur Terre pour retrouver son fils, Son Goku.",
