@@ -488,20 +488,11 @@ const animeConfigs: SimpleAnimeConfig[] = [
           { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955402" },
           { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955410" }
         ]
-      }
-    ]
-  },
-  {
-    title: "MY HERO ACADEMIA S3",
-    description: "Suite à l'attaque surprise de la Ligue sur l'Académie des super-héros Yûei, l'école organise le camp d'été des élèves de Seconde dans le plus grand secret pour éviter qu'un tel événement se reproduise. De plus, All Might, suspecté d'être la cible prioritaire des criminel, se voit contraint de rester à l'école ...",
-    poster: "https://fr.web.img3.acsta.net/c_210_280/pictures/19/04/09/16/59/1980314.jpg",
-    banner: "https://bleachmx.fr/wp-content/uploads/My-Hero-Academia-%C3%A9pisode-15-%E2%80%93-Saison-3-%C2%AB-LExamen-%C2%BB.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2014,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
+      },
+            {
+        number: ,
+        title: "Saison 3",
+        episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826614" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826619" },
       { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826621" },
@@ -526,20 +517,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826640" },
       { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826642" },
       { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826646" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826651" },
-    ]
-  },
-{
-    title: "MY HERO ACADEMIA S4",
-    description: "Le monde des Vilains vacille et menace de basculer dans une guerre totale maintenant qu'All Might est parti. Shigaraki se prépare à affronter Overhaul, chef yakuza. Pendant ce temps, Deku est à nouveau empêtré dans un stage dangereux et se démène pour rester au niveau de Mirio, en terminale à Yuei.",
-    poster: "https://fr.web.img5.acsta.net/c_210_280/pictures/20/02/10/14/54/0047459.jpg",
-    banner: "https://www.megazap.fr/photo/art/grande/53612185-40540523.jpg?v=1612342833",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2014,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4826651" }
+        ]
+      },
+                  {
+              number: 4,
+        title: "Saison 4",
+        episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4954970" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4954971" },
       { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4954974" },
@@ -564,20 +548,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955000" },
       { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955003" },
       { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955004" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955005" },
-    ]
-  },
-  {
-    title: "MY HERO ACADEMIA S5",
-    description: "Après un entraînement de la Seconde A dans le cadre d'un exercice organisé par Les Big 3, les élèves de la classe se retrouvent face à la Seconde B dans le cadre d'un Entraînement Commun, pour finaliser leur préparation héroïque.",
-    poster: "https://fr.web.img3.acsta.net/c_210_280/pictures/21/02/15/09/56/4223172.jpg",
-    banner: "https://adala-news.fr/wp-content/uploads/2021/01/My-Hero-Academia-Saison-5.png",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2014,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955005" }
+        ]
+      },
+                       {
+              number: 5,
+        title: "Saison 5",
+        episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4804713" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4804716" },
       { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4804717" },
@@ -602,20 +579,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4804757" },
       { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4804758" },
       { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4804759" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4804761" },
-    ]
-  },
-  {
-    title: "MY HERO ACADEMIA S6",
-    description: "Izuku, paralysé, est prévenu par le premier détenteur du One for All qu'une bataille d'une intensité jamais vue est à venir. Tomura Shigaraki est sorti de son sommeil et fait des ravages considérables. Tous les héros convergent vers lui, mais il se dirige vers les civils en cours d'évacuation.",
-    poster: "https://fr.web.img5.acsta.net/c_210_280/pictures/22/08/08/10/04/5483489.jpg",
-    banner: "https://www.fredzone.org/wp-content/uploads/2023/02/My-Hero-Academia-Saison-6-Partie-2.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2014,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4804761" }
+        ]
+      },
+                             {
+              number: 6,
+        title: "Saison 6",
+        episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4983760" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4983761" },
       { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4942898" },
@@ -640,20 +610,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5087556" },
       { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5093751" },
       { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5100063" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5106833" },
-    ]
-  },
-  {
-    title: "MY HERO ACADEMIA S7",
-    description: "Tandis qu'Izuku trouve un peu de répit auprès de ses proches et de ses amis, les héros professionnels organisent leur contre-attaque grâce aux quelques informations qu'ils ont pu glaner. Dans le même temps, une aide étrangère bienvenue est en route.",
-    poster: "https://fr.web.img6.acsta.net/c_210_280/pictures/23/12/11/10/20/5371210.jpg",
-    banner: "https://www.melty.fr/wp-content/uploads/meltyfr/2024/05/gouqm2gwaaaci6x.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2014,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5106833" }
+        ]
+      },
+       {
+              number: 7,
+        title: "Saison 7",
+        episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5518283" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5528938" },
       { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5533034" },
@@ -678,9 +641,12 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5714060" },
       { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5722749" },
       { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5735034" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5739877" },
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5739877" }
+        ]
+      }
     ]
   },
+
   {
     title: "Hunter X Hunter ",
     description: "Gon Freecss a douze ans, et rêve de devenir hunter. Les hunters sont des aventuriers d'élite qui peuvent être chasseurs de prime, chefs-cuisinier, archéologues, zoologues, justiciers ou consultants dans divers domaines.",
