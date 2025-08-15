@@ -567,6 +567,25 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
 },
   {
+    title: "Kaiju No.8 S2",
+    description: "DKaiju no 8 se déroule dans un monde dans lequel des monstres nommés kaiju provoquent régulièrement des désastres. Le Japon est le pays avec le taux d'attaques de kaiju le plus élevé au monde et, pour les combattre, il crée la Force de défense anti-Kaiju (日本防衛隊, Nihon bōei-tai, lit. « Force de défense japonaise »).",
+    poster: "https://fr.web.img5.acsta.net/img/c2/27/c227f45be929b01fa507dde0ca62e723.jpg",
+    banner: "https://adala-news.fr/wp-content/uploads/2024/06/Kaiju-No.-8-collab-Plaza.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2025,
+    rating: 8,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    category: "nouveaute"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://sendvid.com/o5ovrbxk" },
+      { title: "Épisode 2", videoUrl: "https://sendvid.com/ariluppd" },
+      { title: "Épisode 3", videoUrl: "https://sendvid.com/c95j1ukm" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/ihaj6og7" },
+      // ... plus d'épisodes
+    ]
+},
+  {
     title: "MY HERO ACADEMIA S1",
     description: "Les pouvoirs d'Izuku Midoriya, élève en troisième au collège Oridera, ne se sont pas manifestés, et ne le feront probablement jamais. L'an prochain, il doit entrer au lycée. Et bien qu'il n'ait aucun Alter, il vise le lycée Yuei, une académie réputée qui a formé les plus grands super-héros...",
     poster: "https://www.manga-news.com/public/images/pix/dvd/2548/my-hero-academia-anime-visuel-2.jpg",
