@@ -1,6 +1,5 @@
 // src/data/animes.ts
 import { Anime } from '../types';
-
 // ------------------------------
 // 1. Types simplifiés pour config
 // ------------------------------
@@ -9,14 +8,12 @@ interface SimpleEpisodeConfig {
   videoUrl: string;
   duration?: string;
 }
-
 interface SimpleSeasonConfig {
   number: number;
   title?: string;
   category?: 'nouveaute' | 'classique';
   episodes: SimpleEpisodeConfig[];
 }
-
 interface SimpleAnimeConfig {
   title: string;
   description: string;
@@ -28,26 +25,23 @@ interface SimpleAnimeConfig {
   type: 'serie' | 'film';
   status: string;
   category: 'nouveaute' | 'classique';
-
   // Ancienne méthode : une seule saison
   episodes?: SimpleEpisodeConfig[];
-
   // Nouvelle méthode : plusieurs saisons
   seasons?: SimpleSeasonConfig[];
 }
-
 // ------------------------------
 // 2. Fonction pour créer l'anime
 // ------------------------------
 const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
   let seasonsData;
-
   if (config.seasons && config.seasons.length > 0) {
     // Mode multi-saisons
     seasonsData = config.seasons.map((season) => ({
       id: season.number,
       number: season.number,
       title: season.title || `Saison ${season.number}`,
+      category: season.category,   // <-- Ajout ici
       episodes: season.episodes.map((ep, index) => ({
         id: index + 1,
         title: ep.title || `Épisode ${index + 1}`,
@@ -75,7 +69,6 @@ const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
       }
     ];
   }
-
   return {
     id,
     title: config.title,
@@ -91,6 +84,7 @@ const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
     seasons: seasonsData
   };
 };
+
 
 // ------------------------------
 // 3. Définition des animes
