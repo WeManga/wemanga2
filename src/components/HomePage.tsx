@@ -6,7 +6,7 @@ import { getContinueWatching } from '../utils/cookies';
 import Footer from './Footer';
 import AdBanner from './AdBanner';
 import UpcomingEpisodes from './UpcomingEpisodes';
-import { X } from 'lucide-react'; // ⬅ ajout de l’icône croix
+import { X } from 'lucide-react';
 
 interface HomePageProps {
   filter: 'all' | 'serie' | 'film';
@@ -42,7 +42,7 @@ const HomePage: React.FC<HomePageProps> = ({
 
   // Filtrage par type + recherche
   const filteredAnimes = animes.filter(anime => {
-    const matchesFilter = filter === 'all' || anime.type === filter; // ✅ corrigé
+    const matchesFilter = filter === 'all' || anime.type === filter;
     const matchesSearch =
       searchQuery === '' ||
       anime.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -65,8 +65,15 @@ const HomePage: React.FC<HomePageProps> = ({
     .filter(Boolean)
     .slice(0, 6);
 
-  const nouveautes = filteredAnimes.filter(a => a.category === 'nouveaute');
-  const classiques = filteredAnimes.filter(a => a.category === 'classique');
+  // Filtrer les animes qui ont au moins une saison "nouveaute"
+  const nouveautes = filteredAnimes.filter(anime =>
+    anime.seasons.some(season => season.category === 'nouveaute')
+  );
+
+  // Filtrer les animes dont toutes les saisons sont "classique"
+  const classiques = filteredAnimes.filter(anime =>
+    anime.seasons.every(season => season.category === 'classique')
+  );
 
   return (
     <div className="min-h-screen bg-black">
@@ -88,9 +95,7 @@ const HomePage: React.FC<HomePageProps> = ({
             </div>
           </div>
         </div>
-
         <div className="max-w-7xl mx-auto px-8 py-12">
-
           {/* RECHERCHE */}
           {searchQuery && (
             <section className="mb-16">
@@ -118,7 +123,6 @@ const HomePage: React.FC<HomePageProps> = ({
               )}
             </section>
           )}
-
           {/* 📺 CONTINUE WATCHING */}
           {!searchQuery && continueWatchingAnimes.length > 0 && (
             <section className="mb-16">
@@ -142,7 +146,6 @@ const HomePage: React.FC<HomePageProps> = ({
                     >
                       <X size={14} />
                     </button>
-
                     <div onClick={() => onAnimeDetail(anime)}>
                       <div className="relative aspect-[3/4]">
                         <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover" />
@@ -169,97 +172,83 @@ const HomePage: React.FC<HomePageProps> = ({
               </div>
             </section>
           )}
-
           {/* BANDEAU PUB haut */}
           <AdBanner id="homeTop" />
-
           {/* EPISODES À VENIR */}
           {!searchQuery && <UpcomingEpisodes />}
-
-{/* NOUVEAUTÉS */}
-{!searchQuery && nouveautes.length > 0 && (
-  <section className="mb-16">
-    <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
-    
-    <div 
-      className="
-        flex gap-4 overflow-x-auto 
-        md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
-        md:gap-8
-        scrollbar-hide
-      "
-    >
-      {nouveautes.map(anime => (
-        <div
-          key={anime.id}
-          onClick={() => onAnimeDetail(anime)}
-          className="bg-gray-900 w-48 md:w-auto flex-shrink-0 
-                     rounded-xl overflow-hidden 
-                     hover:scale-105 transition-transform cursor-pointer"
-        >
-          <img 
-            src={anime.poster} 
-            alt={anime.title} 
-            className="w-full h-64 object-cover" 
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-white">{anime.title}</h3>
-            <p className="text-gray-400 text-sm">
-              {anime.year} • {anime.genre.join(', ')}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
-)}
-
-
+          {/* NOUVEAUTÉS */}
+          {!searchQuery && nouveautes.length > 0 && (
+            <section className="mb-16">
+              <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
+              <div
+                className="
+                  flex gap-4 overflow-x-auto 
+                  md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+                  md:gap-8
+                  scrollbar-hide
+                "
+              >
+                {nouveautes.map(anime => (
+                  <div
+                    key={anime.id}
+                    onClick={() => onAnimeDetail(anime)}
+                    className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
+                  >
+                    <img 
+                      src={anime.poster} 
+                      alt={anime.title} 
+                      className="w-full h-64 object-cover" 
+                    />
+                    <div className="p-4">
+                      <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                      <p className="text-gray-400 text-sm">
+                        {anime.year} • {anime.genre.join(', ')}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
           {/* PUB */}
           <AdBanner id="homeClassics" />
-
-{/* CLASSIQUES */}
-{!searchQuery && classiques.length > 0 && (
-  <section className="mb-16">
-    <h2 className="text-white text-3xl font-bold mb-8 text-center">Les Classiques</h2>
-
-    <div
-      className="
-        flex gap-4 overflow-x-auto
-        md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
-        md:gap-8
-        scrollbar-hide
-      "
-    >
-      {classiques.map(anime => (
-        <div
-          key={anime.id}
-          onClick={() => onAnimeDetail(anime)}
-          className="bg-gray-900 w-48 md:w-auto flex-shrink-0
-                     rounded-xl overflow-hidden
-                     hover:scale-105 transition-transform cursor-pointer"
-        >
-          <img
-            src={anime.poster}
-            alt={anime.title}
-            className="w-full h-64 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-white">{anime.title}</h3>
-            <p className="text-gray-400 text-sm">
-              {anime.year} • {anime.genre.join(', ')}
-            </p>
-          </div>
+          {/* CLASSIQUES */}
+          {!searchQuery && classiques.length > 0 && (
+            <section className="mb-16">
+              <h2 className="text-white text-3xl font-bold mb-8 text-center">Les Classiques</h2>
+              <div
+                className="
+                  flex gap-4 overflow-x-auto
+                  md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+                  md:gap-8
+                  scrollbar-hide
+                "
+              >
+                {classiques.map(anime => (
+                  <div
+                    key={anime.id}
+                    onClick={() => onAnimeDetail(anime)}
+                    className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
+                  >
+                    <img
+                      src={anime.poster}
+                      alt={anime.title}
+                      className="w-full h-64 object-cover"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                      <p className="text-gray-400 text-sm">
+                        {anime.year} • {anime.genre.join(', ')}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+          <AdBanner id="homeBottom" />
+          <Footer />
         </div>
-      ))}
-    </div>
-  </section>
-)}
-
-
-        <AdBanner id="homeBottom" />
-        <Footer />
-          </div>
       </div>
     </div>
   );
