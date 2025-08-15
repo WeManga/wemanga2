@@ -1001,6 +1001,113 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 148", videoUrl: "https://movearnpre.com/embed/tn58rpgh5fxu" },
           ]
   },
+  {
+    title: "Hero au Bouclier S1",
+    description: "Naofumi Iwatani, étudiant et otaku, est envoyé sans prévenir dans un autre monde en tant que héros au bouclier. Il y rencontrera trois autres héros, ayant chacun leur arme et qui auront pour objectif commun de contrer les vagues de calamités.",
+    poster: "https://fr.web.img3.acsta.net/pictures/20/04/29/14/35/2108345.jpg",
+    banner: "https://leclaireur.fnac.com/wp-content/uploads/2024/01/blablabla-1.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2019,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398295" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398306" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398307" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398311" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398315" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398319" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398324" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398328" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398334" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398335" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398336" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398337" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398338" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398341" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398342" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398343" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398345" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398346" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398348" },
+      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398349" },
+      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398350" },
+      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398351" },
+      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398352" },
+      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=439835" },
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398354" },
+               ]
+  },
+    {
+    title: "Hero au Bouclier S2",
+    description: "Naofumi Iwatani, 20 ans, passe de citoyen lambda à héros de seconde zone lorsqu'il est convoqué dans le royaume de Melromarc, ressemblant en tous points à un jeu vidéo. Trahi par ses coéquipiers, considéré comme le plus faible des protecteurs, ce héros désabusé aura-t-il encore envie de se battre ?",
+    poster: "https://fr.web.img5.acsta.net/pictures/20/09/09/11/12/4458267.jpg",
+    banner: "https://www.mangamag.fr/wp-content/uploads/2022/03/The-Rising-of-the-Shield-Hero-Saison-2.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2021,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4702857" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4709245" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4718842" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4728475" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4735790" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4744402" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4753393" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4761555" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4772048" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4781089" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4796432" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4796420" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4803852" },
+               ]
+  },
+      {
+    title: "Hero au Bouclier S3",
+    description: "Naofumi est projeté dans un monde proche en tout lieu d'un jeu de rôle d'heroic fantasy. Mais alors que d'autres héros ont été dotés d'armes offensives redoutables, Naofumi hérite d'un bouclier aux capacités limitées pour progresser dans ce jeu où le danger peut surgir à chaque instant.",
+    poster: "https://images.justwatch.com/poster/333036243/s718/saison-3.jpg",
+    banner: "https://teammanga.fr/wp-content/uploads/2022/08/9B66FD28-F449-498F-AD7F-B014A88014EF-1200x500.jpeg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2023,
+    rating: 8,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5307448" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5315978" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5326164" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5336278" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5347993" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5357930" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5365775" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5373741" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5381332" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5388571" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406111" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406113" },
+               ]
+  },
+        {
+    title: "Hero au Bouclier S4",
+    description: "Les membres de la Strike Team sont impliqués dans les affaires d'Antwon Mitchell, un baron de la drogue très respecté qui finit par faire chanter Vendrell pour obtenir son aide .",
+    poster: "https://images.justwatch.com/poster/333036230/s718/saison-4.jpg",
+    banner: "https://fr.web.img5.acsta.net/c_400_200/img/65/c0/65c058c1396c67b6245dd2c13a60d4b2.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2025,
+    rating: 8,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+          category: "nouveaute"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5974177" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5978874" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5984799" },
+
+               ]
+  },
       {
     title: "Naruto",
     description: "Naruto Uzumaki est un ninja adolescent qui cherche à devenir Hokage.",
