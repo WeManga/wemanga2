@@ -27,7 +27,6 @@ const HomePage: React.FC<HomePageProps> = ({
     setContinueWatchingData(getContinueWatching());
   }, []);
 
-  // Handler pour supprimer une entrée
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
     const current = getContinueWatching();
     const updated = current.filter(
@@ -51,7 +50,7 @@ const HomePage: React.FC<HomePageProps> = ({
     return matchesFilter && matchesSearch;
   });
 
-  // 📺 Reprendre le visionnage via IDs
+  // Continue watching
   const continueWatchingAnimes = continueWatchingData
     .map(item => {
       const anime = animes.find(a => a.id === item.animeId);
@@ -65,15 +64,16 @@ const HomePage: React.FC<HomePageProps> = ({
     .filter(Boolean)
     .slice(0, 6);
 
-  // Filtrer les animes qui ont au moins une saison "nouveaute"
-  const nouveautes = filteredAnimes.filter(anime =>
-    anime.seasons.some(season => season.category === 'nouveaute')
-  );
+  // Classiques : animes dont la propriété category est 'classique'
+  const classiques = filteredAnimes.filter(anime => anime.category === 'classique');
 
-  // Filtrer les animes dont toutes les saisons sont "classique"
-  const classiques = filteredAnimes.filter(anime =>
-    anime.seasons.every(season => season.category === 'classique')
-  );
+  // Nouveautés : animes ayant au moins une saison avec category 'nouveaute'
+  const nouveautes = filteredAnimes
+    .map(anime => ({
+      anime,
+      saisonsNouveaute: anime.seasons.filter(season => season.category === 'nouveaute')
+    }))
+    .filter(item => item.saisonsNouveaute.length > 0);
 
   return (
     <div className="min-h-screen bg-black">
@@ -123,7 +123,7 @@ const HomePage: React.FC<HomePageProps> = ({
               )}
             </section>
           )}
-          {/* 📺 CONTINUE WATCHING */}
+          {/* CONTINUE WATCHING */}
           {!searchQuery && continueWatchingAnimes.length > 0 && (
             <section className="mb-16">
               <h2 className="text-white text-3xl font-bold mb-8 text-center">
@@ -188,25 +188,26 @@ const HomePage: React.FC<HomePageProps> = ({
                   scrollbar-hide
                 "
               >
-                {nouveautes.map(anime => (
-                  <div
-                    key={anime.id}
-                    onClick={() => onAnimeDetail(anime)}
-                    className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
-                  >
-                    <img 
-                      src={anime.poster} 
-                      alt={anime.title} 
-                      className="w-full h-64 object-cover" 
-                    />
-                    <div className="p-4">
-                      <h3 className="text-xl font-bold text-white">{anime.title}</h3>
-                      <p className="text-gray-400 text-sm">
-                        {anime.year} • {anime.genre.join(', ')}
-                      </p>
+                {nouveautes.map(({ anime, saisonsNouveaute }) =>
+                  saisonsNouveaute.map(season => (
+                    <div
+                      key={`${anime.id}-season-${season.number}`}
+                      onClick={() => onAnimeDetail(anime)}
+                      className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
+                    >
+                      <img
+                        src={anime.poster}
+                        alt={anime.title}
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4">
+                        <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                        <p className="text-gray-400 text-sm">{season.title}</p>
+                        <p className="text-gray-400 text-sm">{anime.genre.join(', ')}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))
+                )}
               </div>
             </section>
           )}
@@ -237,9 +238,7 @@ const HomePage: React.FC<HomePageProps> = ({
                     />
                     <div className="p-4">
                       <h3 className="text-xl font-bold text-white">{anime.title}</h3>
-                      <p className="text-gray-400 text-sm">
-                        {anime.year} • {anime.genre.join(', ')}
-                      </p>
+                      <p className="text-gray-400 text-sm">{anime.genre.join(', ')}</p>
                     </div>
                   </div>
                 ))}
