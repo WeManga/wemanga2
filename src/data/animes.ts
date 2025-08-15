@@ -427,7 +427,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 37", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4745172" },
                 ]
 },
-  {
+{
     title: "MY HERO ACADEMIA",
     description: "Les pouvoirs d'Izuku Midoriya, élève en troisième au collège Oridera, ne se sont pas manifestés, et ne le feront probablement jamais. L'an prochain, il doit entrer au lycée. Et bien qu'il n'ait aucun Alter, il vise le lycée Yuei, une académie réputée qui a formé les plus grands super-héros...",
     poster: "https://www.manga-news.com/public/images/pix/dvd/2548/my-hero-academia-anime-visuel-2.jpg",
@@ -435,63 +435,60 @@ const animeConfigs: SimpleAnimeConfig[] = [
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2014,
     rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-     seasons: [
-    {
-      number: 1,
-      title: "Saison 1",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955114" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955115" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955118" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955119" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955121" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955123" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955125" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955127" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955128" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955131" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955134" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955151" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955153" },
-
-] 
-  },
-  {
-
-         seasons: [
-    {
-      number: 2,
-      title: "Saison 2",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955367" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955369" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955370" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955371" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955372" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955374" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955376" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955378" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955379" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955381" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955382" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955383" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955384" },
-      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955385" },
-      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955386" },
-      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955387" },
-      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955389" },
-      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955390" },
-      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955391" },
-      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955392" },
-      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955393" },
-      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955399" },
-      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955401" },
-      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955402" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955410" },
-          ]
-        }
+    type: "serie",
+    status: "En cours",
+    category: "nouveaute",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+          { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955114" },
+          { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955115" },
+          { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955118" },
+          { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955119" },
+          { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955121" },
+          { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955123" },
+          { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955125" },
+          { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955127" },
+          { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955128" },
+          { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955131" },
+          { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955134" },
+          { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955151" },
+          { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955153" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+          { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955367" },
+          { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955369" },
+          { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955370" },
+          { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955371" },
+          { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955372" },
+          { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955374" },
+          { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955376" },
+          { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955378" },
+          { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955379" },
+          { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955381" },
+          { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955382" },
+          { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955383" },
+          { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955384" },
+          { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955385" },
+          { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955386" },
+          { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955387" },
+          { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955389" },
+          { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955390" },
+          { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955391" },
+          { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955392" },
+          { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955393" },
+          { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955399" },
+          { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955401" },
+          { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955402" },
+          { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955410" }
+        ]
+      }
     ]
   },
   {
