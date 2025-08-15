@@ -3314,6 +3314,40 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5885451" },
     ]
 },
+  {
+    title: "To Be Hero X",
+    description: "Dans un monde où les individus exceptionnels sont applaudis, c'est la “confiance“ qui crée ces super-héros. Si les gens croient qu'une personne peut voler, elle obtiendra cette capacité. Inversement, un héros ayant des pouvoirs spéciaux peut s'en voir privé, s'il perd cette confiance.",
+    poster: "https://fr.web.img4.acsta.net/img/d5/2a/d52a37aa61a0b1682fd088d2e09de360.jpg",
+    banner: "https://adala-news.fr/wp-content/uploads/2025/03/To-Be-Hero-X-anime.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    category: "nouveaute",
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5869621" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877520" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5885636" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5893636" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5900764" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5908179" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5914588" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5921167" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5926856" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5931666" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5937152" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5942980" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5948717" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5954995" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5962863" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969850" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976122" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981456" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987652" },
+      // ... plus d'épisodes
+    ]
+},
 {
   title: "Dragon Ball Z",
   description: "Dragon Ball Z est un anime qui se déroule cinq années après le mariage de Son Goku et de Chichi. Tous deux sont parents de Son Gohan. Mais tout va basculer lorsque Raditz va débarquer sur Terre pour retrouver son fils, Son Goku.",
