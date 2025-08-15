@@ -259,6 +259,7 @@ const HomePage: React.FC<HomePageProps> = ({
 
         <AdBanner id="homeBottom" />
         <Footer />
+          </div>
       </div>
     </div>
   );
