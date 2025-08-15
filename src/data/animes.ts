@@ -3486,7 +3486,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987743" },
       // ... plus d'épisodes
     ]
-}
+},
 {
   title: "Dragon Ball Z",
   description: "Dragon Ball Z est un anime qui se déroule cinq années après le mariage de Son Goku et de Chichi. Tous deux sont parents de Son Gohan. Mais tout va basculer lorsque Raditz va débarquer sur Terre pour retrouver son fils, Son Goku.",
