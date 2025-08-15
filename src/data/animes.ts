@@ -586,6 +586,80 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
 },
   {
+    title: "Jujutsu Kaisen S1",
+    description: "Un fléau potentiellement de classe S a été repéré dans une prison pour mineurs. Yuji, Megumi et Nobara sont envoyés sur place pour essayer de retrouver des survivants, si tant est qu'il y en ait, et ordre leur est donné de ne surtout pas approcher le fléau lui-même.",
+    poster: "https://fr.web.img3.acsta.net/pictures/20/09/14/10/31/4875617.jpg",
+    banner: "https://fr.web.img5.acsta.net/c_400_225/newsv7/22/02/28/16/40/0403689.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2020,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    category: "classique",
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668025" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668028" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668029" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668030" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668034" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668035" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668038" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668040" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668042" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668044" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668049" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668055" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668061" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668066" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668072" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668077" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668081" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668084" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668086" },
+      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668089" },
+      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668092" },
+      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668096" },
+      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668102" },
+      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668111" },
+          ]
+},
+    {
+    title: "Jujutsu Kaisen S2",
+    description: "Mei Mei et son jeune frère doivent venir à bout d'un fléau de classe S s'ils veulent pouvoir tenter d'arrêter Geto. Grâce à Fushiguro, les exorcistes qui affrontent Dagon se voient offrir une porte de sortie. Mais avant qu'ils puissent s'échapper, un visage bien connu de Naobito fait irruption.",
+    poster: "https://fr.web.img3.acsta.net/pictures/23/08/24/17/19/2771821.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_640_360/newsv7/22/03/15/11/35/4025847.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2020,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    episodes: [
+     { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5253308" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5253310" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5258312" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5258314" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5263543" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5263545" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5269446" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5278562" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5278171" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5288287" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5298421" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5306222" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5314926" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5324699" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5334985" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5346113" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5355754" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5364778" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5372583" },
+      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5380126" },
+      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5395745" },
+      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5404433" },
+      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5413795" },
+          ]
+},
+  {
     title: "MY HERO ACADEMIA S1",
     description: "Les pouvoirs d'Izuku Midoriya, élève en troisième au collège Oridera, ne se sont pas manifestés, et ne le feront probablement jamais. L'an prochain, il doit entrer au lycée. Et bien qu'il n'ait aucun Alter, il vise le lycée Yuei, une académie réputée qui a formé les plus grands super-héros...",
     poster: "https://www.manga-news.com/public/images/pix/dvd/2548/my-hero-academia-anime-visuel-2.jpg",
@@ -3585,6 +3659,20 @@ const animeConfigs: SimpleAnimeConfig[] = [
     status: "Terminé", // ou "Terminé"
     episodes: [
       { title: "G.I.T.S. Le Film", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5036787" },
+          ]
+  },
+           {
+    title: "Jujutsu Kaisen Zero",
+    description: "Les sentiments négatifs que relâchent les êtres humains sont en cause. Souffrance, regrets, humiliation : leur concentration dans un même endroit engendre des malédictions souvent mortelles... C'est ce que va découvrir Yuji Itadori, lycéen et membre du club d'occultisme.",
+    poster: "https://fr.web.img6.acsta.net/pictures/22/02/16/12/44/0721822.png",
+    banner: "https://fr.web.img3.acsta.net/r_1280_720/newsv7/22/03/14/17/15/4199446.jpg",
+    genre: ["Action", "Aventure"],
+    year: 2020,
+    rating: 8,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4879087" },
           ]
   },
            {
