@@ -1,7 +1,21 @@
 // src/data/animes.ts
 import { Anime } from '../types';
 
-// Configuration simple pour ajouter des nouveaux animes
+// ------------------------------
+// 1. Types simplifiés pour config
+// ------------------------------
+interface SimpleEpisodeConfig {
+  title: string;
+  videoUrl: string;
+  duration?: string;
+}
+
+interface SimpleSeasonConfig {
+  number: number;
+  title?: string;
+  episodes: SimpleEpisodeConfig[];
+}
+
 interface SimpleAnimeConfig {
   title: string;
   description: string;
@@ -13,16 +27,54 @@ interface SimpleAnimeConfig {
   type: 'serie' | 'film';
   status: string;
   category: 'nouveaute' | 'classique';
-  episodes: {
-    title: string;
-    videoUrl: string;
-    duration?: string;
 
-  }[];
+  // Ancienne méthode : une seule saison
+  episodes?: SimpleEpisodeConfig[];
+
+  // Nouvelle méthode : plusieurs saisons
+  seasons?: SimpleSeasonConfig[];
 }
 
-// Fonction pour créer automatiquement un anime à partir d'une configuration simple
+// ------------------------------
+// 2. Fonction pour créer l'anime
+// ------------------------------
 const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
+  let seasonsData;
+
+  if (config.seasons && config.seasons.length > 0) {
+    // Mode multi-saisons
+    seasonsData = config.seasons.map((season) => ({
+      id: season.number,
+      number: season.number,
+      title: season.title || `Saison ${season.number}`,
+      episodes: season.episodes.map((ep, index) => ({
+        id: index + 1,
+        title: ep.title || `Épisode ${index + 1}`,
+        duration: ep.duration || "",
+        thumbnail: config.poster,
+        videoUrl: ep.videoUrl,
+        description: `${config.title} - ${season.title || `Saison ${season.number}`} - Épisode ${index + 1}`
+      }))
+    }));
+  } else {
+    // Mode ancien : une seule saison
+    seasonsData = [
+      {
+        id: 1,
+        number: 1,
+        title: "Saison 1",
+        episodes: (config.episodes ?? []).map((ep, index) => ({
+          id: index + 1,
+          title: ep.title || `Épisode ${index + 1}`,
+          duration: ep.duration || "",
+          thumbnail: config.poster,
+          videoUrl: ep.videoUrl,
+          description: `${config.title} - Épisode ${index + 1}`
+        }))
+      }
+    ];
+  }
+
   return {
     id,
     title: config.title,
@@ -35,177 +87,14 @@ const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
     type: config.type,
     status: config.status,
     category: config.category,
-    seasons: [
-      {
-        id: 1,
-        number: 1,
-        title: "Saison 1",
-        episodes: config.episodes.map((ep, index) => ({
-          id: index + 1,
-          title: ep.title || `Épisode ${index + 1}`,
-          duration: ep.duration || "",
-          thumbnail: config.poster,
-          videoUrl: ep.videoUrl,
-          description: `${config.title} - Épisode ${index + 1}`
-        }))
-      }
-    ]
+    seasons: seasonsData
   };
 };
 
-// Configuration simplifiée des animes - AJOUTEZ VOS NOUVEAUX ANIMES ICI
+// ------------------------------
+// 3. Définition des animes
+// ------------------------------
 const animeConfigs: SimpleAnimeConfig[] = [
-   {
-    title: " Black Clover",
-    description: "Description de l' anime",
-    poster: "https://cdn.anisearch.fr/images/anime/cover/16/16102_600.webp",
-    banner: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/0273e80242d80b0218f640e038269c18.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2017,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-         category: "classique",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3520975" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521008" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521188" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521537" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3522586" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3522590" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3524014" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3524069" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525134" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525581" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525957" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3530401" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3530831" },
-      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3531439" },
-      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3531673" },
-      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3534868" },
-      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3535236" },
-      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3536858" },
-      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3536860" },
-      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3539789" },
-      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3540302" },
-      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3540501" },
-      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3541047" },
-      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3543688" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3544294" },
-      { title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3545502" },
-      { title: "Épisode 27", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3632803" },
-      { title: "Épisode 28", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577299" },
-      { title: "Épisode 29", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577336" },
-      { title: "Épisode 30", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577302" },
-      { title: "Épisode 31", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577305" },
-      { title: "Épisode 32", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577868" },
-      { title: "Épisode 33", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3578650" },
-      { title: "Épisode 34", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3580408" },
-      { title: "Épisode 35", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3581268" },
-      { title: "Épisode 36", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3584045" },
-      { title: "Épisode 37", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3584057" },
-      { title: "Épisode 38", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3585147" },
-      { title: "Épisode 39", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3585779" },
-      { title: "Épisode 40", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3586396" },
-      { title: "Épisode 41", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3586775" },
-      { title: "Épisode 42", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3608070" },
-      { title: "Épisode 43", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3589169" },
-      { title: "Épisode 44", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3595240" },
-      { title: "Épisode 45", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591414" },
-      { title: "Épisode 46", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591416" },
-      { title: "Épisode 47", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591417" },
-      { title: "Épisode 48", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591419" },
-      { title: "Épisode 49", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763659" },
-      { title: "Épisode 50", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763663" },
-      { title: "Épisode 51", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763668" },
-      { title: "Épisode 52", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763671" },
-      { title: "Épisode 53", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763675" },
-      { title: "Épisode 54", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763679" },
-      { title: "Épisode 55", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763681" },
-      { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763685" },
-      { title: "Épisode 57", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763688" },
-      { title: "Épisode 58", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763690" },
-      { title: "Épisode 59", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763692" },
-      { title: "Épisode 60", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763696" },
-      { title: "Épisode 61", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763698" },
-      { title: "Épisode 62", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763701" },
-      { title: "Épisode 63", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763707" },
-      { title: "Épisode 64", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763712" },
-      { title: "Épisode 65", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763714" },
-      { title: "Épisode 66", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763717" },
-      { title: "Épisode 67", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763718" },
-      { title: "Épisode 68", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763722" },
-      { title: "Épisode 69", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763726" },
-      { title: "Épisode 70", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4812770" },
-      { title: "Épisode 71", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763729" },
-      { title: "Épisode 72", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763730" },
-      { title: "Épisode 73", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763737" },
-      { title: "Épisode 74", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763742" },
-      { title: "Épisode 75", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763750" },
-      { title: "Épisode 76", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763755" },
-      { title: "Épisode 77", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763763" },
-      { title: "Épisode 78", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763766" },
-      { title: "Épisode 79", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763768" },
-      { title: "Épisode 80", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763772" },
-      { title: "Épisode 81", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763774" },
-      { title: "Épisode 82", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763776" },
-      { title: "Épisode 83", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763780" },
-      { title: "Épisode 84", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763782" },
-      { title: "Épisode 85", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763784" },
-      { title: "Épisode 86", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5254838" },
-      { title: "Épisode 87", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763789" },
-      { title: "Épisode 88", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763790" },
-      { title: "Épisode 89", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763793" },
-      { title: "Épisode 90", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5254871" },
-      { title: "Épisode 91", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763801" },
-      { title: "Épisode 92", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763803" },
-      { title: "Épisode 93", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763805" },
-      { title: "Épisode 94", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763806" },
-      { title: "Épisode 95", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4959099" },
-      { title: "Épisode 96", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783740" },
-      { title: "Épisode 97", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783741" },
-      { title: "Épisode 98", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783742" },
-      { title: "Épisode 99", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783743" },
-      { title: "Épisode 100", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783744" },
-      { title: "Épisode 101", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783747" },
-      { title: "Épisode 102", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783748" },
-      { title: "Épisode 103", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783749" },
-      { title: "Épisode 104", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783750" },
-      { title: "Épisode 105", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783751" },
-      { title: "Épisode 106", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783753" },
-      { title: "Épisode 107", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783754" },
-      { title: "Épisode 108", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783756" },
-      { title: "Épisode 109", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783757" },
-      { title: "Épisode 110", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783758" },
-      { title: "Épisode 111", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783762" },
-      { title: "Épisode 112", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783763" },
-      { title: "Épisode 113", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783764" },
-      { title: "Épisode 114", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783765" },
-      { title: "Épisode 115", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783766" },
-      { title: "Épisode 116", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860698" },
-      { title: "Épisode 117", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860699" },
-      { title: "Épisode 118", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860700" },
-      { title: "Épisode 119", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860701" },
-      { title: "Épisode 120", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546043" },
-      { title: "Épisode 121", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546044" },
-      { title: "Épisode 122", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546045" },
-      { title: "Épisode 123", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546046" },
-      { title: "Épisode 124", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591929" },
-      { title: "Épisode 125", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591930" },
-      { title: "Épisode 126", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591931" },
-      { title: "Épisode 127", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591932" },
-      { title: "Épisode 128", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591934" },
-      { title: "Épisode 129", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591935" },
-      { title: "Épisode 130", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591938" },
-      { title: "Épisode 131", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591939" },
-      { title: "Épisode 132", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591940" },
-      
-     
-      
-
-      // ... plus d'épisodes
-    ]
-  },
   {
     title: "Bleach",
     description: "Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits. Un jour, il croise la route d'une belle Shinigami",
@@ -216,7 +105,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8.5,
     type: "serie", // ou "film"
     status: "Terminé", // ou "Terminé"
-        category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?start=80&videoid=4818419" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4818420" },
@@ -489,29 +377,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
       // ... plus d'épisodes si nécessaire
     ]
 },
-    {
-    title: "DANDADAN S2",
-    description: "Momo Ayase et Ken Takakura (surnommé Okarun) sont deux lycéens diamétralement opposés : Momo est persuadée de l’existence des fantômes, mais refuse de croire aux extraterrestres. Okarun croit fermement aux aliens et rejette tout ce qui touche aux esprits. Pour trancher ce débat, ils conviennent d’un défi : Momo se rendra dans un hôpital réputé pour abriter des créatures extraterrestres, tandis qu’Okarun explorera un tunnel hanté. Chacun fait une rencontre inattendue... qui va bouleverser leur vision du monde et les lier de manière indissociable. C’est le point de départ d’une aventure déjantée, mêlant romance, paranormal et situations totalement inédites.",
-    poster: "https://fr.web.img6.acsta.net/img/8a/81/8a819234254d8b886c9eac0db480fb48.jpg",
-    banner: "https://www.catsuka.com/interf/breves/dandadan_s2_prerelease.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2025,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "Terminé", // ou "Terminé"
-    category: "nouveaute",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5952240" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5959678" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5966920" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5973704" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5979355" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5985105" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5990643" },
-
-      // ... plus d'épisodes si nécessaire
-    ]
-},
   {
     title: "Death Note",
     description: "Un carnet maléfique (Death Note) tombe entre les mains de Light Yagami, un adolescent de 17 ans. Ce cahier a un pouvoir maléfique : si quelqu'un note un nom sur ses pages, la personne en question meurt quelques secondes plus tard.",
@@ -522,7 +387,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8,
     type: "serie", // ou "film"
     status: "Terminé", // ou "Terminé"
-        category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4745088" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4745089" },
@@ -564,126 +428,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
                 ]
 },
   {
-    title: "Kaiju No.8 S1",
-    description: "Kaiju no 8 se déroule dans un monde dans lequel des monstres nommés kaiju provoquent régulièrement des désastres. Le Japon est le pays avec le taux d'attaques de kaiju le plus élevé au monde et, pour les combattre, il crée la Force de défense anti-Kaiju (日本防衛隊, Nihon bōei-tai, lit. « Force de défense japonaise »).",
-    poster: "https://fr.web.img6.acsta.net/img/77/07/77079c0a800097522800816954373303.jpg",
-    banner: "https://i0.wp.com/www.cinechos.com/wp-content/uploads/2024/06/poster-kaiju-no-8-edited.webp",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2025,
-    rating: 8,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5503649" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5510925" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5518047" },
-      { title: "Épisode 4", videoUrl: "https://sendvid.com/8taamsgk" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5532677" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5538940" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5545176" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5551613" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5557152" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5563936" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5588347" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5595357" },
-      // ... plus d'épisodes
-    ]
-},
-  {
-    title: "Kaiju No.8 S2",
-    description: "DKaiju no 8 se déroule dans un monde dans lequel des monstres nommés kaiju provoquent régulièrement des désastres. Le Japon est le pays avec le taux d'attaques de kaiju le plus élevé au monde et, pour les combattre, il crée la Force de défense anti-Kaiju (日本防衛隊, Nihon bōei-tai, lit. « Force de défense japonaise »).",
-    poster: "https://fr.web.img5.acsta.net/img/c2/27/c227f45be929b01fa507dde0ca62e723.jpg",
-    banner: "https://adala-news.fr/wp-content/uploads/2024/06/Kaiju-No.-8-collab-Plaza.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2025,
-    rating: 8,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "nouveaute",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://sendvid.com/o5ovrbxk" },
-      { title: "Épisode 2", videoUrl: "https://sendvid.com/ariluppd" },
-      { title: "Épisode 3", videoUrl: "https://sendvid.com/c95j1ukm" },
-      { title: "Épisode 4", videoUrl: "https://sendvid.com/ihaj6og7" },
-      // ... plus d'épisodes
-    ]
-},
-  {
-    title: "Jujutsu Kaisen S1",
-    description: "Un fléau potentiellement de classe S a été repéré dans une prison pour mineurs. Yuji, Megumi et Nobara sont envoyés sur place pour essayer de retrouver des survivants, si tant est qu'il y en ait, et ordre leur est donné de ne surtout pas approcher le fléau lui-même.",
-    poster: "https://fr.web.img3.acsta.net/pictures/20/09/14/10/31/4875617.jpg",
-    banner: "https://fr.web.img5.acsta.net/c_400_225/newsv7/22/02/28/16/40/0403689.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2020,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "classique",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668025" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668028" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668029" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668030" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668034" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668035" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668038" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668040" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668042" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668044" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668049" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668055" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668061" },
-      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668066" },
-      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668072" },
-      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668077" },
-      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668081" },
-      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668084" },
-      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668086" },
-      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668089" },
-      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668092" },
-      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668096" },
-      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668102" },
-      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668111" },
-          ]
-},
-    {
-    title: "Jujutsu Kaisen S2",
-    description: "Mei Mei et son jeune frère doivent venir à bout d'un fléau de classe S s'ils veulent pouvoir tenter d'arrêter Geto. Grâce à Fushiguro, les exorcistes qui affrontent Dagon se voient offrir une porte de sortie. Mais avant qu'ils puissent s'échapper, un visage bien connu de Naobito fait irruption.",
-    poster: "https://fr.web.img3.acsta.net/pictures/23/08/24/17/19/2771821.jpg",
-    banner: "https://fr.web.img6.acsta.net/c_640_360/newsv7/22/03/15/11/35/4025847.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2020,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
-     { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5253308" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5253310" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5258312" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5258314" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5263543" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5263545" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5269446" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5278562" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5278171" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5288287" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5298421" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5306222" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5314926" },
-      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5324699" },
-      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5334985" },
-      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5346113" },
-      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5355754" },
-      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5364778" },
-      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5372583" },
-      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5380126" },
-      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5395745" },
-      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5404433" },
-      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5413795" },
-          ]
-},
-  {
-    title: "MY HERO ACADEMIA S1",
+    title: "MY HERO ACADEMIA",
     description: "Les pouvoirs d'Izuku Midoriya, élève en troisième au collège Oridera, ne se sont pas manifestés, et ne le feront probablement jamais. L'an prochain, il doit entrer au lycée. Et bien qu'il n'ait aucun Alter, il vise le lycée Yuei, une académie réputée qui a formé les plus grands super-héros...",
     poster: "https://www.manga-news.com/public/images/pix/dvd/2548/my-hero-academia-anime-visuel-2.jpg",
     banner: "https://www.programme-tv.net/imgre/fit/~2~backoffice~program~6592e46d688f7f55.jpg/1160x500/crop-from/top/quality/80/cr/wqkgVGhlIE1vdmllIERC/my-hero-academia.jpg",
@@ -692,7 +437,10 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8.5,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-    category: "classique",
+     seasons: [
+    {
+      number: 1,
+      title: "Saison 1",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955114" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955115" },
@@ -707,18 +455,15 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955134" },
       { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955151" },
       { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955153" },
-          ]
+
+] 
   },
   {
-    title: "MY HERO ACADEMIA S2",
-    description: "A peine remis de leurs émotions, les élèves de la seconde A vont devoir se préparer pour un évènement phare du lycée Yuei : le grand championnat sportif annuel. Cet évènement, réputé dans le monde entier, est l'occasion rêvée pour les participants de se faire remarquer par les agences de Super-Héros.",
-    poster: "https://fr.web.img3.acsta.net/pictures/21/02/16/12/46/2749639.jpg",
-    banner: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/07/F475D076-D85D-4A4F-9953-03C2301021A1.jpeg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2017,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
+
+         seasons: [
+    {
+      number: 2,
+      title: "Saison 2",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955367" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955369" },
@@ -746,6 +491,8 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955402" },
       { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955410" },
           ]
+        }
+    ]
   },
   {
     title: "MY HERO ACADEMIA S3",
@@ -1097,113 +844,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 147", videoUrl: "https://movearnpre.com/embed/8jstexgbsmp3" },
       { title: "Épisode 148", videoUrl: "https://movearnpre.com/embed/tn58rpgh5fxu" },
           ]
-  },
-  {
-    title: "Hero au Bouclier S1",
-    description: "Naofumi Iwatani, étudiant et otaku, est envoyé sans prévenir dans un autre monde en tant que héros au bouclier. Il y rencontrera trois autres héros, ayant chacun leur arme et qui auront pour objectif commun de contrer les vagues de calamités.",
-    poster: "https://fr.web.img3.acsta.net/pictures/20/04/29/14/35/2108345.jpg",
-    banner: "https://leclaireur.fnac.com/wp-content/uploads/2024/01/blablabla-1.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2019,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398295" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398306" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398307" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398311" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398315" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398319" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398324" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398328" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398334" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398335" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398336" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398337" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398338" },
-      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398341" },
-      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398342" },
-      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398343" },
-      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398345" },
-      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398346" },
-      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398348" },
-      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398349" },
-      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398350" },
-      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398351" },
-      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398352" },
-      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=439835" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398354" },
-               ]
-  },
-    {
-    title: "Hero au Bouclier S2",
-    description: "Naofumi Iwatani, 20 ans, passe de citoyen lambda à héros de seconde zone lorsqu'il est convoqué dans le royaume de Melromarc, ressemblant en tous points à un jeu vidéo. Trahi par ses coéquipiers, considéré comme le plus faible des protecteurs, ce héros désabusé aura-t-il encore envie de se battre ?",
-    poster: "https://fr.web.img5.acsta.net/pictures/20/09/09/11/12/4458267.jpg",
-    banner: "https://www.mangamag.fr/wp-content/uploads/2022/03/The-Rising-of-the-Shield-Hero-Saison-2.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2021,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4702857" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4709245" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4718842" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4728475" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4735790" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4744402" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4753393" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4761555" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4772048" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4781089" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4796432" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4796420" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4803852" },
-               ]
-  },
-      {
-    title: "Hero au Bouclier S3",
-    description: "Naofumi est projeté dans un monde proche en tout lieu d'un jeu de rôle d'heroic fantasy. Mais alors que d'autres héros ont été dotés d'armes offensives redoutables, Naofumi hérite d'un bouclier aux capacités limitées pour progresser dans ce jeu où le danger peut surgir à chaque instant.",
-    poster: "https://images.justwatch.com/poster/333036243/s718/saison-3.jpg",
-    banner: "https://teammanga.fr/wp-content/uploads/2022/08/9B66FD28-F449-498F-AD7F-B014A88014EF-1200x500.jpeg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2023,
-    rating: 8,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5307448" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5315978" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5326164" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5336278" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5347993" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5357930" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5365775" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5373741" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5381332" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5388571" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406111" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406113" },
-               ]
-  },
-        {
-    title: "Hero au Bouclier S4",
-    description: "Les membres de la Strike Team sont impliqués dans les affaires d'Antwon Mitchell, un baron de la drogue très respecté qui finit par faire chanter Vendrell pour obtenir son aide .",
-    poster: "https://images.justwatch.com/poster/333036230/s718/saison-4.jpg",
-    banner: "https://fr.web.img5.acsta.net/c_400_200/img/65/c0/65c058c1396c67b6245dd2c13a60d4b2.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2025,
-    rating: 8,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-          category: "nouveaute",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5974177" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5978874" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5984799" },
-
-               ]
   },
       {
     title: "Naruto",
@@ -1951,6 +1591,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+   category: "classique",
     episodes: [
  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834078" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834080" },
@@ -2046,6 +1687,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+     category: "classique",
     episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871931" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871932" },
@@ -2122,6 +1764,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+       category: "classique",
     episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834640" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3872001" },
@@ -2265,6 +1908,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+         category: "classique",
     episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824714" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824718" },
@@ -2331,6 +1975,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+    category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4832709" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4832997" },
@@ -2471,6 +2116,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+    category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833113" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833158" },
@@ -2542,6 +2188,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+    category: "classique",
     episodes: [
 
   { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471375" },
@@ -2728,6 +2375,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+    category: "classique",
     episodes: [
 
   { title: "Épisode 1", videoUrl: "https://oneupload.to/embed-hiil70h8dc2d.html" },
@@ -2873,6 +2521,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+    category: "classique",
     episodes: [
 
   { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471090" },
@@ -3158,7 +2807,156 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976654" },
   ]
 },
+ {
+    title: " Black Clover",
+    description: "Description de l' anime",
+    poster: "https://cdn.anisearch.fr/images/anime/cover/16/16102_600.webp",
+    banner: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/0273e80242d80b0218f640e038269c18.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2017,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3520975" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521008" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521188" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521537" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3522586" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3522590" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3524014" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3524069" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525134" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525581" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525957" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3530401" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3530831" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3531439" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3531673" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3534868" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3535236" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3536858" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3536860" },
+      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3539789" },
+      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3540302" },
+      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3540501" },
+      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3541047" },
+      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3543688" },
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3544294" },
+      { title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3545502" },
+      { title: "Épisode 27", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3632803" },
+      { title: "Épisode 28", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577299" },
+      { title: "Épisode 29", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577336" },
+      { title: "Épisode 30", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577302" },
+      { title: "Épisode 31", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577305" },
+      { title: "Épisode 32", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577868" },
+      { title: "Épisode 33", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3578650" },
+      { title: "Épisode 34", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3580408" },
+      { title: "Épisode 35", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3581268" },
+      { title: "Épisode 36", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3584045" },
+      { title: "Épisode 37", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3584057" },
+      { title: "Épisode 38", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3585147" },
+      { title: "Épisode 39", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3585779" },
+      { title: "Épisode 40", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3586396" },
+      { title: "Épisode 41", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3586775" },
+      { title: "Épisode 42", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3608070" },
+      { title: "Épisode 43", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3589169" },
+      { title: "Épisode 44", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3595240" },
+      { title: "Épisode 45", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591414" },
+      { title: "Épisode 46", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591416" },
+      { title: "Épisode 47", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591417" },
+      { title: "Épisode 48", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591419" },
+      { title: "Épisode 49", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763659" },
+      { title: "Épisode 50", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763663" },
+      { title: "Épisode 51", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763668" },
+      { title: "Épisode 52", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763671" },
+      { title: "Épisode 53", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763675" },
+      { title: "Épisode 54", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763679" },
+      { title: "Épisode 55", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763681" },
+      { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763685" },
+      { title: "Épisode 57", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763688" },
+      { title: "Épisode 58", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763690" },
+      { title: "Épisode 59", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763692" },
+      { title: "Épisode 60", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763696" },
+      { title: "Épisode 61", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763698" },
+      { title: "Épisode 62", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763701" },
+      { title: "Épisode 63", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763707" },
+      { title: "Épisode 64", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763712" },
+      { title: "Épisode 65", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763714" },
+      { title: "Épisode 66", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763717" },
+      { title: "Épisode 67", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763718" },
+      { title: "Épisode 68", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763722" },
+      { title: "Épisode 69", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763726" },
+      { title: "Épisode 70", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4812770" },
+      { title: "Épisode 71", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763729" },
+      { title: "Épisode 72", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763730" },
+      { title: "Épisode 73", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763737" },
+      { title: "Épisode 74", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763742" },
+      { title: "Épisode 75", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763750" },
+      { title: "Épisode 76", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763755" },
+      { title: "Épisode 77", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763763" },
+      { title: "Épisode 78", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763766" },
+      { title: "Épisode 79", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763768" },
+      { title: "Épisode 80", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763772" },
+      { title: "Épisode 81", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763774" },
+      { title: "Épisode 82", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763776" },
+      { title: "Épisode 83", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763780" },
+      { title: "Épisode 84", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763782" },
+      { title: "Épisode 85", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763784" },
+      { title: "Épisode 86", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5254838" },
+      { title: "Épisode 87", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763789" },
+      { title: "Épisode 88", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763790" },
+      { title: "Épisode 89", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763793" },
+      { title: "Épisode 90", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5254871" },
+      { title: "Épisode 91", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763801" },
+      { title: "Épisode 92", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763803" },
+      { title: "Épisode 93", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763805" },
+      { title: "Épisode 94", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763806" },
+      { title: "Épisode 95", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4959099" },
+      { title: "Épisode 96", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783740" },
+      { title: "Épisode 97", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783741" },
+      { title: "Épisode 98", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783742" },
+      { title: "Épisode 99", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783743" },
+      { title: "Épisode 100", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783744" },
+      { title: "Épisode 101", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783747" },
+      { title: "Épisode 102", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783748" },
+      { title: "Épisode 103", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783749" },
+      { title: "Épisode 104", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783750" },
+      { title: "Épisode 105", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783751" },
+      { title: "Épisode 106", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783753" },
+      { title: "Épisode 107", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783754" },
+      { title: "Épisode 108", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783756" },
+      { title: "Épisode 109", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783757" },
+      { title: "Épisode 110", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783758" },
+      { title: "Épisode 111", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783762" },
+      { title: "Épisode 112", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783763" },
+      { title: "Épisode 113", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783764" },
+      { title: "Épisode 114", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783765" },
+      { title: "Épisode 115", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783766" },
+      { title: "Épisode 116", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860698" },
+      { title: "Épisode 117", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860699" },
+      { title: "Épisode 118", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860700" },
+      { title: "Épisode 119", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860701" },
+      { title: "Épisode 120", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546043" },
+      { title: "Épisode 121", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546044" },
+      { title: "Épisode 122", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546045" },
+      { title: "Épisode 123", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546046" },
+      { title: "Épisode 124", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591929" },
+      { title: "Épisode 125", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591930" },
+      { title: "Épisode 126", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591931" },
+      { title: "Épisode 127", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591932" },
+      { title: "Épisode 128", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591934" },
+      { title: "Épisode 129", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591935" },
+      { title: "Épisode 130", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591938" },
+      { title: "Épisode 131", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591939" },
+      { title: "Épisode 132", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591940" },
+      
+     
+      
 
+      // ... plus d'épisodes
+    ]
+  },
   {
   title: "Dragon Ball Z",
   description: "Dragon Ball Z est un anime qui se déroule cinq années après le mariage de Son Goku et de Chichi. Tous deux sont parents de Son Gohan. Mais tout va basculer lorsque Raditz va débarquer sur Terre pour retrouver son fils, Son Goku.",
@@ -3169,7 +2967,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
   rating: 8.5,
   type: "serie", // ou "film"
   status: "Terminé", // ou "Terminé"
-        category: "classique",
   episodes: [
     // Épisodes 1 à 50 déjà inclus ici...
     { title: "Épisode 1", videoUrl: "https://sendvid.com/mhmwljnw" },
@@ -3466,124 +3263,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
 
   ]
 },
-  {
-    title: "Solo Leveling S1",
-    description: "Sung Jin Woo, un chasseur de portails de rang E, considéré comme le plus faible de tous, se rend avec une équipe dans un donjon de rang D. Cependant, alors qu'ils se retrouvent piégé dans une salle avec des monstres qui ne sont pas du tout du niveau du donjon, Jin Woo succombe.",
-    poster: "https://fr.web.img5.acsta.net/pictures/23/09/11/09/25/4087505.jpg",
-    banner: "https://a.storyblok.com/f/178900/960x540/11b5912604/poster_solo_leveling_16_9.png",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2024,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-        category: "classique",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406687" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5415193" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5421450" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5428347" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5435958" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5444965" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5453272" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5470652" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5479612" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5496084" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5504016" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5511308" },
-    ]
-},
-  {
-    title: "Solo Leveling S2",
-    description: "Intriguée par Jinwoo, Cha Hae-in rejoint le donjon. À l'intérieur, la troupe de Kihoon arrive face au boss, qui compte ne faire qu'une bouchée d'eux.",
-    poster: "https://m.media-amazon.com/images/I/81ZAC67DE1S.jpg",
-    banner: "https://www.superpouvoir.com/wp-content/uploads/2025/03/solo-leveling-saison-2-jinwoo-e1743362300963.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2025,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5806748" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5812653" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5819532" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5826552" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5834007" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5839458" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845865" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5851984" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5857932" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5864065" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5869318" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877505" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5885451" },
-    ]
-},
-  {
-    title: "To Be Hero X",
-    description: "Dans un monde où les individus exceptionnels sont applaudis, c'est la “confiance“ qui crée ces super-héros. Si les gens croient qu'une personne peut voler, elle obtiendra cette capacité. Inversement, un héros ayant des pouvoirs spéciaux peut s'en voir privé, s'il perd cette confiance.",
-    poster: "https://fr.web.img4.acsta.net/img/d5/2a/d52a37aa61a0b1682fd088d2e09de360.jpg",
-    banner: "https://adala-news.fr/wp-content/uploads/2025/03/To-Be-Hero-X-anime.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2025,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "nouveaute",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5869621" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877520" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5885636" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5893636" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5900764" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5908179" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5914588" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5921167" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5926856" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5931666" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5937152" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5942980" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5948717" },
-      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5954995" },
-      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5962863" },
-      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969850" },
-      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976122" },
-      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981456" },
-      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987652" },
-      // ... plus d'épisodes
-    ]
-},
-  {
-    title: "Witch Watch",
-    description: "Morihito Otogi possède une force surhumaine car il est le descendant d'une lignée d'ogres. Un jour, son père lui annonce qu'il doit devenir le familier de Nico, son amie d'enfance qui est une sorcière. Ils vont vivre ensemble et il devra la protéger de tout danger.",
-    poster: "https://fr.web.img6.acsta.net/img/8b/e1/8be1cdaf83442f28bdb3c0a2609a311b.jpg",
-    banner: "https://fr.web.img4.acsta.net/c_400_200/img/5a/1d/5a1d5fe2aa5b768aedbb4f559459de9c.jpeg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2025,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "nouveaute",
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5885753" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5893796" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5900794" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5908292" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5914838" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5921288" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5926890" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5931918" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5937222" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5943052" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5948742" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5955063" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5962896" },
-      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969858" },
-      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976208" },
-      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981540" },
-      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987743" },
-      // ... plus d'épisodes
-    ]
-},
 {
   title: "Dragon Ball Z",
   description: "Dragon Ball Z est un anime qui se déroule cinq années après le mariage de Son Goku et de Chichi. Tous deux sont parents de Son Gohan. Mais tout va basculer lorsque Raditz va débarquer sur Terre pour retrouver son fils, Son Goku.",
@@ -3682,20 +3361,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     status: "Terminé", // ou "Terminé"
     episodes: [
       { title: "G.I.T.S. Le Film", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5036787" },
-          ]
-  },
-           {
-    title: "Jujutsu Kaisen Zero",
-    description: "Les sentiments négatifs que relâchent les êtres humains sont en cause. Souffrance, regrets, humiliation : leur concentration dans un même endroit engendre des malédictions souvent mortelles... C'est ce que va découvrir Yuji Itadori, lycéen et membre du club d'occultisme.",
-    poster: "https://fr.web.img6.acsta.net/pictures/22/02/16/12/44/0721822.png",
-    banner: "https://fr.web.img3.acsta.net/r_1280_720/newsv7/22/03/14/17/15/4199446.jpg",
-    genre: ["Action", "Aventure"],
-    year: 2020,
-    rating: 8,
-    type: "film", // ou "film"
-    status: "Terminé", // ou "Terminé"
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4879087" },
           ]
   },
            {
@@ -4146,46 +3811,45 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Weathering With You", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4110281" },
           ]
   },
-  {
-    title: "Your Name",
-    description: "Mitsuha, adolescente coincée dans une famille traditionnelle, rêve de quitter ses montagnes natales pour découvrir la vie trépidante de Tokyo. Elle est loin d'imaginer pouvoir vivre l'aventure urbaine dans la peau de... Taki, un jeune lycéen vivant à Tokyo. À travers ses rêves, Mitsuha se voit littéralement propulsée dans la vie du jeune garçon. Quel mystère se cache derrière ces rêves étranges qui unissent deux destinées que tout oppose et qui ne se sont jamais rencontrées ?",
-    poster: "https://fr.web.img2.acsta.net/pictures/16/12/12/13/49/295774.jpg",
-    banner: "https://v9q2n5w7.delivery.rocketcdn.me/wp-content/uploads/2016/12/1008x646_your-name-makoto-shinkai.jpg",
-    genre: ["Fantaisie", "Romance", "Science-Fiction"],
-    year: 2016,
-    rating: 8,
-    type: "film", // ou "film"
-    status: "Terminé", // ou "Terminé"
-    episodes: [
-      { title: "Your Name", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3202964" },
-          ]
-  },
-  // AJOUTEZ VOS NOUVEAUX ANIMES ICI EN SUIVANT LE MÊME FORMAT
-  /*
-  {
-    title: "Nom de votre anime",
-    description: "Description de votre anime",
-    poster: "URL de l'image poster",
-    banner: "URL de l'image banner (optionnel)",
-    genre: ["Genre1", "Genre2", "Genre3"],
-    year: 2023,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
-      { title: "Épisode 1", videoUrl: "URL_VIDEO_1" },
-      { title: "Épisode 2", videoUrl: "URL_VIDEO_2" },
-      // ... plus d'épisodes
-    ]
-  },
-  */
+{
+  title: "Your Name",
+  description: "Mitsuha, adolescente coincée dans une famille traditionnelle...",
+  poster: "https://fr.web.img2.acsta.net/pictures/16/12/12/13/49/295774.jpg",
+  banner: "https://v9q2n5w7.delivery.rocketcdn.me/wp-content/uploads/2016/12/1008x646_your-name-makoto-shinkai.jpg",
+  genre: ["Fantaisie", "Romance", "Science-Fiction"],
+  year: 2016,
+  rating: 8,
+  type: "film", // ou "serie"
+  status: "Terminé",
+  episodes: [
+    { title: "Your Name", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3202964" }
+  ]
+},
+// AJOUTEZ VOS NOUVEAUX ANIMES ICI EN SUIVANT LE MÊME FORMAT
+/*
+{
+  title: "Nom de votre anime",
+  description: "Description de votre anime",
+  poster: "URL de l'image poster",
+  banner: "URL de l'image banner (optionnel)",
+  genre: ["Genre1", "Genre2", "Genre3"],
+  year: 2023,
+  rating: 8.5,
+  type: "serie", // ou "film"
+  status: "En cours", // ou "Terminé"
+  episodes: [
+    { title: "Épisode 1", videoUrl: "URL_VIDEO_1" },
+    { title: "Épisode 2", videoUrl: "URL_VIDEO_2" }
+  ]
+},
+*/
 ];
 
 // Génération automatique des animes à partir des configurations
-export const animes: Anime[] = animeConfigs.map((config, index) => 
+export const animes: Anime[] = animeConfigs.map((config, index) =>
   createAnime(index + 1, config)
 );
-
+export default animes;
 // Ancienne structure complexe supprimée - remplacée par le système simplifié ci-dessus
 /*
 export const animes: Anime[] = [
