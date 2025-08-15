@@ -55,6 +55,157 @@ const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
 
 // Configuration simplifiée des animes - AJOUTEZ VOS NOUVEAUX ANIMES ICI
 const animeConfigs: SimpleAnimeConfig[] = [
+   {
+    title: " Black Clover",
+    description: "Description de l' anime",
+    poster: "https://cdn.anisearch.fr/images/anime/cover/16/16102_600.webp",
+    banner: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/0273e80242d80b0218f640e038269c18.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2017,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "En cours", // ou "Terminé"
+         category: "classique",
+    episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3520975" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521008" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521188" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521537" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3522586" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3522590" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3524014" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3524069" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525134" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525581" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525957" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3530401" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3530831" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3531439" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3531673" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3534868" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3535236" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3536858" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3536860" },
+      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3539789" },
+      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3540302" },
+      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3540501" },
+      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3541047" },
+      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3543688" },
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3544294" },
+      { title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3545502" },
+      { title: "Épisode 27", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3632803" },
+      { title: "Épisode 28", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577299" },
+      { title: "Épisode 29", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577336" },
+      { title: "Épisode 30", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577302" },
+      { title: "Épisode 31", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577305" },
+      { title: "Épisode 32", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577868" },
+      { title: "Épisode 33", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3578650" },
+      { title: "Épisode 34", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3580408" },
+      { title: "Épisode 35", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3581268" },
+      { title: "Épisode 36", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3584045" },
+      { title: "Épisode 37", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3584057" },
+      { title: "Épisode 38", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3585147" },
+      { title: "Épisode 39", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3585779" },
+      { title: "Épisode 40", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3586396" },
+      { title: "Épisode 41", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3586775" },
+      { title: "Épisode 42", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3608070" },
+      { title: "Épisode 43", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3589169" },
+      { title: "Épisode 44", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3595240" },
+      { title: "Épisode 45", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591414" },
+      { title: "Épisode 46", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591416" },
+      { title: "Épisode 47", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591417" },
+      { title: "Épisode 48", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591419" },
+      { title: "Épisode 49", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763659" },
+      { title: "Épisode 50", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763663" },
+      { title: "Épisode 51", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763668" },
+      { title: "Épisode 52", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763671" },
+      { title: "Épisode 53", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763675" },
+      { title: "Épisode 54", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763679" },
+      { title: "Épisode 55", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763681" },
+      { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763685" },
+      { title: "Épisode 57", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763688" },
+      { title: "Épisode 58", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763690" },
+      { title: "Épisode 59", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763692" },
+      { title: "Épisode 60", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763696" },
+      { title: "Épisode 61", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763698" },
+      { title: "Épisode 62", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763701" },
+      { title: "Épisode 63", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763707" },
+      { title: "Épisode 64", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763712" },
+      { title: "Épisode 65", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763714" },
+      { title: "Épisode 66", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763717" },
+      { title: "Épisode 67", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763718" },
+      { title: "Épisode 68", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763722" },
+      { title: "Épisode 69", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763726" },
+      { title: "Épisode 70", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4812770" },
+      { title: "Épisode 71", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763729" },
+      { title: "Épisode 72", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763730" },
+      { title: "Épisode 73", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763737" },
+      { title: "Épisode 74", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763742" },
+      { title: "Épisode 75", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763750" },
+      { title: "Épisode 76", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763755" },
+      { title: "Épisode 77", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763763" },
+      { title: "Épisode 78", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763766" },
+      { title: "Épisode 79", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763768" },
+      { title: "Épisode 80", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763772" },
+      { title: "Épisode 81", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763774" },
+      { title: "Épisode 82", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763776" },
+      { title: "Épisode 83", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763780" },
+      { title: "Épisode 84", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763782" },
+      { title: "Épisode 85", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763784" },
+      { title: "Épisode 86", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5254838" },
+      { title: "Épisode 87", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763789" },
+      { title: "Épisode 88", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763790" },
+      { title: "Épisode 89", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763793" },
+      { title: "Épisode 90", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5254871" },
+      { title: "Épisode 91", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763801" },
+      { title: "Épisode 92", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763803" },
+      { title: "Épisode 93", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763805" },
+      { title: "Épisode 94", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763806" },
+      { title: "Épisode 95", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4959099" },
+      { title: "Épisode 96", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783740" },
+      { title: "Épisode 97", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783741" },
+      { title: "Épisode 98", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783742" },
+      { title: "Épisode 99", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783743" },
+      { title: "Épisode 100", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783744" },
+      { title: "Épisode 101", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783747" },
+      { title: "Épisode 102", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783748" },
+      { title: "Épisode 103", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783749" },
+      { title: "Épisode 104", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783750" },
+      { title: "Épisode 105", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783751" },
+      { title: "Épisode 106", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783753" },
+      { title: "Épisode 107", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783754" },
+      { title: "Épisode 108", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783756" },
+      { title: "Épisode 109", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783757" },
+      { title: "Épisode 110", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783758" },
+      { title: "Épisode 111", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783762" },
+      { title: "Épisode 112", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783763" },
+      { title: "Épisode 113", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783764" },
+      { title: "Épisode 114", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783765" },
+      { title: "Épisode 115", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783766" },
+      { title: "Épisode 116", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860698" },
+      { title: "Épisode 117", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860699" },
+      { title: "Épisode 118", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860700" },
+      { title: "Épisode 119", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860701" },
+      { title: "Épisode 120", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546043" },
+      { title: "Épisode 121", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546044" },
+      { title: "Épisode 122", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546045" },
+      { title: "Épisode 123", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546046" },
+      { title: "Épisode 124", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591929" },
+      { title: "Épisode 125", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591930" },
+      { title: "Épisode 126", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591931" },
+      { title: "Épisode 127", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591932" },
+      { title: "Épisode 128", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591934" },
+      { title: "Épisode 129", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591935" },
+      { title: "Épisode 130", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591938" },
+      { title: "Épisode 131", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591939" },
+      { title: "Épisode 132", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591940" },
+      
+     
+      
+
+      // ... plus d'épisodes
+    ]
+  },
   {
     title: "Bleach",
     description: "Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits. Un jour, il croise la route d'une belle Shinigami",
@@ -65,6 +216,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8.5,
     type: "serie", // ou "film"
     status: "Terminé", // ou "Terminé"
+        category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?start=80&videoid=4818419" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4818420" },
@@ -347,6 +499,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8,
     type: "serie", // ou "film"
     status: "Terminé", // ou "Terminé"
+        category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4745088" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4745089" },
@@ -397,6 +550,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8.5,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+        category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955114" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4955115" },
@@ -1548,7 +1702,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-   category: "classique",
     episodes: [
  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834078" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834080" },
@@ -1644,7 +1797,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-     category: "classique",
     episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871931" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871932" },
@@ -1721,7 +1873,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-       category: "classique",
     episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834640" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3872001" },
@@ -1865,7 +2016,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-         category: "classique",
     episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824714" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824718" },
@@ -1932,7 +2082,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-    category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4832709" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4832997" },
@@ -2073,7 +2222,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-    category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833113" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833158" },
@@ -2145,7 +2293,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-    category: "classique",
     episodes: [
 
   { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471375" },
@@ -2332,7 +2479,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-    category: "classique",
     episodes: [
 
   { title: "Épisode 1", videoUrl: "https://oneupload.to/embed-hiil70h8dc2d.html" },
@@ -2478,7 +2624,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
-    category: "classique",
     episodes: [
 
   { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471090" },
@@ -2764,156 +2909,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976654" },
   ]
 },
- {
-    title: " Black Clover",
-    description: "Description de l' anime",
-    poster: "https://cdn.anisearch.fr/images/anime/cover/16/16102_600.webp",
-    banner: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/0273e80242d80b0218f640e038269c18.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 2017,
-    rating: 8.5,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3520975" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521008" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521188" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3521537" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3522586" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3522590" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3524014" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3524069" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525134" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525581" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3525957" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3530401" },
-      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3530831" },
-      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3531439" },
-      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3531673" },
-      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3534868" },
-      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3535236" },
-      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3536858" },
-      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3536860" },
-      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3539789" },
-      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3540302" },
-      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3540501" },
-      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3541047" },
-      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3543688" },
-      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3544294" },
-      { title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3545502" },
-      { title: "Épisode 27", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3632803" },
-      { title: "Épisode 28", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577299" },
-      { title: "Épisode 29", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577336" },
-      { title: "Épisode 30", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577302" },
-      { title: "Épisode 31", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577305" },
-      { title: "Épisode 32", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3577868" },
-      { title: "Épisode 33", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3578650" },
-      { title: "Épisode 34", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3580408" },
-      { title: "Épisode 35", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3581268" },
-      { title: "Épisode 36", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3584045" },
-      { title: "Épisode 37", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3584057" },
-      { title: "Épisode 38", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3585147" },
-      { title: "Épisode 39", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3585779" },
-      { title: "Épisode 40", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3586396" },
-      { title: "Épisode 41", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3586775" },
-      { title: "Épisode 42", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3608070" },
-      { title: "Épisode 43", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3589169" },
-      { title: "Épisode 44", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3595240" },
-      { title: "Épisode 45", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591414" },
-      { title: "Épisode 46", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591416" },
-      { title: "Épisode 47", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591417" },
-      { title: "Épisode 48", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3591419" },
-      { title: "Épisode 49", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763659" },
-      { title: "Épisode 50", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763663" },
-      { title: "Épisode 51", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763668" },
-      { title: "Épisode 52", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763671" },
-      { title: "Épisode 53", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763675" },
-      { title: "Épisode 54", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763679" },
-      { title: "Épisode 55", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763681" },
-      { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763685" },
-      { title: "Épisode 57", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763688" },
-      { title: "Épisode 58", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763690" },
-      { title: "Épisode 59", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763692" },
-      { title: "Épisode 60", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763696" },
-      { title: "Épisode 61", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763698" },
-      { title: "Épisode 62", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763701" },
-      { title: "Épisode 63", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763707" },
-      { title: "Épisode 64", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763712" },
-      { title: "Épisode 65", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763714" },
-      { title: "Épisode 66", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763717" },
-      { title: "Épisode 67", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763718" },
-      { title: "Épisode 68", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763722" },
-      { title: "Épisode 69", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763726" },
-      { title: "Épisode 70", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4812770" },
-      { title: "Épisode 71", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763729" },
-      { title: "Épisode 72", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763730" },
-      { title: "Épisode 73", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763737" },
-      { title: "Épisode 74", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763742" },
-      { title: "Épisode 75", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763750" },
-      { title: "Épisode 76", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763755" },
-      { title: "Épisode 77", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763763" },
-      { title: "Épisode 78", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763766" },
-      { title: "Épisode 79", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763768" },
-      { title: "Épisode 80", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763772" },
-      { title: "Épisode 81", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763774" },
-      { title: "Épisode 82", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763776" },
-      { title: "Épisode 83", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763780" },
-      { title: "Épisode 84", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763782" },
-      { title: "Épisode 85", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763784" },
-      { title: "Épisode 86", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5254838" },
-      { title: "Épisode 87", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763789" },
-      { title: "Épisode 88", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763790" },
-      { title: "Épisode 89", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763793" },
-      { title: "Épisode 90", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5254871" },
-      { title: "Épisode 91", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763801" },
-      { title: "Épisode 92", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763803" },
-      { title: "Épisode 93", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763805" },
-      { title: "Épisode 94", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763806" },
-      { title: "Épisode 95", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4959099" },
-      { title: "Épisode 96", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783740" },
-      { title: "Épisode 97", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783741" },
-      { title: "Épisode 98", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783742" },
-      { title: "Épisode 99", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783743" },
-      { title: "Épisode 100", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783744" },
-      { title: "Épisode 101", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783747" },
-      { title: "Épisode 102", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783748" },
-      { title: "Épisode 103", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783749" },
-      { title: "Épisode 104", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783750" },
-      { title: "Épisode 105", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783751" },
-      { title: "Épisode 106", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783753" },
-      { title: "Épisode 107", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783754" },
-      { title: "Épisode 108", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783756" },
-      { title: "Épisode 109", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783757" },
-      { title: "Épisode 110", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783758" },
-      { title: "Épisode 111", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783762" },
-      { title: "Épisode 112", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783763" },
-      { title: "Épisode 113", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783764" },
-      { title: "Épisode 114", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783765" },
-      { title: "Épisode 115", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4783766" },
-      { title: "Épisode 116", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860698" },
-      { title: "Épisode 117", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860699" },
-      { title: "Épisode 118", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860700" },
-      { title: "Épisode 119", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4860701" },
-      { title: "Épisode 120", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546043" },
-      { title: "Épisode 121", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546044" },
-      { title: "Épisode 122", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546045" },
-      { title: "Épisode 123", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5546046" },
-      { title: "Épisode 124", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591929" },
-      { title: "Épisode 125", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591930" },
-      { title: "Épisode 126", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591931" },
-      { title: "Épisode 127", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591932" },
-      { title: "Épisode 128", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591934" },
-      { title: "Épisode 129", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591935" },
-      { title: "Épisode 130", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591938" },
-      { title: "Épisode 131", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591939" },
-      { title: "Épisode 132", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5591940" },
-      
-     
-      
 
-      // ... plus d'épisodes
-    ]
-  },
   {
   title: "Dragon Ball Z",
   description: "Dragon Ball Z est un anime qui se déroule cinq années après le mariage de Son Goku et de Chichi. Tous deux sont parents de Son Gohan. Mais tout va basculer lorsque Raditz va débarquer sur Terre pour retrouver son fils, Son Goku.",
@@ -2924,6 +2920,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   rating: 8.5,
   type: "serie", // ou "film"
   status: "Terminé", // ou "Terminé"
+        category: "classique",
   episodes: [
     // Épisodes 1 à 50 déjà inclus ici...
     { title: "Épisode 1", videoUrl: "https://sendvid.com/mhmwljnw" },
@@ -3230,6 +3227,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 9,
     type: "serie", // ou "film"
     status: "En cours", // ou "Terminé"
+        category: "classique",
     episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406687" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5415193" },
