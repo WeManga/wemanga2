@@ -1468,19 +1468,22 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 500", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3343350" },
     ]
   },
-   {
-    title: "One Piece - Saga 1 (East Blue)",
+{
+    title: "One Piece",
     description: "Luffy, un garçon espiègle, rêve de devenir le roi des pirates en trouvant le “One Piece”, un fabuleux trésor. Seulement, Luffy a avalé un fruit du démon qui l'a transformé en homme élastique. Depuis, il est capable de contorsionner son corps dans tous les sens, mais il a perdu la faculté de nager.",
     poster: "https://limaginaerumdesymphonie.fr/wp-content/uploads/2024/03/east-blue.jpg",
     banner: "https://i0.wp.com/www.cinechos.com/wp-content/uploads/2024/06/east-blue-1.webp",
-    genre: ["Action", "Aventure", "Comédie"],
+    genre: ["Action", "Aventure", "Fantaisie"],
     year: 1999,
     rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
+    type: "serie",
+    status: "En cours",
     category: "classique",
-    episodes: [
-
+    seasons: [
+      {
+        number: 1,
+        title: "Saga 1 (East Blue)",
+        episodes: [
   { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833453" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833454" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833455" },
@@ -1541,21 +1544,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 58", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833548" },
   { title: "Épisode 59", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833552" },
   { title: "Épisode 60", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4729242" },
-  { title: "Épisode 61", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4729244" },
-    ]
-},
- {
-    title: "One Piece - Saga 2 (Alabasta)",
-    description: "Elle suit L'Équipage du Chapeau de Paille qui aide la princesse Nefertari Vivi à rejoindre sa terre natale avant qu'une guerre massive ne débute.",
-    poster: "https://image.animationdigitalnetwork.com/license/onepiece/arc2/web/affiche_500x0.jpg",
-    banner: "https://bleachmx.fr/wp-content/uploads/One-Piece-Anime-Alabasta-1280x720.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-   category: "classique",
-    episodes: [
+  { title: "Épisode 61", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4729244" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saga 2 (Alabasta)",
+        episodes: [
  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834078" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834080" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834083" },
@@ -1637,21 +1632,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 79", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834299" },
   { title: "Épisode 80", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4705225" },
   { title: "Épisode 81", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4705227" },
-  { title: "Épisode 82", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834301" },
-    ]
-  },
-   {
-    title: "One Piece - Saga 3 (Iles Célèstes)",
-    description: "Elle suit l'Équipage du Chapeau de Paille dans leur aventure à Jaya et Skypiea, une mystérieuse île se trouvant au dessus des nuages..",
-    poster: "https://image.animationdigitalnetwork.com/license/onepiece/arc3/web/affiche_500x0.jpg",
-    banner: "https://image.animationdigitalnetwork.com/license/onepiece/tv/web/eps186_1920x1080.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-     category: "classique",
-    episodes: [
+  { title: "Épisode 82", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834301" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saga 3 (Iles Célèstes)",
+        episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871931" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871932" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871933" },
@@ -1714,21 +1701,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 60", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871996" },
   { title: "Épisode 61", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871997" },
   { title: "Épisode 62", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871998" },
-  { title: "Épisode 63", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871999" },
-    ]
-  },
-     {
-    title: "One Piece - Saga 4 (Water 7)",
-    description: "Monkey D. Luffy poursuit son rêve de devenir le Roi des Pirates. De retour des cieux, l'équipage est dispersé à l'atterrissage...",
-    poster: "https://limaginaerumdesymphonie.fr/wp-content/uploads/2024/12/water-seven.jpg?w=300",
-    banner: "https://i.redd.it/i81f4m1yyc4d1.jpeg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-       category: "classique",
-    episodes: [
+  { title: "Épisode 63", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3871999" }
+        ]
+      },
+      {
+        number: 4,
+        title: "Saga 4 (Water 7)",
+        episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834640" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3872001" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834646" },
@@ -1858,21 +1837,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 127", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834895" },
   { title: "Épisode 128", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834896" },
   { title: "Épisode 129", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4732051" },
-  { title: "Épisode 130", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834897" },
-    ]
-  },
-       {
-    title: "One Piece - Saga 5 (Thriller Bark)",
-    description: "La Saga Thriller Bark est la cinquième saga de l'anime et manga One Piece. Elle retrace l'aventure de l'Équipage du Chapeau de Paille après leur départ de Water 7.",
-    poster: "https://limaginaerumdesymphonie.fr/wp-content/uploads/2024/11/thriller-bark.jpg?w=683",
-    banner: "https://image.over-blog.com/ff2QOTkJZVOZMtiiVPJOfFyLJIs=/filters:no_upscale()/image%2F1169323%2F20240428%2Fob_ff3ffc_one-piece-thriller-bark-02-1.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-         category: "classique",
-    episodes: [
+  { title: "Épisode 130", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4834897" }
+        ]
+      },
+      {
+        number: 5,
+        title: "Saga 5 (Thriller Bark)",
+        episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824714" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824718" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824720" },
@@ -1925,21 +1896,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 50", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824758" },
   { title: "Épisode 51", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4732077" },
   { title: "Épisode 52", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5470568" },
-  { title: "Épisode 53", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824763" },
-    ]
-  },
-         {
-    title: "One Piece - Saga 6 (MarineFord)",
-    description: "Portgas D. Ace, le commandant de la deuxième division de l'équipage de Barbe Blanche sera exécuté à 15h précise à Marine Ford.",
-    poster: "https://www.paninimania.com/files/15/30/?n=7370b.jpg",
-    banner: "https://image.over-blog.com/zFG3vtuZNf_4NYY3oWpcxoY2upc=/filters:no_upscale()/image%2F1169323%2F20240831%2Fob_12440c_one-piece-marineford-04.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "classique",
-    episodes: [
+  { title: "Épisode 53", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4824763" }
+        ]
+      },
+      {
+        number: 6,
+        title: "Saga 6 (MarineFord)",
+        episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4832709" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4832997" },
 { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4832726" },
@@ -2066,21 +2029,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 124", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833037" },
 { title: "Épisode 125", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833043" },
 { title: "Épisode 126", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833046" },
-{ title: "Épisode 127", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833049" },
-    ]
-  },
+{ title: "Épisode 127", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833049" }
+        ]
+      },
       {
-    title: "One Piece - Saga 7 (Île des Hommes-Poissons)",
-    description: "Arc Île des Hommes-Poissons ; Luffy, Usopp et Chopper trouvent un donneur de sang. Une fois Sanji réveillé...",
-    poster: "https://cdn.cultura.com/cdn-cgi/image/width=830/media/pim/TITELIVE/12_9782723487689_1_75.jpg",
-    banner: "https://static.hitek.fr/img/actualite/ill_m/757432078/onepieceremakeilehommespoissons.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "classique",
-    episodes: [
+        number: 7,
+        title: "Saga 7 (Île des Hommes-Poissons)",
+        episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833113" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833158" },
 { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833190" },
@@ -2138,22 +2093,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 55", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833464" },
 { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833466" },
 { title: "Épisode 57", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833469" },
-{ title: "Épisode 58", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833471" },
-    ]
-  },
+{ title: "Épisode 58", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4833471" }
+        ]
+      },
       {
-    title: "One Piece - Saga 8 (Dressrosa)",
-    description: "Dressrosa est la seconde île que Les Chapeaux de Paille découvrent dans le Nouveau Monde, et est gouvernée par le Grand Corsaire, Don Quichotte Doflamingo.",
-    poster: "https://m.media-amazon.com/images/I/71Vuog-ZsVS._UF894,1000_QL80_.jpg",
-    banner: "https://www.manga-news.com/public/2021/news_12/one-piece-dressrosa-crunchyroll.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "classique",
-    episodes: [
-
+        number: 8,
+        title: "Saga 8 (Dressrosa)",
+        episodes: [
   { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471375" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471376" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471378" },
@@ -2325,22 +2271,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 169", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471720" },
   { title: "Épisode 170", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471724" },
   { title: "Épisode 171", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471732" },
-  { title: "Épisode 172", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471737" },
-  ]
-},
-   {
-    title: "One Piece - Saga 9 (Ile Tougato)",
-    description: "Luffy, qui n'a pas suivi le plan, est seul dans Enies Lobby. Il se dirige vers le bout de la ville mais des centaines de soldats s'oppose à lui.",
-    poster: "https://image.over-blog.com/Ob8FxZlsELStJr2P9ulFa1fHM64=/filters:no_upscale()/image%2F1169323%2F20231229%2Fob_de0678_water-seven-04.jpg",
-    banner: "https://www.manga-news.com/public/2021/news_12/one-piece-dressrosa-crunchyroll.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "classique",
-    episodes: [
-
+  { title: "Épisode 172", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471737" }
+        ]
+      },
+      {
+        number: 9,
+        title: "Saga 9 (Ile Tougato)",
+        episodes: [
   { title: "Épisode 1", videoUrl: "https://oneupload.to/embed-hiil70h8dc2d.html" },
   { title: "Épisode 2", videoUrl: "https://oneupload.to/embed-m3w411sdv1gh.html" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4978911" },
@@ -2471,23 +2408,14 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 128", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471084" },
   { title: "Épisode 129", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471085" },
   { title: "Épisode 130", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471086" },
-  { title: "Épisode 131", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471089" },
-]
-},
-   {
-    title: "One Piece - Saga 10 (Pays De Wa)",
-    description: "Après avoir réussi à quitter les terres de Big Mom avec son cuisinier grâce aux pirates du Soleil, Luffy se rend au Pays des Wa pour rejoindre le groupe de Zoro et leurs alliés déjà sur place. L'Alliance des Ninjas-Pirates-Minks-Samouraïs compte délivrer le pays de la tyrannie que l'Empereur Kaidou lui fait subir et décide de frapper un grand coup lors d'un événement annuel nommé le Festival du Feu. Cependant les actions de Luffy sur Whole Cake Island ont conduit l'impératrice à se rendre aussi sur l'île où contre toute attente elle et Kaidou décident spontanément de s'allier.",
-    poster: "https://media.themoviedb.org/t/p/w500/awSahTRht2V11NKVp8KaMyd3z2v.jpg",
-    banner: "https://www.manga-news.com/public/2021/news_12/one-piece-dressrosa-crunchyroll.jpg",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-    category: "classique",
-    episodes: [
-
-  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471090" },
+  { title: "Épisode 131", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471089" }
+        ]
+      },
+      {
+        number: 10,
+        title: "Saga 10 (Pays De Wa)",
+        episodes: [
+   { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471090" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471093" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471095" },
   { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5471097" },
@@ -2697,22 +2625,14 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 208", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5835103" },
   { title: "Épisode 209", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5835105" },
   { title: "Épisode 210", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5835106" },
-  { title: "Épisode 211", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5839622" },
-  ]
-},
-   {
-    title: "One Piece - Saga 11 (Egg Head)",
-    description: "L'Arc Île d'Egg Head, également nommé Arc Île du Futur est le 32ème arc de la série One Piece et le premier arc de la Saga Finale.",
-    poster: "https://adala-news.fr/wp-content/uploads/2024/12/One-Piece-Egghead-arc-scaled.jpg",
-    banner: "https://gear5world.com/cdn/shop/articles/egghead_saga_cover_anime_one_piece_a216449b-a616-42ff-b274-8a962a1aee50.jpg?v=1739192476&width=1920",
-    genre: ["Action", "Aventure", "Comédie"],
-    year: 1999,
-    rating: 9,
-    type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
-     category: "nouveaute",
-    episodes: [
-  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5390006" },
+  { title: "Épisode 211", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5839622" }
+        ]
+      },
+      {
+        number: 11,
+        title: "Saga 11 (Egg Head)",
+        episodes: [
+ { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5390006" },
   { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5398100" },
   { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5407007" },
   { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5415209" },
@@ -2767,9 +2687,11 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 53", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5948967" },
   { title: "Épisode 54", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5955442" },
   { title: "Épisode 55", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5963246" },
-  { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976654" },
-  ]
-},
+  { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976654" }
+        ]
+      }
+    ]
+  },
  {
     title: " Black Clover",
     description: "Description de l' anime",
