@@ -1504,7 +1504,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     type: "serie", // ou "film"
     status: "Terminé", // ou "Terminé"
     episodes: [
-      { title: "Épisode 1", videoUrl: "https://movearnpre.com/embed/nwjolczqmdd4" },
+      { title: "Épisode 1", videoUrl: "https://movearnpre.com/nwjolczqmdd4" },
       { title: "Épisode 2", videoUrl: "https://movearnpre.com/embed/fo6q7k4whi45" },
       { title: "Épisode 3", videoUrl: "https://movearnpre.com/embed/bcbrer8om7z1" },
       { title: "Épisode 4", videoUrl: "https://movearnpre.com/embed/dlnnwsjasxh0" },
