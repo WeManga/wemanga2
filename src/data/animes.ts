@@ -2704,6 +2704,51 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 500", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3343350" },
     ]
   },
+	{
+    title: "No Longer Rangers",
+    description: "Les cinq Dragon Keepers et leur escadron sont la seule ligne de défense de l'humanité contre l'armée maléfique qui tente de conquérir le monde !",
+    poster: "https://fr.web.img3.acsta.net/img/f6/11/f611dfce32fa2f2fbb0b978b3f208ca9.jpg",
+    banner: "https://fr.web.img4.acsta.net/r_1280_720/img/4e/f0/4ef0ec67ae0c783de5d3d09b357fffd7.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2024,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+            { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845334" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845335" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845336" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845337" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845339" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858298" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858300" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858302" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858304" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858307" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858310" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858311" }
+			     ]
+      }
+    ]
+  },
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+	category: "nouveaute",
+        episodes: [
+       { title: "Épisode 1", videoUrl: "https://vidmoly.net/9v7pkdd35goq" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/qsx0nne9n8eo" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/b2zvyq4chd0j" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/6xuczy88kp8o" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/zkslot9rur4h" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/6i1swefeixlf" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/md3tqgt3xycy" }
 {
     title: "One Piece",
     description: "Luffy, un garçon espiègle, rêve de devenir le roi des pirates en trouvant le “One Piece”, un fabuleux trésor. Seulement, Luffy a avalé un fruit du démon qui l'a transformé en homme élastique. Depuis, il est capable de contorsionner son corps dans tous les sens, mais il a perdu la faculté de nager.",
