@@ -4321,6 +4321,32 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "The Summer Hikaru Died",
+    description: "Hikaru et Yoshiki sont 2 amis d'enfance. Mais un jour, les doutes de Yoshiki se confirment : Hikaru a été remplacé par "autre chose".",
+    poster: "https://fr.web.img2.acsta.net/img/f5/50/f5508414dfb01e42061bebb1a5ed7f05.jpg",
+    banner: "https://fr.web.img6.acsta.net/r_1280_720/img/0a/8f/0a8f431cf13595c673aff1ff6b66982f.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+	category: "nouveaute"
+        episodes: [
+        { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5954008" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5962034" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969001" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5975491" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5980904" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987375" }
+     ]
+      }
+    ]
+  },
+	{
     title: "WITCH WATCH",
     description: "Morihito Otogi possède une force surhumaine car il est le descendant d'une lignée d'ogres. Un jour, son père lui annonce qu'il doit devenir le familier de ...",
     poster: "https://fr.web.img4.acsta.net/c_310_420/img/8b/e1/8be1cdaf83442f28bdb3c0a2609a311b.jpg",
