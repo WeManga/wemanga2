@@ -162,7 +162,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       <AdBanner id="playerTop" />
       <div className="flex justify-center mb-6">
         <div className="bg-black/70 px-6 py-2 rounded-lg text-xl font-semibold shadow-md">
-          {episode.title}
+          {`${animeTitle} - ${season.title || `Saison ${season.number}`} - ${episode.title}`}
         </div>
       </div>
       <div className="w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-[#111] shadow-lg">
