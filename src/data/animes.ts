@@ -4291,7 +4291,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8,
     type: "serie",
     status: "En cours",
-	category: "nouveaute"
+	category: "nouveaute",
     seasons: [
       {
         number: 1,
