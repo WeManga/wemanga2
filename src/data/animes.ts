@@ -90,6 +90,33 @@ const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
 // 3. Définition des animes
 // ------------------------------
 const animeConfigs: SimpleAnimeConfig[] = [
+	{
+    title: "Arknights VOSTFR",
+    description: "Alors qu'une maladie mortelle qui transforme ses victimes en cristaux se propage, Rhodes Island Pharmaceuticals Inc. se lance dans la recherche d'un remède",
+    poster: "https://fr.web.img2.acsta.net/pictures/22/10/19/10/05/4846939.jpg",
+    banner: "https://fr.web.img3.acsta.net/c_400_200/img/2c/66/2c66a3138f1b8fefc0251079ac57f98f.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+	category: "nouveaute",
+        episodes: [
+         { title: "Épisode 1", videoUrl: "https://vidmoly.net/9gqfukicodho" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/zrup25zbqdwo" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/1ajpd1ey32at" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/jf8skal7bamj" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/q3ryjyq3o1dt" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/gujjmxogt466" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/s11nqg53tp20" }
+    ]
+      }
+    ]
+  },
   {
     title: "Bleach",
     description: "Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits. Un jour, il croise la route d'une belle Shinigami",
