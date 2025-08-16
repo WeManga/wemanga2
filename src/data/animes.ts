@@ -2731,10 +2731,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858307" },
   { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858310" },
   { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858311" }
-			     ]
-      }
-    ]
-  },
         ]
       },
       {
@@ -2749,6 +2745,10 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 5", videoUrl: "https://vidmoly.net/zkslot9rur4h" },
   { title: "Épisode 6", videoUrl: "https://vidmoly.net/6i1swefeixlf" },
   { title: "Épisode 7", videoUrl: "https://vidmoly.net/md3tqgt3xycy" }
+				     ]
+      }
+    ]
+  },
 {
     title: "One Piece",
     description: "Luffy, un garçon espiègle, rêve de devenir le roi des pirates en trouvant le “One Piece”, un fabuleux trésor. Seulement, Luffy a avalé un fruit du démon qui l'a transformé en homme élastique. Depuis, il est capable de contorsionner son corps dans tous les sens, mais il a perdu la faculté de nager.",
