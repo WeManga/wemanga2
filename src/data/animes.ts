@@ -3789,6 +3789,55 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "One Punch Man",
+    description: "Histoire de passer le temps, Saitama est devenu un héros. Trois années d'un entraînement spécial lui ont donné un pouvoir le rendant invincible.",
+    poster: "https://fr.web.img6.acsta.net/pictures/17/02/27/17/41/046707.jpg",
+    banner: "https://fr.web.img3.acsta.net/c_400_225/newsv7/20/04/22/10/51/0228077.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2015,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://sendvid.com/6d7oilns" },
+      { title: "Épisode 2", videoUrl: "https://sendvid.com/x9p1llnt" },
+      { title: "Épisode 3", videoUrl: "https://sendvid.com/4mcnptzm" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/pbxflapa" },
+      { title: "Épisode 5", videoUrl: "https://sendvid.com/1i9iiap6" },
+      { title: "Épisode 6", videoUrl: "https://sendvid.com/pjdkltjj" },
+      { title: "Épisode 7", videoUrl: "https://sendvid.com/w6x0k6dg" },
+      { title: "Épisode 8", videoUrl: "https://sendvid.com/swxktyy8" },
+      { title: "Épisode 9", videoUrl: "https://sendvid.com/7yl1iggz" },
+      { title: "Épisode 10", videoUrl: "https://sendvid.com/t6b027yx" },
+      { title: "Épisode 11", videoUrl: "https://sendvid.com/xg6rxlbr" },
+      { title: "Épisode 12", videoUrl: "https://sendvid.com/pnkeu7py" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://sendvid.com/t6pi8al4" },
+      { title: "Épisode 2", videoUrl: "https://sendvid.com/3tktw2wp" },
+      { title: "Épisode 3", videoUrl: "https://sendvid.com/ty8m9yzx" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/eevpl9dt" },
+      { title: "Épisode 5", videoUrl: "https://sendvid.com/ss43ai6r" },
+      { title: "Épisode 6", videoUrl: "https://sendvid.com/xa0f7ymh" },
+      { title: "Épisode 7", videoUrl: "https://sendvid.com/5pjsenz9" },
+      { title: "Épisode 8", videoUrl: "https://sendvid.com/zgpyx7pd" },
+      { title: "Épisode 9", videoUrl: "https://sendvid.com/sdp4hwgz" },
+      { title: "Épisode 10", videoUrl: "https://sendvid.com/xlyg9d0c" },
+      { title: "Épisode 11", videoUrl: "https://sendvid.com/wpauatdd" },
+      { title: "Épisode 12", videoUrl: "https://sendvid.com/f2i1f7jy" }
+       ]
+      }
+    ]
+  },
  {
     title: " Black Clover",
     description: "Description de l' anime",
