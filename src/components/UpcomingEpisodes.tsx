@@ -21,9 +21,8 @@ const UpcomingEpisodes: React.FC = () => {
         setLoading(false);
       }
     };
-
     fetchEpisodes();
-    
+
     // Actualiser toutes les 5 minutes
     const interval = setInterval(fetchEpisodes, 5 * 60 * 1000);
     return () => clearInterval(interval);
@@ -33,7 +32,6 @@ const UpcomingEpisodes: React.FC = () => {
     const days = Math.floor(seconds / 86400);
     const hours = Math.floor((seconds % 86400) / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
-
     if (days > 0) return `${days}j ${hours}h`;
     if (hours > 0) return `${hours}h ${minutes}m`;
     return `${minutes}m`;
@@ -95,20 +93,22 @@ const UpcomingEpisodes: React.FC = () => {
                   alt={episode.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                
+
+                {/*
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-colors duration-200">
                     <Play size={24} fill="white" />
                   </div>
                 </div>
-                
+                */}
+
                 {/* Badge épisode */}
                 <div className="absolute top-3 left-3">
                   <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                     ÉP. {episode.nextEpisode}
                   </span>
                 </div>
-                
+
                 {/* Temps restant */}
                 <div className="absolute top-3 right-3">
                   <span className="bg-black/70 text-white px-2 py-1 rounded text-xs font-medium flex items-center space-x-1">
@@ -117,12 +117,12 @@ const UpcomingEpisodes: React.FC = () => {
                   </span>
                 </div>
               </div>
-              
+
               <div className="p-4">
                 <h3 className="text-white font-bold text-lg mb-2 line-clamp-2">
                   {episode.title}
                 </h3>
-                
+
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-3">
                   <div className="flex items-center space-x-1">
                     <Calendar size={14} />
@@ -135,7 +135,7 @@ const UpcomingEpisodes: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-3">
                   {episode.genres.map((genre, index) => (
                     <span
@@ -146,8 +146,6 @@ const UpcomingEpisodes: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
-
               </div>
             </div>
           ))}
