@@ -4636,6 +4636,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
       {
         number: 1,
         title: "Saison 1",
+		  category: "nouveaute",
         episodes: [
            { title: "Épisode 1", videoUrl: "https://vidmoly.net/0gnasrpqulgn" },
   { title: "Épisode 2", videoUrl: "https://vidmoly.net/z44jot9quodu" },
