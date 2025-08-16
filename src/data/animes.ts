@@ -4347,7 +4347,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 	{
     title: "The Summer Hikaru Died",
-    description: "Hikaru et Yoshiki sont 2 amis d'enfance. Mais un jour, les doutes de Yoshiki se confirment : Hikaru a été remplacé par "autre chose".",
+    description: "Hikaru et Yoshiki sont 2 amis d'enfance. Mais un jour, les doutes de Yoshiki se confirment : Hikaru a été remplacé par autre chose.",
     poster: "https://fr.web.img2.acsta.net/img/f5/50/f5508414dfb01e42061bebb1a5ed7f05.jpg",
     banner: "https://fr.web.img6.acsta.net/r_1280_720/img/0a/8f/0a8f431cf13595c673aff1ff6b66982f.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
