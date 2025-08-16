@@ -3318,6 +3318,20 @@ const animeConfigs: SimpleAnimeConfig[] = [
           ]
   },
            {
+    title: "Jujutsu Kaisen Zero",
+    description: "Jujutsu Kaisen 0 (劇場版 呪術廻戦 0, Gekijōban Jujutsu Kaisen 0) est un film japonais réalisé par Park Seong-hu, sorti en 2021.",
+    poster: "https://fr.web.img6.acsta.net/pictures/22/02/16/12/44/0721822.png",
+    banner: "https://fr.web.img4.acsta.net/r_640_360/videothumbnails/22/03/18/00/38/4950682.png",
+    genre: ["Action", "Aventure"],
+    year: 2020,
+    rating: 8,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4879087" },
+          ]
+  },
+           {
     title: "Kiki La Petite Sorcière",
     description: "EKiki est une petite sorcière de treize ans. La tradition chez les jeunes sorcières veut que durant leur treizième année, elles partent faire leur apprentissage loin de leurs parents dans une ville inconnue. Le tour de Kiki est enfin arrivé..",
     poster: "https://media.hachette.fr/imgArticle/GLENAT/2025/9782344036419-001-X.jpeg?source=web",
