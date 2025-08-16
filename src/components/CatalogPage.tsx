@@ -33,7 +33,7 @@ const CatalogPage: React.FC<CatalogPageProps> = ({
         {/* Titre et sous-titre */}
         <div className="mb-12 text-center">
           <h1 className="text-white text-4xl font-bold mb-4">
-            {searchQuery ? `Catalogue - Résultats pour "${searchQuery}"` : '📚 Catalogue Complet'}
+            {searchQuery ? `Catalogue - Résultats pour "${searchQuery}"` : ' Catalogue Complet'}
           </h1>
           <p className="text-gray-400 text-lg">
             {searchQuery
