@@ -4649,6 +4649,90 @@ const animeConfigs: SimpleAnimeConfig[] = [
           ]
   },
 		       {
+    title: "Détective Conan Le Gratte-Ciel infernal",
+    description: "Un inconnu vole des explosifs. Par téléphone, le criminel donne des indications sur l'endroit où se trouve la prochaine charge d'explosifs, et Conan doit empêcher que des personnes soient blessées.",
+    poster: "https://fr.web.img6.acsta.net/c_300_300/pictures/18/09/21/17/38/0126059.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_300_300/pictures/18/09/21/17/38/0126059.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2007,
+    rating: 7,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+      { title: "Détective Conan Le Gratte-Ciel infernal", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5185638" },
+          ]
+  },
+	   {
+    title: "Détective Conan La Quatorzième Cible",
+    description: "Detective Conan, la quatorziéme cible" se révéle être un divertissement accompli, qui comblera les fans et conquérira les plus réticents à ce type d'animation.",
+    poster: "https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/71/02/72/19120827.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/71/02/72/19120827.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 1998,
+    rating: 7,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+      { title: "Détective Conan La Quatorzième Cible", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5185639" },
+          ]
+  },
+{
+    title: "Détective Conan Le Magicien De La Fin Du Siècle",
+    description: "Pour voler un œuf Fabergé ayant appartenu à la dynastie des Romanov gardé par la police d'Osaka, Kid éteint les lumières de la ville et laisse Conan se débattre dans l'obscurité.",
+    poster: "https://fr.web.img3.acsta.net/medias/nmedia/18/72/48/84/19166602.jpg",
+    banner: "https://fr.web.img3.acsta.net/medias/nmedia/18/72/48/84/19166602.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 1999,
+    rating: 7,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+      { title: "Détective Conan Le Magicien De La Fin Du Siècle", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5185640" },
+          ]
+  },
+{
+    title: "Détective Conan Mémoire Assassine",
+    description: "Il s'agit du quatrième film tiré du manga Détective Conan.",
+    poster: "https://www.cineanimation.fr/sites/default/files/2021-02/D%C3%A9tective%20Conan%20%20M%C3%A9moire%20assassine%20Valid%C3%A9.jpg",
+    banner: "https://www.cineanimation.fr/sites/default/files/2021-02/D%C3%A9tective%20Conan%20%20M%C3%A9moire%20assassine%20Valid%C3%A9.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2008,
+    rating: 7,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+      { title: "Détective Conan Le Magicien De La Fin Du Siècle", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5185641" },
+          ]
+  },
+{
+    title: "Détective Conan Décompte Aux Cieux",
+    description: "Conan, Agasa, Ran, Sonoko, Kogoro et les Detectives Boys sont invités dans les tours Tokiwa, des tours faisant partie des plus grandes du Japon.",
+    poster: "https://media.senscritique.com/media/000020098102/0/detective_conan_decompte_aux_cieux.jpg",
+    banner: "https://media.senscritique.com/media/000020098102/0/detective_conan_decompte_aux_cieux.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2001,
+    rating: 7,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+      { title: "Détective Conan Décompte Aux Cieux", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5185643" },
+          ]
+  },
+{
+    title: "Détective Conan Le Sous Marin Noir",
+    description: "Cette nouvelle aventure du célèbre détective se déroule en mer, près de l'île de Hachijô, Tokyo. Conan reçoit un appel de Subaru Okiya l'informant qu'une ...",
+    poster: "https://fr.web.img6.acsta.net/pictures/23/05/30/11/54/2669609.jpg",
+    banner: "https://fr.web.img6.acsta.net/pictures/23/05/30/11/54/2669609.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2023,
+    rating: 7,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+      { title: "Détective Conan Le Sous Marin Noir", videoUrl: "https://vidmoly.net/embed-7hp2n9i96din.html" },
+          ]
+  },
+		       {
 	    title: "FAIRY TAIL LE FILM : LA PRETESSE DU PHOENIX",
     description: "Au retour d'une mission Lucy rencontre une jeune fille nommée Eclair qui s'écroule sous ses yeux.",
     poster: "https://fr.web.img6.acsta.net/c_300_300/pictures/18/03/20/12/19/2018642.jpg",
