@@ -575,13 +575,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
         number: 2,
         title: "Episodes Train de l'infini",
         episodes: [
-      { title: "Épisode 1", videoUrl: "https://sendvid.com/embed/0ya2c5j5" },
-      { title: "Épisode 2", videoUrl: "https://sendvid.com/embed/to5yfsmm" },
-      { title: "Épisode 3", videoUrl: "https://sendvid.com/embed/blixyrz6" },
-      { title: "Épisode 4", videoUrl: "https://sendvid.com/embed/619ph4xg" },
-      { title: "Épisode 5", videoUrl: "https://sendvid.com/embed/h3f1olxr" },
-      { title: "Épisode 6", videoUrl: "https://sendvid.com/embed/jzllm48p" },
-      { title: "Épisode 7", videoUrl: "https://sendvid.com/embed/nu0pacvm" }
+      { title: "Épisode 1", videoUrl: "https://sendvid.com/0ya2c5j5" },
+      { title: "Épisode 2", videoUrl: "https://sendvid.com/to5yfsmm" },
+      { title: "Épisode 3", videoUrl: "https://sendvid.com/blixyrz6" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/619ph4xg" },
+      { title: "Épisode 5", videoUrl: "https://sendvid.com/h3f1olxr" },
+      { title: "Épisode 6", videoUrl: "https://sendvid.com/jzllm48p" },
+      { title: "Épisode 7", videoUrl: "https://sendvid.com/nu0pacvm" }
         ]
       },
       {
@@ -4248,7 +4248,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     { title: "Épisode 6", videoUrl: "https://sendvid.com/dnn1a9qa" },
     { title: "Épisode 7", videoUrl: "https://sendvid.com/r31i929s" },
     { title: "Épisode 8", videoUrl: "https://sendvid.com/0jsstoqq" },
-    { title: "Épisode 9", videoUrl: "https://vidmoly.to/embed-nqvc9xe9iyf5.html" },
+    { title: "Épisode 9", videoUrl: "https://vidmoly.net/nqvc9xe9iyf5" },
     { title: "Épisode 10", videoUrl: "https://sendvid.com/o22etdpq" },
     { title: "Épisode 11", videoUrl: "https://sendvid.com/gel4qr3d" },
     { title: "Épisode 12", videoUrl: "https://sendvid.com/u5y5k83b" },
@@ -4308,7 +4308,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     { title: "Épisode 66", videoUrl: "https://sendvid.com/h5lfxbq1" },
     { title: "Épisode 67", videoUrl: "https://sendvid.com/x9oajr10" },
     { title: "Épisode 68", videoUrl: "https://sendvid.com/egphvila" },
-    { title: "Épisode 69", videoUrl: "https://vidmoly.to/embed-bxwpnvuol55z.html" },
+    { title: "Épisode 69", videoUrl: "https://vidmoly.net/bxwpnvuol55z" },
     { title: "Épisode 70", videoUrl: "https://sendvid.com/bowfxmcl" },
     { title: "Épisode 71", videoUrl: "https://sendvid.com/0j36rm6p" },
     { title: "Épisode 72", videoUrl: "https://sendvid.com/bc098ay7" },
