@@ -1959,7 +1959,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
         number: 8,
         title: "Film : la dernière attaque",
         episodes: [
-	{ title: "Épisode 1", videoUrl: "https://Smoothpre.com/embed/al5rxzbgjwcc" }
+	{ title: "Épisode 1", videoUrl: "https://sendvid.com/vnb0wmee" }
         ]
       }
     ]
