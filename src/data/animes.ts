@@ -4320,6 +4320,43 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "WITCH WATCH",
+    description: "Morihito Otogi possède une force surhumaine car il est le descendant d'une lignée d'ogres. Un jour, son père lui annonce qu'il doit devenir le familier de ...",
+    poster: "https://fr.web.img4.acsta.net/c_310_420/img/8b/e1/8be1cdaf83442f28bdb3c0a2609a311b.jpg",
+    banner: "https://fr.web.img3.acsta.net/r_1280_720/img/5a/1d/5a1d5fe2aa5b768aedbb4f559459de9c.jpeg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+	category: "nouveaute",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5885753" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5893796" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5900794" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5908292" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5914838" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5921288" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5926890" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5931918" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5937222" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5943052" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5948742" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5955063" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5962896" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969858" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976208" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981540" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987743" }
+       ]
+      }
+    ]
+  },
   {
     title: "Le Voyage de Chihiro",
     description: "Le film raconte l'histoire de Chihiro, une jeune fille de dix ans qui se retrouve transportée dans un monde mystérieux rempli de créatures surnaturelles.",
