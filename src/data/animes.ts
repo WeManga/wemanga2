@@ -1021,7 +1021,98 @@ const animeConfigs: SimpleAnimeConfig[] = [
       // Ajoutez plus d'épisodes ici...
     ]
   },
-  
+  {
+    title: "Le héro au Bouclier",
+    description: "Un fléau potentiellement de classe S a été repéré dans une prison pour mineurs. Yuji, Megumi et Nobara sont envoyés sur place pour essayer de retrouver des survivants, si tant est qu'il y en ait, et ordre leur est donné de ne surtout pas approcher le fléau lui-même.",
+    poster: "https://fr.web.img3.acsta.net/pictures/20/09/14/10/31/4875617.jpg",
+    banner: "https://fr.web.img4.acsta.net/r_640_360/videothumbnails/22/03/18/00/38/4950682.png",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2020,
+    rating: 9,
+    type: "serie",
+    status: "En cours",
+    category: "classique",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398295" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398306" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398307" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398311" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398315" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398319" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398324" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398328" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398334" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398335" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398336" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398337" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398338" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398341" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398342" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398343" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398345" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398346" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398348" },
+      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398349" },
+      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398350" },
+      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398351" },
+      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398352" },
+      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=439835" },
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398354" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4702857" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4709245" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4718842" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4728475" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4735790" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4744402" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4753393" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4761555" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4772048" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4781089" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4796432" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4796420" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4803852" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 3",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5307448" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5315978" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5326164" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5336278" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5347993" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5357930" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5365775" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5373741" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5381332" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5388571" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406111" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5406113" }
+        ]
+      },
+      {
+        number: 4,
+        title: "Saison 4",
+	category: "nouveaute"
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5974177" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5978874" },
+      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5984799" }
+        ]
+      }
+    ]
+  },
   {
     title: "Naruto Shippûden",
     description: "Après deux ans et demi d'entraînement avec Jiraya, Naruto retrouve ses camarades de l'Académie des ninja ainsi que ses professeurs de Konoha. Tous ont évolué, y compris les ninjas du village de Suna. Cependant, le village est menacé par Akatsuki.",
