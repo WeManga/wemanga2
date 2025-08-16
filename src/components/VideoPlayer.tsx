@@ -34,6 +34,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const bannerUrl = season?.banner || episode.thumbnail || "";
 
+  // Détection du type de vidéo
   const getVideoType = (url: string) => {
     if (!url) return null;
     if (url.includes("youtube.com") || url.includes("youtu.be")) return "youtube";
@@ -41,13 +42,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     if (url.includes("sibnet.ru")) return "sibnet";
     if (url.includes("sendvid.com")) return "sendvid";
     if (url.includes("movearnpre.com")) return "movearnpre";
+    if (url.includes("vidmoly.to")) return "vidmoly";
     if (url.match(/\.(mp4|webm|ogg)$/i)) return "video";
     return "unknown";
   };
 
   const videoType = getVideoType(episode.videoUrl);
 
-  // Sauvegarde au démontage — fonctionne même pour les iframes
+  // Sauvegarde au démontage
   useEffect(() => {
     return () => {
       if (animeId && season && episode) {
@@ -104,6 +106,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     };
   }, [onProgress, videoType, progress, animeId, animeTitle, season, episode]);
 
+  // Construction de l'URL d'embed selon le type
   const getEmbedUrl = () => {
     try {
       if (videoType === "youtube") {
@@ -123,6 +126,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       if (videoType === "movearnpre") {
         const match = episode.videoUrl.match(/movearnpre\.com\/([a-zA-Z0-9]+)/);
         return match ? `https://movearnpre.com/embed/${match[1]}` : null;
+      }
+      if (videoType === "vidmoly") {
+        const match = episode.videoUrl.match(/vidmoly\.to\/([a-zA-Z0-9]+)/);
+        return match ? `https://vidmoly.to/embed-${match}.html` : null;
       }
       return episode.videoUrl;
     } catch {
@@ -168,7 +175,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               className="absolute top-0 left-0 w-full h-full"
             />
           )}
-          {["youtube", "vimeo", "sendvid", "movearnpre"].includes(videoType) && (
+          {["youtube", "vimeo", "sendvid", "movearnpre", "vidmoly"].includes(videoType) && (
             (() => {
               const embedUrl = getEmbedUrl();
               return embedUrl ? (
