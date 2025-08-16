@@ -68,25 +68,21 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   useEffect(() => {
     const videoEl = videoRef.current;
     if (!videoEl || videoType !== "video") return;
-
     const setInitialTime = () => {
       if (progress && !isNaN(progress) && videoEl.duration > 0) {
         videoEl.currentTime = progress * videoEl.duration;
       }
     };
-
     if (videoEl.readyState >= 1) {
       setInitialTime();
     } else {
       videoEl.addEventListener("loadedmetadata", setInitialTime);
     }
-
     let lastSave = 0;
     const handleTimeUpdate = () => {
       const currentProgress = videoEl.currentTime / videoEl.duration;
       if (!isNaN(currentProgress)) {
         onProgress(currentProgress);
-
         if (Date.now() - lastSave > 5000 && currentProgress > 0.01) {
           saveContinueWatching({
             animeId,
@@ -101,7 +97,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         }
       }
     };
-
     videoEl.addEventListener("timeupdate", handleTimeUpdate);
     return () => {
       videoEl.removeEventListener("timeupdate", handleTimeUpdate);
@@ -113,7 +108,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     try {
       if (videoType === "youtube") {
         const id = episode.videoUrl.includes("youtu.be")
-          ? episode.videoUrl.split("youtu.be/")[1].split(/[?&]/)[0]
+          ? episode.videoUrl.split("youtu.be/")[1].split(/[?&]/)
           : new URL(episode.videoUrl).searchParams.get("v");
         return `https://www.youtube.com/embed/${id}?autoplay=1&controls=1&rel=0`;
       }
@@ -138,7 +133,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   return (
     <div className="bg-black min-h-screen text-white font-sans pb-10">
       <ScrollingMessage />
-
       <div className="px-6 pt-14">
         <button
           onClick={onBack}
@@ -147,7 +141,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           ← Retour
         </button>
       </div>
-
       {bannerUrl && (
         <div
           className="w-full h-[220px] mt-4 mb-4"
@@ -158,15 +151,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           }}
         />
       )}
-
       <AdBanner id="playerTop" />
-
       <div className="flex justify-center mb-6">
         <div className="bg-black/70 px-6 py-2 rounded-lg text-xl font-semibold shadow-md">
           {episode.title}
         </div>
       </div>
-
       <div className="w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-[#111] shadow-lg">
         <div className="relative pb-[56.25%]">
           {videoType === "video" && (
@@ -178,23 +168,23 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               className="absolute top-0 left-0 w-full h-full"
             />
           )}
-
-          {(videoType === "youtube" || videoType === "vimeo" || videoType === "sendvid") && (() => {
-            const embedUrl = getEmbedUrl();
-            return embedUrl ? (
-              <iframe
-                src={embedUrl}
-                title="Video Player"
-                frameBorder="0"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full"
-              />
-            ) : (
-              <p className="absolute top-0">Impossible de charger la vidéo</p>
-            );
-          })()}
-
+          {["youtube", "vimeo", "sendvid", "movearnpre"].includes(videoType) && (
+            (() => {
+              const embedUrl = getEmbedUrl();
+              return embedUrl ? (
+                <iframe
+                  src={embedUrl}
+                  title="Video Player"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                />
+              ) : (
+                <p className="absolute top-0">Impossible de charger la vidéo</p>
+              );
+            })()
+          )}
           {videoType === "sibnet" && (
             <iframe
               src={episode.videoUrl}
@@ -206,7 +196,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
             />
           )}
         </div>
-
         <div className="flex justify-between items-center px-4 py-3 bg-[#222]">
           <button
             onClick={onPreviousEpisode}
@@ -228,7 +217,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           </button>
         </div>
       </div>
-
       <AdBanner id="playerBottom" />
     </div>
   );
