@@ -4492,13 +4492,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
         title: "Saison 1",
 	category: "nouveaute",
         episodes: [
-       { title: "Épisode 1", videoUrl: "https://vidmoly.to/jxj3rmrthvwy" },
-  { title: "Épisode 2", videoUrl: "https://vidmoly.to/kwn9ba3edpdg" },
-  { title: "Épisode 3", videoUrl: "https://vidmoly.to/t7ef1aigrdih" },
-  { title: "Épisode 4", videoUrl: "https://vidmoly.to/6pe9b3fd6lnf" },
-  { title: "Épisode 5", videoUrl: "https://vidmoly.to/5og3alyrhy65" },
-  { title: "Épisode 6", videoUrl: "https://vidmoly.to/d25xmqei2m5n" },
-  { title: "Épisode 7", videoUrl: "https://vidmoly.to/j8al2cx0jxy5" }
+       { title: "Épisode 1", videoUrl: "https://vidmoly.net/jxj3rmrthvwy" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/kwn9ba3edpdg" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/t7ef1aigrdih" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/6pe9b3fd6lnf" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/5og3alyrhy65" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/d25xmqei2m5n" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/j8al2cx0jxy5" }
 	      ]
       }
     ]
