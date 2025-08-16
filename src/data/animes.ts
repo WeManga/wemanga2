@@ -4664,7 +4664,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 	   {
     title: "Détective Conan La Quatorzième Cible",
-    description: "Detective Conan, la quatorziéme cible" se révéle être un divertissement accompli, qui comblera les fans et conquérira les plus réticents à ce type d'animation.",
+    description: "Detective Conan, la quatorziéme cible se révéle être un divertissement accompli, qui comblera les fans et conquérira les plus réticents à ce type d'animation.",
     poster: "https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/71/02/72/19120827.jpg",
     banner: "https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/71/02/72/19120827.jpg",
     genre: ["Action", "Aventure", "Comédie"],
