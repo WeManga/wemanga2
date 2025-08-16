@@ -4729,7 +4729,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     type: "film", // ou "film"
     status: "Terminé", // ou "Terminé"
     episodes: [
-      { title: "Détective Conan Le Sous Marin Noir", videoUrl: "https://vidmoly.net/embed-7hp2n9i96din.html" },
+      { title: "Détective Conan Le Sous Marin Noir", videoUrl: "https://vidmoly.net/7hp2n9i96din" },
           ]
   },
 		       {
