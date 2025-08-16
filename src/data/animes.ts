@@ -1378,7 +1378,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     year: 1986,
     rating: 8.5,
     type: "serie", // ou "film"
-    status: "En cours", // ou "Terminé"
+    status: "Terminé", // ou "Terminé"
 	category: "classique",
     episodes: [
 { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295592" },
@@ -3858,7 +3858,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     year: 2015,
     rating: 8.5,
     type: "serie",
-    status: "En cours",
+    status: "Terminé",
     seasons: [
       {
         number: 1,
