@@ -40,7 +40,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     if (url.includes("vimeo.com")) return "vimeo";
     if (url.includes("sibnet.ru")) return "sibnet";
     if (url.includes("sendvid.com")) return "sendvid";
-    if (url.includes("movearnpre.com")) return "moviearnpre";
+    if (url.includes("movearnpre.com")) return "movearnpre";
     if (url.match(/\.(mp4|webm|ogg)$/i)) return "video";
     return "unknown";
   };
@@ -125,9 +125,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         const match = episode.videoUrl.match(/sendvid\.com\/([a-zA-Z0-9]+)/);
         return match ? `https://sendvid.com/embed/${match[1]}` : null;
       }
-      if (videoType === "moviearnpre") {
-        const match = episode.videoUrl.match(/moviearnpre\.com\/([a-zA-Z0-9]+)/);
-        return match ? `https://moviearnpre.com/embed/${match[1]}` : null;
+      if (videoType === "movearnpre") {
+        const match = episode.videoUrl.match(/movearnpre\.com\/([a-zA-Z0-9]+)/);
+        return match ? `https://movearnpre.com/embed/${match[1]}` : null;
       }
       return episode.videoUrl;
     } catch {
