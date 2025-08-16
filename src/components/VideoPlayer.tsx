@@ -41,7 +41,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     if (url.includes("sibnet.ru")) return "sibnet";
     if (url.includes("sendvid.com")) return "sendvid";
     if (url.includes("movearnpre.com")) return "movearnpre";
-    if (url.includes("vidmoly.to")) return "vidmoly";
+    if (url.includes("vidmoly.net")) return "vidmoly";  // modifié ici
     if (url.includes("smoothpre.com")) return "smoothpre";
     if (url.match(/\.(mp4|webm|ogg)$/i)) return "video";
     return "unknown";
@@ -125,8 +125,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         return match ? `https://movearnpre.com/embed/${match[1]}` : null;
       }
       if (videoType === "vidmoly") {
-        const match = episode.videoUrl.match(/vidmoly\.to\/([a-zA-Z0-9]+)/);
-        return match ? `https://vidmoly.to/embed-${match[1]}.html` : null;
+        const match = episode.videoUrl.match(/vidmoly\.net\/([a-zA-Z0-9]+)/);  // modifié ici
+        return match ? `https://vidmoly.net/embed-${match[1]}.html` : null;  // modifié ici
       }
       if (videoType === "smoothpre") {
         const match = episode.videoUrl.match(/smoothpre\.com\/([a-zA-Z0-9]+)/);
