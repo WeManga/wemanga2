@@ -4307,6 +4307,48 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "SAKAMOTO DAYS ",
+    description: "Tueur à gages hors pair, Taro Sakamoto a pris sa retraite par amour. Mais lorsque son passé le rattrape, il doit se battre pour protéger sa famille ...",
+    poster: "https://fr.web.img2.acsta.net/img/01/16/0116a15fc0c058ec5dd8c3386ddfc1fa.jpg",
+    banner: "https://fr.web.img6.acsta.net/r_1280_720/img/9b/77/9b770015bd8978db4e348719341d82e4.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1 Partie 1",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5795824" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5801277" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5806365" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5811614" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5818927" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5825676" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5831925" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5838903" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845448" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5851275" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5857628" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 1 Partie 2",
+	category: "nouveaute",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5964336" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5970955" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5977186" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982806" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5988565" }
+			        ]
+      }
+    ]
+  },
+	{
     title: "To Be A Hero X",
     description: "Tous les deux ans, les meilleurs héros se réunissent pour participer à un tournoi. Leur performance met à jour leur “taux de confiance“ et le classement évolue.",
     poster: "https://fr.web.img2.acsta.net/c_310_420/img/d5/2a/d52a37aa61a0b1682fd088d2e09de360.jpg",
