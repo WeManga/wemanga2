@@ -1017,6 +1017,31 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Gachiakuta",
+    description: "Dans une ville flottante où les riches se débarrassent de leurs déchets, comme de leurs habitants indésirables, Rudo est accusé de meurtre.",
+    poster: "https://fr.web.img6.acsta.net/img/d5/7b/d57b51b6b84ed66f6dfb47d83aa759a6.jpg",
+    banner: "https://fr.web.img4.acsta.net/r_1280_720/img/45/e0/45e04f8c994576b6b4ab5c3e38971431.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+	category: "nouveaute"
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5955316" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5963187" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976520" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981805" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5988006" }
+      ]
+      }
+    ]
+  },
+	{
     title: "Héro au Bouclier",
     description: "Naofumi est projeté dans un monde proche en tout lieu d'un jeu de rôle d'heroic fantasy. Mais alors que d'autres héros ont été dotés d'armes offensives ...",
     poster: "https://fr.web.img5.acsta.net/pictures/20/04/29/14/36/1180707.jpg",
@@ -4333,7 +4358,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     seasons: [
       {
         number: 1,
-        title: "Saison 1",
+        title: "Saison 1 VOSTFR",
 	category: "nouveaute"
         episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5954008" },
