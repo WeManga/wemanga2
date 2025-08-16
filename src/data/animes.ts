@@ -4477,6 +4477,33 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Silent Witch VOSTFR",
+    description: "Monica Everett est la Silent Witch, seule au monde capable de manier la magie sans prononcer d'incantation.",
+    poster: "https://fr.web.img5.acsta.net/img/b5/74/b5746f84c1c957431a9616fc29691450.jpg",
+    banner: "https://fr.web.img3.acsta.net/r_1280_720/img/02/77/02775fa46502594b6af6ca23f4683045.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+	category: "nouveaute",
+        episodes: [
+       { title: "Épisode 1", videoUrl: "https://vidmoly.to/jxj3rmrthvwy" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.to/kwn9ba3edpdg" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.to/t7ef1aigrdih" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.to/6pe9b3fd6lnf" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.to/5og3alyrhy65" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.to/d25xmqei2m5n" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.to/j8al2cx0jxy5" }
+	      ]
+      }
+    ]
+  },
+	{
     title: "To Be A Hero X",
     description: "Tous les deux ans, les meilleurs héros se réunissent pour participer à un tournoi. Leur performance met à jour leur “taux de confiance“ et le classement évolue.",
     poster: "https://fr.web.img2.acsta.net/c_310_420/img/d5/2a/d52a37aa61a0b1682fd088d2e09de360.jpg",
