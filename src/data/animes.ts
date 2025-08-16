@@ -4291,11 +4291,11 @@ const animeConfigs: SimpleAnimeConfig[] = [
     rating: 8,
     type: "serie",
     status: "En cours",
-	category: "nouveaute",
     seasons: [
       {
         number: 1,
         title: "Saison 1",
+		  	category: "nouveaute",
         episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5869621" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877520" },
