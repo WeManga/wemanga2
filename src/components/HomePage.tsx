@@ -163,7 +163,7 @@ const HomePage: React.FC<HomePageProps> = ({
                         <h3 className="text-white font-bold truncate">{anime.title}</h3>
                         <p className="text-xs text-gray-400 truncate">{episode.title}</p>
                         <p className="text-xs text-gray-500">
-                          Progression : {Math.round((progress ?? 0) * 100)}%
+
                         </p>
                       </div>
                     </div>
