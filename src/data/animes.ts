@@ -4281,6 +4281,45 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "FILM 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5567506" },
     ]
   },
+	{
+    title: "To Be A Hero X",
+    description: "Tous les deux ans, les meilleurs héros se réunissent pour participer à un tournoi. Leur performance met à jour leur “taux de confiance“ et le classement évolue.",
+    poster: "https://fr.web.img2.acsta.net/c_310_420/img/d5/2a/d52a37aa61a0b1682fd088d2e09de360.jpg",
+    banner: "https://fr.web.img4.acsta.net/img/7c/1f/7c1f50e479615bfc29cb13ff2ae261f3.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8,
+    type: "serie",
+    status: "En cours",
+	category: "nouveaute"
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5869621" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877520" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5885636" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5893636" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5900764" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5908179" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5914588" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5921167" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5926856" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5931666" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5937152" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5942980" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5948717" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5954995" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5962863" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969850" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976122" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981456" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987652" }
+        ]
+      }
+    ]
+  },
   {
     title: "Le Voyage de Chihiro",
     description: "Le film raconte l'histoire de Chihiro, une jeune fille de dix ans qui se retrouve transportée dans un monde mystérieux rempli de créatures surnaturelles.",
