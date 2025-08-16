@@ -1727,6 +1727,48 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "Kaiju N.8",
+    description: "C'est l'histoire de Kafka Hibino qui travaille dans le nettoyage des Kaiju , d'énormes monstres qui attaquent les villes et détruisent tout sur leur ...",
+    poster: "https://fr.web.img6.acsta.net/img/77/07/77079c0a800097522800816954373303.jpg",
+    banner: "https://fr.web.img4.acsta.net/r_1280_720/img/f8/28/f8280eef08ae8389c70340725177cbcd.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2024,
+    rating: 9,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5503649" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5510925" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5518047" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/8taamsgk" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5532677" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5538940" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5545176" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5551613" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5557152" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5563936" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5588347" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5595357" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+		  category: "nouveaute",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://sendvid.com/o5ovrbxk" },
+      { title: "Épisode 2", videoUrl: "https://sendvid.com/ariluppd" },
+      { title: "Épisode 3", videoUrl: "https://sendvid.com/c95j1ukm" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/ihaj6og7" }
+	    ]
+      }
+    ]
+  },
       {
     title: "Naruto",
     description: "Naruto Uzumaki est un ninja adolescent qui cherche à devenir Hokage.",
