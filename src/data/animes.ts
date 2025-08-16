@@ -1030,7 +1030,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
       {
         number: 1,
         title: "Saison 1",
-	category: "nouveaute"
+	category: "nouveaute",
         episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5955316" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5963187" },
@@ -4359,7 +4359,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
       {
         number: 1,
         title: "Saison 1 VOSTFR",
-	category: "nouveaute"
+	category: "nouveaute",
         episodes: [
         { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5954008" },
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5962034" },
