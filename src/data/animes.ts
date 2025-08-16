@@ -447,18 +447,18 @@ const animeConfigs: SimpleAnimeConfig[] = [
         number: 1,
         title: "Saison 1",
         episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5702327" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5710680" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5719293" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5728390" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5737110" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5744354" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5751527" },
-      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5758273" },
-      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5764378" },
-      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5768594" },
-      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5772582" },
-      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5778118" }
+       { title: "Épisode 1", videoUrl: "https://vidmoly.net/4b5r6ogmt9ce" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/c1sokkikzi3w" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/ibm3cngma5u4" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/lszfj8qn2c6t" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/72t4b53lb8e1" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/126ws41jioq1" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/xfkp7eyydod5" },
+  { title: "Épisode 8", videoUrl: "https://vidmoly.net/g3adf3qnf7mb" },
+  { title: "Épisode 9", videoUrl: "https://vidmoly.net/h160l01fazsz" },
+  { title: "Épisode 10", videoUrl: "https://vidmoly.net/ddcvo1w79eoj" },
+  { title: "Épisode 11", videoUrl: "https://vidmoly.net/3yjmo0xzkg1s" },
+  { title: "Épisode 12", videoUrl: "https://vidmoly.net/q2pcv7um7gdj" }
         ]
       },
       {
