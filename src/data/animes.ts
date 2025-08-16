@@ -361,7 +361,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
         number: 1,
         title: "Saison 1",
         episodes: [
-      { title: "Épisode 1", videoUrl: "https://sendvid.com/embed/o2f76jpm" },
+      { title: "Épisode 1", videoUrl: "https://sendvid.com/o2f76jpm" },
       { title: "Épisode 2", videoUrl: "https://sendvid.com/5y30qvow" },
       { title: "Épisode 3", videoUrl: "https://sendvid.com/po5m0ls0" },
       { title: "Épisode 4", videoUrl: "https://sendvid.com/byk4u0de" },
