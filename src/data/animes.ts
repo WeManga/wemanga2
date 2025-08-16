@@ -346,6 +346,37 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 28", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4819778" },
           ]
 },
+	{
+    title: "Chainsaw Man",
+    description: "Après avoir mit hors d'état de nuire Katana Man, Denji va faire la rencontre de Reze, une jeune femme qui semble s'intéresser à lui.",
+    poster: "https://fr.web.img4.acsta.net/img/09/e2/09e24b1cd13cd6c05a7a67bb737f638b.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_400_225/newsv7/22/09/27/15/11/0981457.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2022,
+    rating: 9,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://sendvid.com/embed/o2f76jpm" },
+      { title: "Épisode 2", videoUrl: "https://sendvid.com/5y30qvow" },
+      { title: "Épisode 3", videoUrl: "https://sendvid.com/po5m0ls0" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/byk4u0de" },
+      { title: "Épisode 5", videoUrl: "https://sendvid.com/xc0fhe9l" },
+      { title: "Épisode 6", videoUrl: "https://sendvid.com/667czm31" },
+      { title: "Épisode 7", videoUrl: "https://sendvid.com/eme7imab" },
+      { title: "Épisode 8", videoUrl: "https://sendvid.com/k1838sjx" },
+      { title: "Épisode 9", videoUrl: "https://sendvid.com/0wzx6kvn" },
+      { title: "Épisode 10", videoUrl: "https://sendvid.com/towp6hkr },
+      { title: "Épisode 11", videoUrl: "https://sendvid.com/mg7tokk1" },
+      { title: "Épisode 12", videoUrl: "https://sendvid.com/qgohpd7m" }
+       ]
+      }
+    ]
+  },
   {
     title: "DANDADAN S1",
     description: "Momo Ayase et Ken Takakura (surnommé Okarun) sont deux lycéens diamétralement opposés : Momo est persuadée de l’existence des fantômes, mais refuse de croire aux extraterrestres. Okarun croit fermement aux aliens et rejette tout ce qui touche aux esprits. Pour trancher ce débat, ils conviennent d’un défi : Momo se rendra dans un hôpital réputé pour abriter des créatures extraterrestres, tandis qu’Okarun explorera un tunnel hanté. Chacun fait une rencontre inattendue... qui va bouleverser leur vision du monde et les lier de manière indissociable. C’est le point de départ d’une aventure déjantée, mêlant romance, paranormal et situations totalement inédites.",
