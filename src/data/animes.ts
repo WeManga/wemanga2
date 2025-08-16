@@ -422,6 +422,113 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 37", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4745172" },
                 ]
 },
+	{
+    title: "Demon Slayer",
+    description: "La légende raconte aussi qu'un tueur déambule la nuit, chassant ces démons assoiffés de sang. Depuis la mort de son père, Tanjiro a pris sur lui pour subvenir aux besoins de sa famille. Malgré cette tragédie, ils réussissent à trouver un peu de bonheur au quotidien.",
+    poster: "https://fr.web.img6.acsta.net/pictures/19/09/18/13/46/0198270.jpg",
+    banner: "https://fr.web.img6.acsta.net/r_1280_720/newsv7/20/10/23/16/55/5813882.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2019,
+    rating: 9,
+    type: "serie",
+    status: "En cours",
+    category: "classique",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668241" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668280" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668284" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668287" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668289" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668291" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668293" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668298" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668299" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668304" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668308" },
+      { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668313" },
+      { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668320" },
+      { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668327" },
+      { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668332" },
+      { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668339" },
+      { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668344" },
+      { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668349" },
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668358" },
+      { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668363" },
+      { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668369" },
+      { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668375" },
+      { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668379" },
+      { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668384" },
+      { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668387" },
+      { title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4668389" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Episodes Train de l'infini",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://sendvid.com/embed/0ya2c5j5" },
+      { title: "Épisode 2", videoUrl: "https://sendvid.com/embed/to5yfsmm" },
+      { title: "Épisode 3", videoUrl: "https://sendvid.com/embed/blixyrz6" },
+      { title: "Épisode 4", videoUrl: "https://sendvid.com/embed/619ph4xg" },
+      { title: "Épisode 5", videoUrl: "https://sendvid.com/embed/h3f1olxr" },
+      { title: "Épisode 6", videoUrl: "https://sendvid.com/embed/jzllm48p" },
+      { title: "Épisode 7", videoUrl: "https://sendvid.com/embed/nu0pacvm" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 2",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699607" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699609" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699611" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699612" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699613" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699614" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699616" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699618" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699620" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699622" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4699625" }
+        ]
+      },
+      {
+        number: 4,
+        title: "Saison 3",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5123652" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5129278" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5139733" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5148655" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5155200" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5162155" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5168755" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5175891" },
+      { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5181163" },
+      { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5186530" },
+      { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5193486" }
+        ]
+      },
+      {
+        number: 5,
+        title: "Saison 4",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5558735" },
+      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5565316" },
+      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5574503" },
+      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5582223" },
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5589758" },
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5597263" },
+      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5606165" },
+      { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5613056" }
+        ]
+      }
+    ]
+  },
 {
     title: "MY HERO ACADEMIA",
     description: "Les pouvoirs d'Izuku Midoriya, élève en troisième au collège Oridera, ne se sont pas manifestés, et ne le feront probablement jamais. L'an prochain, il doit entrer au lycée. Et bien qu'il n'ait aucun Alter, il vise le lycée Yuei, une académie réputée qui a formé les plus grands super-héros...",
@@ -3394,6 +3501,20 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "AKIRA Le Film", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5340708" },
           ]
   },
+	       {
+    title: "Demon Slayer Le Train de l'Infini",
+    description: "Tanjirô Kamado a reoint une organisation dédiée à la chasse aux démons, les pourfendeurs de démons, après que sa jeune sœur Nezuko ait été transformée en ...",
+    poster: "https://fr.web.img2.acsta.net/img/2f/53/2f538be2e4524b1473af94ea004b16b4.jpg",
+    banner: "https://fr.web.img3.acsta.net/r_654_368/newsv7/20/11/02/17/05/2207915.jpg",
+    genre: ["Action", "Aventure", "Comédie"],
+    year: 2021,
+    rating: 9,
+    type: "film", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+      { title: "Demon Slayer Le Train de l'Infini", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4708131" },
+          ]
+  },
          {
     title: "Gost In The Shell",
     description: "En 2029, le monde, ainsi que l'âme humaine, est contrôlé par Internet. Motoko Kusagani, une cyberpolicière, et Batou, deux cyborgs appartenant à la section 9, antiterroriste, doivent mettre la main sur un pirate informatique mystérieux en contact...",
@@ -3419,7 +3540,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     type: "film", // ou "film"
     status: "Terminé", // ou "Terminé"
     episodes: [
-  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4879087" },
+  { title: "Jujutsu Kaisen Zero", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4879087" },
           ]
   },
            {
