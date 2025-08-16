@@ -4623,6 +4623,31 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "The Water Magician VOSTFR",
+    description: "Grâce à la magie de l'eau et à sa jeunesse éternelle, il survit pendant 20 ans dans ce monde hostile et devient l'un des magiciens les plus puissants.",
+    poster: "https://fr.web.img2.acsta.net/img/ce/59/ce59af019b7b38bcbc980fcf480d62ae.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_400_200/img/ce/59/ce59af019b7b38bcbc980fcf480d62ae.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+           { title: "Épisode 1", videoUrl: "https://vidmoly.net/0gnasrpqulgn" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/z44jot9quodu" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/wyfx8pk3g547" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/ph7ejj8zjziq" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/3dzi17ef2egy" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/jv6l7tp01rt0" }
+        ]
+      }
+    ]
+  },
+	{
     title: "The Summer Hikaru Died",
     description: "Hikaru et Yoshiki sont 2 amis d'enfance. Mais un jour, les doutes de Yoshiki se confirment : Hikaru a été remplacé par autre chose.",
     poster: "https://fr.web.img2.acsta.net/img/f5/50/f5508414dfb01e42061bebb1a5ed7f05.jpg",
