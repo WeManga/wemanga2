@@ -1964,6 +1964,30 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "Lord Of Misteries",
+    description: "Dans un monde steampunk de l'ère victorienne, Zhou Mingrui se réveille sous le nom de Klein Moretti. Il se retrouve confronté à une mystérieuse organisation ...",
+    poster: "https://fr.web.img3.acsta.net/img/c0/98/c098c23d1ddd09a1c29082d46d31b383.jpg",
+    banner: "https://fr.web.img3.acsta.net/c_400_200/img/c0/98/c098c23d1ddd09a1c29082d46d31b383.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+	category: "nouveaute",
+        episodes: [
+       { title: "Épisode 1", videoUrl: "https://vidmoly.net/pakicu53nc2r" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/mh0a7l90jp4d" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/pfpnh70h352m" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/znj2ypou6pim" }
+	  ]
+    }
+    ]
+  },
       {
     title: "Naruto",
     description: "Naruto Uzumaki est un ninja adolescent qui cherche à devenir Hokage.",
