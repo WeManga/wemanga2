@@ -466,13 +466,13 @@ const animeConfigs: SimpleAnimeConfig[] = [
         title: "Saison 2",
 	category: "nouveaute",
         episodes: [
-      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5952240" },
-      { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5959678" },
-      { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5966920" },
-      { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5973704" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5979355" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5985105" },
-      { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5990643" }
+        { title: "Épisode 1", videoUrl: "https://vidmoly.net/s0eujneryt7k" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/ceb03r1s50yw" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/uv94eqdvu20r" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/ci6spcvpqcnu" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/jd0mn7ndxr66" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/afmtv0wju547" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/vvcyygrp3tgk" }
         ]
       }
     ]
