@@ -104,9 +104,37 @@ const animeConfigs: SimpleAnimeConfig[] = [
       {
         number: 1,
         title: "Saison 1",
+        episodes: [
+           { title: "Épisode 1", videoUrl: "https://sendvid.com/hg4crdz7" },
+  { title: "Épisode 2", videoUrl: "https://sendvid.com/wc4p7hy4" },
+  { title: "Épisode 3", videoUrl: "https://sendvid.com/0l5f4tc7" },
+  { title: "Épisode 4", videoUrl: "https://sendvid.com/h7a2vj16" },
+  { title: "Épisode 5", videoUrl: "https://sendvid.com/0bdlgza8" },
+  { title: "Épisode 6", videoUrl: "https://sendvid.com/edo9nnx7" },
+  { title: "Épisode 7", videoUrl: "https://sendvid.com/55wjdtir" },
+  { title: "Épisode 8", videoUrl: "https://sendvid.com/stuciomq" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+     { title: "Épisode 1", videoUrl: "https://sendvid.com/knce2vxo" },
+  { title: "Épisode 2", videoUrl: "https://sendvid.com/wu44jeca" },
+  { title: "Épisode 3", videoUrl: "https://sendvid.com/1p198ois" },
+  { title: "Épisode 4", videoUrl: "https://sendvid.com/9ak38pyx" },
+  { title: "Épisode 5", videoUrl: "https://sendvid.com/07vixype" },
+  { title: "Épisode 6", videoUrl: "https://sendvid.com/j3fpbou0" },
+  { title: "Épisode 7", videoUrl: "https://sendvid.com/p19bts30" },
+  { title: "Épisode 8", videoUrl: "https://sendvid.com/not0p4uz" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 3",
 	category: "nouveaute",
         episodes: [
-         { title: "Épisode 1", videoUrl: "https://vidmoly.net/9gqfukicodho" },
+      { title: "Épisode 1", videoUrl: "https://vidmoly.net/9gqfukicodho" },
   { title: "Épisode 2", videoUrl: "https://vidmoly.net/zrup25zbqdwo" },
   { title: "Épisode 3", videoUrl: "https://vidmoly.net/1ajpd1ey32at" },
   { title: "Épisode 4", videoUrl: "https://vidmoly.net/jf8skal7bamj" },
