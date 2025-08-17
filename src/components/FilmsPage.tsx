@@ -1,7 +1,7 @@
 import React from 'react';
 import { Anime } from '../types';
 import { animes } from '../data/animes';
-import AdBanner from './AdBanner';
+import AdBanner from './AdcashBanner';
 
 interface FilmsPageProps {
   searchQuery?: string;
