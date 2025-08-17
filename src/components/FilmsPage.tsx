@@ -133,7 +133,7 @@ const FilmsPage: React.FC<FilmsPageProps> = ({
                     {anime.description}
                   </p>
                   <div className="text-xs text-gray-500">
-                    Durée: {(anime.seasons?.[0]?.episodes?.?.duration) ?? 'N/A'}
+                    Durée: {(anime.seasons[0]?.episodes.duration) ?? 'N/A'}
                   </div>
                 </div>
               </div>
