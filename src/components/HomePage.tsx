@@ -33,36 +33,52 @@ const HomePage: React.FC<HomePageProps> = ({
   searchQuery = '',
 }) => {
   const [continueWatchingData, setContinueWatchingData] = useState<ContinueWatching[]>([]);
-  const adContainerRef = useRef<HTMLDivElement>(null);
+
+  // Refs pour chaque bannière
+  const adRefEpisodes = useRef<HTMLDivElement>(null);
+  const adRefNouveautes = useRef<HTMLDivElement>(null);
+  const adRefClassiques = useRef<HTMLDivElement>(null);
+  const adRefFooter = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setContinueWatchingData(getContinueWatching());
   }, []);
 
   useEffect(() => {
-    if (!adContainerRef.current) return;
+    // Ne rien faire si refs non prêtes
+    if (!adRefEpisodes.current || !adRefNouveautes.current || !adRefClassiques.current || !adRefFooter.current) return;
 
-    // Script pour charger la bibliothèque Adcash
-    const libScript = document.createElement('script');
-    libScript.src = '//acscdn.com/script/aclib.js';
-    libScript.async = true;
-
-    // Script inline pour exécuter runBanner dans le bon contexte
-    const inlineScript = document.createElement('script');
-    inlineScript.type = 'text/javascript';
-    inlineScript.innerHTML = "aclib && aclib.runBanner({ zoneId: '10295018' });";
-
-    adContainerRef.current.appendChild(libScript);
-    adContainerRef.current.appendChild(inlineScript);
-
-    return () => {
-      if (adContainerRef.current) {
-        adContainerRef.current.innerHTML = '';
-      }
+    // Fonction d’injection unique
+    const injectAdcashScript = () => {
+      return new Promise<void>((resolve) => {
+        if (document.getElementById('aclib')) {
+          resolve();
+          return;
+        }
+        const script = document.createElement('script');
+        script.id = 'aclib';
+        script.src = '//acscdn.com/script/aclib.js';
+        script.async = true;
+        script.onload = () => resolve();
+        document.body.appendChild(script);
+      });
     };
+
+    injectAdcashScript().then(() => {
+      if (window.aclib) {
+        try {
+          window.aclib.runBanner({ zoneId: '10295342' }); // Episodes à venir
+          window.aclib.runBanner({ zoneId: '10295350' }); // Nouveautés
+          window.aclib.runBanner({ zoneId: '10295350' }); // Classiques (même zoneId que Nouveautés selon ta donnée)
+          window.aclib.runBanner({ zoneId: '10295370' }); // Footer
+        } catch (e) {
+          console.error('Erreur lors de runBanner:', e);
+        }
+      }
+    });
   }, []);
 
-  // Fonction pour gérer suppression dans continue watching
+  // Fonction pour retirer un anime dans continue watching
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
     const current = getContinueWatching();
     const updated = current.filter(
@@ -125,17 +141,10 @@ const HomePage: React.FC<HomePageProps> = ({
           </div>
         </div>
 
-        {/* Conteneur pub */}
+        {/* PUB au dessus de "Episodes à venir" */}
         <div
-          ref={adContainerRef}
-          style={{
-            width: '100%',
-            maxWidth: 468,
-            height: 60,
-            margin: 'auto',
-            overflow: 'hidden',
-            marginBottom: 24,
-          }}
+          ref={adRefEpisodes}
+          style={{ width: '100%', maxWidth: 468, height: 60, margin: 'auto', overflow: 'hidden', marginBottom: 24 }}
         />
 
         {/* RECHERCHE */}
@@ -214,11 +223,11 @@ const HomePage: React.FC<HomePageProps> = ({
           </section>
         )}
 
-
-
-        
-        {/* ÉPISODES À VENIR */}
-        {!searchQuery && <UpcomingEpisodes />}
+        {/* PUB au-dessus de Nouveautés */}
+        <div
+          ref={adRefNouveautes}
+          style={{ width: '100%', maxWidth: 468, height: 60, margin: 'auto', overflow: 'hidden', marginBottom: 24 }}
+        />
 
         {/* NOUVEAUTÉS */}
         {!searchQuery && nouveautes.length > 0 && (
@@ -255,6 +264,12 @@ const HomePage: React.FC<HomePageProps> = ({
           </section>
         )}
 
+        {/* PUB au-dessus de Classiques */}
+        <div
+          ref={adRefClassiques}
+          style={{ width: '100%', maxWidth: 468, height: 60, margin: 'auto', overflow: 'hidden', marginBottom: 24 }}
+        />
+
         {/* CLASSIQUES */}
         {!searchQuery && classiques.length > 0 && (
           <section className="mb-16">
@@ -286,6 +301,12 @@ const HomePage: React.FC<HomePageProps> = ({
             </div>
           </section>
         )}
+
+        {/* PUB au-dessus du Footer */}
+        <div
+          ref={adRefFooter}
+          style={{ width: '100%', maxWidth: 468, height: 60, margin: 'auto', overflow: 'hidden', marginBottom: 24 }}
+        />
 
         <Footer />
       </div>
