@@ -1,5 +1,5 @@
 // src/components/HomePage.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Anime, ContinueWatching } from '../types';
 import { animes } from '../data/animes';
 import { getContinueWatching } from '../utils/cookies';
@@ -26,40 +26,43 @@ const firePopunder = () => {
   }
 };
 
-const HomePage: React.FC<HomePageProps> = ({
-  filter,
-  onPlayAnime,
-  onAnimeDetail,
-  searchQuery = ''
-}) => {
+const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail, searchQuery = '' }) => {
   const [continueWatchingData, setContinueWatchingData] = useState<ContinueWatching[]>([]);
+  const adContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setContinueWatchingData(getContinueWatching());
   }, []);
 
   useEffect(() => {
-    // Injecter script Adcash une seule fois au montage pour test pub
-    if (!document.getElementById('aclib')) {
-      const script = document.createElement('script');
-      script.id = 'aclib';
-      script.type = 'text/javascript';
-      script.src = '//acscdn.com/script/aclib.js';
-      script.async = true;
-      document.body.appendChild(script);
+    if (!adContainerRef.current) return;
 
-      script.onload = () => {
+    const loadAdcash = () => {
+      return new Promise<void>((resolve) => {
         if (window.aclib) {
-          window.aclib.runBanner({
-            zoneId: '10295018', // Change selon ta zone publicitaire
-          });
+          resolve();
+          return;
         }
-      };
-    } else if (window.aclib) {
-      window.aclib.runBanner({
-        zoneId: '10295018',
+        const script = document.createElement('script');
+        script.id = 'aclib';
+        script.src = '//acscdn.com/script/aclib.js';
+        script.async = true;
+        script.onload = () => resolve();
+        document.body.appendChild(script);
       });
-    }
+    };
+
+    loadAdcash().then(() => {
+      if (window.aclib && adContainerRef.current) {
+        try {
+          window.aclib.runBanner({
+            zoneId: '10295018',
+          });
+        } catch (e) {
+          console.error('Erreur lors de l’appel de runBanner:', e);
+        }
+      }
+    });
   }, []);
 
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
@@ -208,7 +211,11 @@ const HomePage: React.FC<HomePageProps> = ({
           )}
 
           {/* EMPLACEMENT DE LA BANNIÈRE PUB */}
-          <div id="adcash-banner-container" style={{ width: 468, height: 60, margin: 'auto', overflow: 'hidden' }} />
+          <div
+            ref={adContainerRef}
+            id="adcash-banner-container"
+            style={{ width: 468, height: 60, margin: 'auto', overflow: 'hidden' }}
+          />
 
           {/* ÉPISODES À VENIR */}
           {!searchQuery && <UpcomingEpisodes />}
