@@ -37,7 +37,6 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
   useEffect(() => {
     if (!adContainerRef.current) return;
 
-    // Créer la balise <script> dynamiquement dans le container
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.async = true;
@@ -58,7 +57,6 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
       }
     };
 
-    // Nettoyage au démontage du composant
     return () => {
       if (adContainerRef.current) {
         adContainerRef.current.innerHTML = '';
@@ -66,14 +64,13 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
     };
   }, []);
 
-  // Ton code de filtrage, gestion continue watching, etc.
-
-  // ... (comme dans ton code original, inchangé)
-
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
     const current = getContinueWatching();
-    const updated = current.filter(item =>
-      item.animeId !== animeId || item.seasonId !== seasonId || item.episodeId !== episodeId
+    const updated = current.filter(
+      item => 
+        item.animeId !== animeId || 
+        item.seasonId !== seasonId || 
+        item.episodeId !== episodeId
     );
     localStorage.setItem('continueWatching', JSON.stringify(updated));
     setContinueWatchingData(updated);
@@ -132,10 +129,17 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
           </div>
         </div>
 
-        {/* Conteneur de la bannière publicitaire */}
+        {/* Conteneur de la bannière publicitaire responsive */}
         <div
           ref={adContainerRef}
-          style={{ width: 468, height: 60, margin: 'auto', overflow: 'hidden' }}
+          style={{
+            width: '100%',          // prend toute la largeur possible
+            maxWidth: 468,          // limite max à 468px
+            height: 60,
+            margin: 'auto',
+            overflow: 'hidden',
+            marginBottom: 24
+          }}
         />
 
         {/* RECHERCHE */}
@@ -216,8 +220,10 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
           </section>
         )}
 
-        {/* AUTRES SECTIONS (Nouveautés, Classiques, Footer, etc.) */}
+        {/* ÉPISODES À VENIR */}
+        {!searchQuery && <UpcomingEpisodes />}
 
+        {/* NOUVEAUTÉS */}
         {!searchQuery && nouveautes.length > 0 && (
           <section className="mb-16">
             <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
@@ -256,6 +262,7 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
           </section>
         )}
 
+        {/* CLASSIQUES */}
         {!searchQuery && classiques.length > 0 && (
           <section className="mb-16">
             <h2 className="text-white text-3xl font-bold mb-8 text-center">Les Classiques</h2>
