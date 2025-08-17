@@ -4,7 +4,6 @@ import { Anime, ContinueWatching } from '../types';
 import { animes } from '../data/animes';
 import { getContinueWatching } from '../utils/cookies';
 import Footer from './Footer';
-import AdBanner from './AdBanner';
 import UpcomingEpisodes from './UpcomingEpisodes';
 import { X } from 'lucide-react';
 
@@ -15,15 +14,12 @@ interface HomePageProps {
   searchQuery?: string;
 }
 
-// Fonction popunder améliorée
 const firePopunder = () => {
-  const popUrl = 'https://pl27441070.profitableratecpm.com/f4/39/97/f4399746b6a1899924dab9a65d818df6.html'; // Ta pub
-
+  const popUrl = 'https://pl27441070.profitableratecpm.com/f4/39/97/f4399746b6a1899924dab9a65d818df6.html';
   const popunder = window.open(popUrl, '_blank', 'width=800,height=600,noopener,noreferrer');
   if (popunder) {
     popunder.blur();
     window.focus();
-    // Parfois utile pour les navigateurs plus stricts
     setTimeout(() => {
       window.focus();
     }, 500);
@@ -42,6 +38,30 @@ const HomePage: React.FC<HomePageProps> = ({
     setContinueWatchingData(getContinueWatching());
   }, []);
 
+  useEffect(() => {
+    // Injecter script Adcash une seule fois au montage pour test pub
+    if (!document.getElementById('aclib')) {
+      const script = document.createElement('script');
+      script.id = 'aclib';
+      script.type = 'text/javascript';
+      script.src = '//acscdn.com/script/aclib.js';
+      script.async = true;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        if (window.aclib) {
+          window.aclib.runBanner({
+            zoneId: '10295018', // Change selon ta zone publicitaire
+          });
+        }
+      };
+    } else if (window.aclib) {
+      window.aclib.runBanner({
+        zoneId: '10295018',
+      });
+    }
+  }, []);
+
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
     const current = getContinueWatching();
     const updated = current.filter(
@@ -55,7 +75,7 @@ const HomePage: React.FC<HomePageProps> = ({
   };
 
   const filteredAnimes = animes.filter(anime => {
-    const matchesFilter = filter === 'all' || anime.type === filter;
+    const matchesFilter = (filter === 'all') || (anime.type === filter);
     const matchesSearch =
       searchQuery === '' ||
       anime.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -106,6 +126,7 @@ const HomePage: React.FC<HomePageProps> = ({
             </div>
           </div>
         </div>
+
         <div className="max-w-7xl mx-auto px-8 py-12">
           {/* RECHERCHE */}
           {searchQuery && (
@@ -137,6 +158,7 @@ const HomePage: React.FC<HomePageProps> = ({
               )}
             </section>
           )}
+
           {/* CONTINUE WATCHING */}
           {!searchQuery && continueWatchingAnimes.length > 0 && (
             <section className="mb-16">
@@ -184,17 +206,13 @@ const HomePage: React.FC<HomePageProps> = ({
               </div>
             </section>
           )}
-          {/* BANDEAU PUB haut */}
-          <div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '10295018',
-        });
-    </script>
-</div>
 
-          {/* EPISODES À VENIR */}
+          {/* EMPLACEMENT DE LA BANNIÈRE PUB */}
+          <div id="adcash-banner-container" style={{ width: 468, height: 60, margin: 'auto', overflow: 'hidden' }} />
+
+          {/* ÉPISODES À VENIR */}
           {!searchQuery && <UpcomingEpisodes />}
+
           {/* NOUVEAUTÉS */}
           {!searchQuery && nouveautes.length > 0 && (
             <section className="mb-16">
@@ -233,8 +251,7 @@ const HomePage: React.FC<HomePageProps> = ({
               </div>
             </section>
           )}
-          {/* PUB */}
-          <AdBanner id="homeClassics" />
+
           {/* CLASSIQUES */}
           {!searchQuery && classiques.length > 0 && (
             <section className="mb-16">
@@ -270,7 +287,7 @@ const HomePage: React.FC<HomePageProps> = ({
               </div>
             </section>
           )}
-          <AdBanner id="homeBottom" />
+
           <Footer />
         </div>
       </div>
