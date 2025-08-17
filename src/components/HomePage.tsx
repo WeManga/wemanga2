@@ -26,7 +26,12 @@ const firePopunder = () => {
   }
 };
 
-const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail, searchQuery = '' }) => {
+const HomePage: React.FC<HomePageProps> = ({
+  filter,
+  onPlayAnime,
+  onAnimeDetail,
+  searchQuery = '',
+}) => {
   const [continueWatchingData, setContinueWatchingData] = useState<ContinueWatching[]>([]);
   const adContainerRef = useRef<HTMLDivElement>(null);
 
@@ -37,25 +42,18 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
   useEffect(() => {
     if (!adContainerRef.current) return;
 
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = '//acscdn.com/script/aclib.js';
+    // Script pour charger la bibliothèque Adcash
+    const libScript = document.createElement('script');
+    libScript.src = '//acscdn.com/script/aclib.js';
+    libScript.async = true;
 
-    adContainerRef.current.appendChild(script);
+    // Script inline pour exécuter runBanner dans le bon contexte
+    const inlineScript = document.createElement('script');
+    inlineScript.type = 'text/javascript';
+    inlineScript.innerHTML = "aclib && aclib.runBanner({ zoneId: '10295018' });";
 
-    script.onload = () => {
-      if (window.aclib) {
-        try {
-          window.aclib.runBanner({
-            zoneId: '10295018',
-          });
-          console.log('Adcash banner loaded');
-        } catch (e) {
-          console.error('Erreur lors de runBanner:', e);
-        }
-      }
-    };
+    adContainerRef.current.appendChild(libScript);
+    adContainerRef.current.appendChild(inlineScript);
 
     return () => {
       if (adContainerRef.current) {
@@ -64,13 +62,11 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
     };
   }, []);
 
+  // Fonction pour gérer suppression dans continue watching
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
     const current = getContinueWatching();
     const updated = current.filter(
-      item => 
-        item.animeId !== animeId || 
-        item.seasonId !== seasonId || 
-        item.episodeId !== episodeId
+      item => item.animeId !== animeId || item.seasonId !== seasonId || item.episodeId !== episodeId,
     );
     localStorage.setItem('continueWatching', JSON.stringify(updated));
     setContinueWatchingData(updated);
@@ -104,7 +100,7 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
   const nouveautes = filteredAnimes
     .map(anime => ({
       anime,
-      saisonsNouveaute: anime.seasons.filter(season => season.category === 'nouveaute')
+      saisonsNouveaute: anime.seasons.filter(season => season.category === 'nouveaute'),
     }))
     .filter(item => item.saisonsNouveaute.length > 0);
 
@@ -129,25 +125,23 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
           </div>
         </div>
 
-        {/* Conteneur de la bannière publicitaire responsive */}
+        {/* Conteneur pub */}
         <div
           ref={adContainerRef}
           style={{
-            width: '100%',          // prend toute la largeur possible
-            maxWidth: 468,          // limite max à 468px
+            width: '100%',
+            maxWidth: 468,
             height: 60,
             margin: 'auto',
             overflow: 'hidden',
-            marginBottom: 24
+            marginBottom: 24,
           }}
         />
 
         {/* RECHERCHE */}
         {searchQuery && (
           <section className="mb-16">
-            <h2 className="text-white text-3xl font-bold mb-8 text-center">
-              🔍 Résultats pour "{searchQuery}"
-            </h2>
+            <h2 className="text-white text-3xl font-bold mb-8 text-center">🔍 Résultats pour "{searchQuery}"</h2>
             {filteredAnimes.length > 0 ? (
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {filteredAnimes.map(anime => (
@@ -162,7 +156,9 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
                     <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
                     <div className="p-4">
                       <h3 className="text-xl font-bold text-white">{anime.title}</h3>
-                      <p className="text-gray-400 text-sm">{anime.year} • {anime.genre.join(', ')}</p>
+                      <p className="text-gray-400 text-sm">
+                        {anime.year} • {anime.genre.join(', ')}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -176,18 +172,19 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
         {/* CONTINUE WATCHING */}
         {!searchQuery && continueWatchingAnimes.length > 0 && (
           <section className="mb-16">
-            <h2 className="text-white text-3xl font-bold mb-8 text-center">
-              Reprenez votre visionnage
-            </h2>
+            <h2 className="text-white text-3xl font-bold mb-8 text-center">Reprenez votre visionnage</h2>
             <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
               {continueWatchingAnimes.map(({ anime, season, episode, progress }, idx) => (
                 <div
                   key={`cw-${idx}`}
                   className="bg-gray-900 rounded-xl overflow-hidden flex-shrink-0 w-56 hover:scale-105 transition-transform relative"
-                  onClick={() => { firePopunder(); onAnimeDetail(anime); }}
+                  onClick={() => {
+                    firePopunder();
+                    onAnimeDetail(anime);
+                  }}
                 >
                   <button
-                    onClick={(e) => {
+                    onClick={e => {
                       e.stopPropagation();
                       handleRemoveContinueWatching(anime.id, season.id, episode.id);
                     }}
@@ -200,10 +197,7 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
                     <div className="relative aspect-[3/4]">
                       <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover" />
                       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
-                        <div
-                          className="h-full bg-red-600"
-                          style={{ width: `${(progress ?? 0) * 100}%` }}
-                        />
+                        <div className="h-full bg-red-600" style={{ width: `${(progress ?? 0) * 100}%` }} />
                       </div>
                       <div className="absolute top-2 left-2 bg-orange-600 px-2 py-1 rounded text-xs font-bold">
                         {season.title} - {episode.title}
@@ -229,8 +223,8 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
             <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
             <div
               className="
-                flex gap-4 overflow-x-auto 
-                md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+                flex gap-4 overflow-x-auto
+                md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
                 md:gap-8
                 scrollbar-hide
               "
@@ -245,18 +239,14 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
                     }}
                     className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
                   >
-                    <img
-                      src={anime.poster}
-                      alt={anime.title}
-                      className="w-full h-64 object-cover"
-                    />
+                    <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
                     <div className="p-4">
                       <h3 className="text-xl font-bold text-white">{anime.title}</h3>
                       <p className="text-gray-400 text-sm">{season.title}</p>
                       <p className="text-gray-400 text-sm">{anime.genre.join(', ')}</p>
                     </div>
                   </div>
-                ))
+                )),
               )}
             </div>
           </section>
@@ -283,11 +273,7 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
                   }}
                   className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
                 >
-                  <img
-                    src={anime.poster}
-                    alt={anime.title}
-                    className="w-full h-64 object-cover"
-                  />
+                  <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
                   <div className="p-4">
                     <h3 className="text-xl font-bold text-white">{anime.title}</h3>
                     <p className="text-gray-400 text-sm">{anime.genre.join(', ')}</p>
