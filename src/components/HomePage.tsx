@@ -15,13 +15,18 @@ interface HomePageProps {
   searchQuery?: string;
 }
 
-// Fonction popunder qui ouvre l'URL en arrière-plan
+// Fonction popunder améliorée
 const firePopunder = () => {
-  const popUrl = 'https://pl27441070.profitableratecpm.com/f4/39/97/f4399746b6a1899924dab9a65d818df6.html'; // Remplace par la vraie URL de ta pub si différente
+  const popUrl = 'https://pl27441070.profitableratecpm.com/f4/39/97/f4399746b6a1899924dab9a65d818df6.html'; // Ta pub
+
   const popunder = window.open(popUrl, '_blank', 'width=800,height=600,noopener,noreferrer');
   if (popunder) {
     popunder.blur();
     window.focus();
+    // Parfois utile pour les navigateurs plus stricts
+    setTimeout(() => {
+      window.focus();
+    }, 500);
   }
 };
 
