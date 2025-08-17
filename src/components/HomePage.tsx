@@ -15,12 +15,14 @@ interface HomePageProps {
   searchQuery?: string;
 }
 
-// Fonction qui injecte le script popunder à chaque clic
+// Fonction popunder qui ouvre l'URL en arrière-plan
 const firePopunder = () => {
-  const script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = '//pl27441070.profitableratecpm.com/f4/39/97/f4399746b6a1899924dab9a65d818df6.js';
-  document.body.appendChild(script);
+  const popUrl = 'https://pl27441070.profitableratecpm.com/f4/39/97/f4399746b6a1899924dab9a65d818df6.html'; // Remplace par la vraie URL de ta pub si différente
+  const popunder = window.open(popUrl, '_blank', 'width=800,height=600,noopener,noreferrer');
+  if (popunder) {
+    popunder.blur();
+    window.focus();
+  }
 };
 
 const HomePage: React.FC<HomePageProps> = ({
@@ -47,7 +49,6 @@ const HomePage: React.FC<HomePageProps> = ({
     setContinueWatchingData(updated);
   };
 
-  // Filtrage par type + recherche
   const filteredAnimes = animes.filter(anime => {
     const matchesFilter = filter === 'all' || anime.type === filter;
     const matchesSearch =
@@ -58,7 +59,6 @@ const HomePage: React.FC<HomePageProps> = ({
     return matchesFilter && matchesSearch;
   });
 
-  // Continue watching
   const continueWatchingAnimes = continueWatchingData
     .map(item => {
       const anime = animes.find(a => a.id === item.animeId);
@@ -72,9 +72,8 @@ const HomePage: React.FC<HomePageProps> = ({
     .filter(Boolean)
     .slice(0, 6);
 
-  // Classiques : animes dont la propriété category est 'classique'
   const classiques = filteredAnimes.filter(anime => anime.category === 'classique');
-  // Nouveautés : animes ayant au moins une saison avec category 'nouveaute'
+
   const nouveautes = filteredAnimes
     .map(anime => ({
       anime,
@@ -144,6 +143,7 @@ const HomePage: React.FC<HomePageProps> = ({
                   <div
                     key={`cw-${idx}`}
                     className="bg-gray-900 rounded-xl overflow-hidden flex-shrink-0 w-56 hover:scale-105 transition-transform relative"
+                    onClick={() => { firePopunder(); onAnimeDetail(anime); }}
                   >
                     {/* BOUTON CROIX */}
                     <button
@@ -156,10 +156,7 @@ const HomePage: React.FC<HomePageProps> = ({
                     >
                       <X size={14} />
                     </button>
-                    <div onClick={() => {
-                      firePopunder();
-                      onAnimeDetail(anime);
-                    }}>
+                    <div>
                       <div className="relative aspect-[3/4]">
                         <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover" />
                         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
@@ -175,7 +172,6 @@ const HomePage: React.FC<HomePageProps> = ({
                       <div className="p-4">
                         <h3 className="text-white font-bold truncate">{anime.title}</h3>
                         <p className="text-xs text-gray-400 truncate">{episode.title}</p>
-                        <p className="text-xs text-gray-500"></p>
                       </div>
                     </div>
                   </div>
