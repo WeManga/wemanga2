@@ -215,18 +215,7 @@ const HomePage: React.FC<HomePageProps> = ({
         )}
 
 
-{/* Conteneur pub */}
-        <div
-          ref={adContainerRef}
-          style={{
-            width: '100%',
-            maxWidth: 468,
-            height: 60,
-            margin: 'auto',
-            overflow: 'hidden',
-            marginBottom: 24,
-          }}
-        />
+
         
         {/* ÉPISODES À VENIR */}
         {!searchQuery && <UpcomingEpisodes />}
