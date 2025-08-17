@@ -3,7 +3,7 @@ import { Play, Info, Star, Calendar } from 'lucide-react';
 import { Anime } from '../types';
 import { animes } from '../data/animes';
 import Footer from './Footer';
-import AdBanner from './AdBanner';
+import AdBanner from './AdcashBanner';
 
 interface CatalogPageProps {
   searchQuery?: string;
