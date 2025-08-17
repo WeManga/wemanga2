@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Episode, Season } from "../types";
-import AdBanner from "./AdBanner";
+import AdBanner from "./AdcashBanner";
 import ScrollingMessage from "./ScrollingMessage";
 import { saveContinueWatching } from "../utils/cookies";
 
