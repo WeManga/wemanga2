@@ -15,6 +15,14 @@ interface HomePageProps {
   searchQuery?: string;
 }
 
+// Fonction qui injecte le script popunder à chaque clic
+const firePopunder = () => {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = '//pl27441070.profitableratecpm.com/f4/39/97/f4399746b6a1899924dab9a65d818df6.js';
+  document.body.appendChild(script);
+};
+
 const HomePage: React.FC<HomePageProps> = ({
   filter,
   onPlayAnime,
@@ -66,7 +74,6 @@ const HomePage: React.FC<HomePageProps> = ({
 
   // Classiques : animes dont la propriété category est 'classique'
   const classiques = filteredAnimes.filter(anime => anime.category === 'classique');
-
   // Nouveautés : animes ayant au moins une saison avec category 'nouveaute'
   const nouveautes = filteredAnimes
     .map(anime => ({
@@ -107,7 +114,10 @@ const HomePage: React.FC<HomePageProps> = ({
                   {filteredAnimes.map(anime => (
                     <div
                       key={anime.id}
-                      onClick={() => onAnimeDetail(anime)}
+                      onClick={() => {
+                        firePopunder();
+                        onAnimeDetail(anime);
+                      }}
                       className="bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
                     >
                       <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
@@ -146,7 +156,10 @@ const HomePage: React.FC<HomePageProps> = ({
                     >
                       <X size={14} />
                     </button>
-                    <div onClick={() => onAnimeDetail(anime)}>
+                    <div onClick={() => {
+                      firePopunder();
+                      onAnimeDetail(anime);
+                    }}>
                       <div className="relative aspect-[3/4]">
                         <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover" />
                         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
@@ -162,9 +175,7 @@ const HomePage: React.FC<HomePageProps> = ({
                       <div className="p-4">
                         <h3 className="text-white font-bold truncate">{anime.title}</h3>
                         <p className="text-xs text-gray-400 truncate">{episode.title}</p>
-                        <p className="text-xs text-gray-500">
-
-                        </p>
+                        <p className="text-xs text-gray-500"></p>
                       </div>
                     </div>
                   </div>
@@ -192,7 +203,10 @@ const HomePage: React.FC<HomePageProps> = ({
                   saisonsNouveaute.map(season => (
                     <div
                       key={`${anime.id}-season-${season.number}`}
-                      onClick={() => onAnimeDetail(anime)}
+                      onClick={() => {
+                        firePopunder();
+                        onAnimeDetail(anime);
+                      }}
                       className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
                     >
                       <img
@@ -228,7 +242,10 @@ const HomePage: React.FC<HomePageProps> = ({
                 {classiques.map(anime => (
                   <div
                     key={anime.id}
-                    onClick={() => onAnimeDetail(anime)}
+                    onClick={() => {
+                      firePopunder();
+                      onAnimeDetail(anime);
+                    }}
                     className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
                   >
                     <img
