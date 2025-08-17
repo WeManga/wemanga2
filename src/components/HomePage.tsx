@@ -185,7 +185,14 @@ const HomePage: React.FC<HomePageProps> = ({
             </section>
           )}
           {/* BANDEAU PUB haut */}
-          <AdBanner id="homeTop" />
+          <div>
+    <script type="text/javascript">
+        aclib.runBanner({
+            zoneId: '10295018',
+        });
+    </script>
+</div>
+
           {/* EPISODES À VENIR */}
           {!searchQuery && <UpcomingEpisodes />}
           {/* NOUVEAUTÉS */}
