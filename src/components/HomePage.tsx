@@ -45,11 +45,9 @@ const HomePage: React.FC<HomePageProps> = ({
   }, []);
 
   useEffect(() => {
-    // Ne rien faire si refs non prêtes
     if (!adRefEpisodes.current || !adRefNouveautes.current || !adRefClassiques.current || !adRefFooter.current) return;
 
-    // Fonction d’injection unique
-    const injectAdcashScript = () => {
+    const loadAdcashScript = () => {
       return new Promise<void>((resolve) => {
         if (document.getElementById('aclib')) {
           resolve();
@@ -64,21 +62,26 @@ const HomePage: React.FC<HomePageProps> = ({
       });
     };
 
-    injectAdcashScript().then(() => {
+    loadAdcashScript().then(() => {
       if (window.aclib) {
         try {
           window.aclib.runBanner({ zoneId: '10295342' }); // Episodes à venir
-          window.aclib.runBanner({ zoneId: '10295350' }); // Nouveautés
-          window.aclib.runBanner({ zoneId: '10295350' }); // Classiques (même zoneId que Nouveautés selon ta donnée)
+          window.aclib.runBanner({ zoneId: '10295406' }); // Nouveautés (ID corrigé)
+          window.aclib.runBanner({ zoneId: '10295350' }); // Classiques
           window.aclib.runBanner({ zoneId: '10295370' }); // Footer
         } catch (e) {
           console.error('Erreur lors de runBanner:', e);
         }
       }
     });
+
+    return () => {
+      [adRefEpisodes, adRefNouveautes, adRefClassiques, adRefFooter].forEach(ref => {
+        if (ref.current) ref.current.innerHTML = '';
+      });
+    };
   }, []);
 
-  // Fonction pour retirer un anime dans continue watching
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
     const current = getContinueWatching();
     const updated = current.filter(
