@@ -37,48 +37,50 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
   useEffect(() => {
     if (!adContainerRef.current) return;
 
-    const loadAdcash = () => {
-      return new Promise<void>((resolve) => {
-        if (window.aclib) {
-          resolve();
-          return;
-        }
-        const script = document.createElement('script');
-        script.id = 'aclib';
-        script.src = '//acscdn.com/script/aclib.js';
-        script.async = true;
-        script.onload = () => resolve();
-        document.body.appendChild(script);
-      });
-    };
+    // Créer la balise <script> dynamiquement dans le container
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = '//acscdn.com/script/aclib.js';
 
-    loadAdcash().then(() => {
-      if (window.aclib && adContainerRef.current) {
+    adContainerRef.current.appendChild(script);
+
+    script.onload = () => {
+      if (window.aclib) {
         try {
           window.aclib.runBanner({
             zoneId: '10295018',
           });
+          console.log('Adcash banner loaded');
         } catch (e) {
-          console.error('Erreur lors de l’appel de runBanner:', e);
+          console.error('Erreur lors de runBanner:', e);
         }
       }
-    });
+    };
+
+    // Nettoyage au démontage du composant
+    return () => {
+      if (adContainerRef.current) {
+        adContainerRef.current.innerHTML = '';
+      }
+    };
   }, []);
+
+  // Ton code de filtrage, gestion continue watching, etc.
+
+  // ... (comme dans ton code original, inchangé)
 
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
     const current = getContinueWatching();
-    const updated = current.filter(
-      item =>
-        item.animeId !== animeId ||
-        item.seasonId !== seasonId ||
-        item.episodeId !== episodeId
+    const updated = current.filter(item =>
+      item.animeId !== animeId || item.seasonId !== seasonId || item.episodeId !== episodeId
     );
-    localStorage.setItem("continueWatching", JSON.stringify(updated));
+    localStorage.setItem('continueWatching', JSON.stringify(updated));
     setContinueWatchingData(updated);
   };
 
   const filteredAnimes = animes.filter(anime => {
-    const matchesFilter = (filter === 'all') || (anime.type === filter);
+    const matchesFilter = filter === 'all' || anime.type === filter;
     const matchesSearch =
       searchQuery === '' ||
       anime.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -130,150 +132,107 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-8 py-12">
-          {/* RECHERCHE */}
-          {searchQuery && (
-            <section className="mb-16">
-              <h2 className="text-white text-3xl font-bold mb-8 text-center">
-                🔍 Résultats pour "{searchQuery}"
-              </h2>
-              {filteredAnimes.length > 0 ? (
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {filteredAnimes.map(anime => (
-                    <div
-                      key={anime.id}
-                      onClick={() => {
-                        firePopunder();
-                        onAnimeDetail(anime);
-                      }}
-                      className="bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
-                    >
-                      <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
-                      <div className="p-4">
-                        <h3 className="text-xl font-bold text-white">{anime.title}</h3>
-                        <p className="text-gray-400 text-sm">{anime.year} • {anime.genre.join(', ')}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-20 text-gray-400">Aucun résultat trouvé</div>
-              )}
-            </section>
-          )}
+        {/* Conteneur de la bannière publicitaire */}
+        <div
+          ref={adContainerRef}
+          style={{ width: 468, height: 60, margin: 'auto', overflow: 'hidden' }}
+        />
 
-          {/* CONTINUE WATCHING */}
-          {!searchQuery && continueWatchingAnimes.length > 0 && (
-            <section className="mb-16">
-              <h2 className="text-white text-3xl font-bold mb-8 text-center">
-                Reprenez votre visionnage
-              </h2>
-              <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
-                {continueWatchingAnimes.map(({ anime, season, episode, progress }, idx) => (
+        {/* RECHERCHE */}
+        {searchQuery && (
+          <section className="mb-16">
+            <h2 className="text-white text-3xl font-bold mb-8 text-center">
+              🔍 Résultats pour "{searchQuery}"
+            </h2>
+            {filteredAnimes.length > 0 ? (
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {filteredAnimes.map(anime => (
                   <div
-                    key={`cw-${idx}`}
-                    className="bg-gray-900 rounded-xl overflow-hidden flex-shrink-0 w-56 hover:scale-105 transition-transform relative"
-                    onClick={() => { firePopunder(); onAnimeDetail(anime); }}
+                    key={anime.id}
+                    onClick={() => {
+                      firePopunder();
+                      onAnimeDetail(anime);
+                    }}
+                    className="bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
                   >
-                    {/* BOUTON CROIX */}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleRemoveContinueWatching(anime.id, season.id, episode.id);
-                      }}
-                      className="absolute top-2 right-2 bg-black/60 hover:bg-red-600 text-white rounded-full p-1 z-10"
-                      title="Retirer de la liste"
-                    >
-                      <X size={14} />
-                    </button>
-                    <div>
-                      <div className="relative aspect-[3/4]">
-                        <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
-                          <div
-                            className="h-full bg-red-600"
-                            style={{ width: `${(progress ?? 0) * 100}%` }}
-                          />
-                        </div>
-                        <div className="absolute top-2 left-2 bg-orange-600 px-2 py-1 rounded text-xs font-bold">
-                          {season.title} - {episode.title}
-                        </div>
-                      </div>
-                      <div className="p-4">
-                        <h3 className="text-white font-bold truncate">{anime.title}</h3>
-                        <p className="text-xs text-gray-400 truncate">{episode.title}</p>
-                      </div>
+                    <img src={anime.poster} alt={anime.title} className="w-full h-64 object-cover" />
+                    <div className="p-4">
+                      <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                      <p className="text-gray-400 text-sm">{anime.year} • {anime.genre.join(', ')}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            </section>
-          )}
+            ) : (
+              <div className="text-center py-20 text-gray-400">Aucun résultat trouvé</div>
+            )}
+          </section>
+        )}
 
-          {/* EMPLACEMENT DE LA BANNIÈRE PUB */}
-          <div
-            ref={adContainerRef}
-            id="adcash-banner-container"
-            style={{ width: 468, height: 60, margin: 'auto', overflow: 'hidden' }}
-          />
-
-          {/* ÉPISODES À VENIR */}
-          {!searchQuery && <UpcomingEpisodes />}
-
-          {/* NOUVEAUTÉS */}
-          {!searchQuery && nouveautes.length > 0 && (
-            <section className="mb-16">
-              <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
-              <div
-                className="
-                  flex gap-4 overflow-x-auto 
-                  md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
-                  md:gap-8
-                  scrollbar-hide
-                "
-              >
-                {nouveautes.map(({ anime, saisonsNouveaute }) =>
-                  saisonsNouveaute.map(season => (
-                    <div
-                      key={`${anime.id}-season-${season.number}`}
-                      onClick={() => {
-                        firePopunder();
-                        onAnimeDetail(anime);
-                      }}
-                      className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
-                    >
-                      <img
-                        src={anime.poster}
-                        alt={anime.title}
-                        className="w-full h-64 object-cover"
-                      />
-                      <div className="p-4">
-                        <h3 className="text-xl font-bold text-white">{anime.title}</h3>
-                        <p className="text-gray-400 text-sm">{season.title}</p>
-                        <p className="text-gray-400 text-sm">{anime.genre.join(', ')}</p>
+        {/* CONTINUE WATCHING */}
+        {!searchQuery && continueWatchingAnimes.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-white text-3xl font-bold mb-8 text-center">
+              Reprenez votre visionnage
+            </h2>
+            <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
+              {continueWatchingAnimes.map(({ anime, season, episode, progress }, idx) => (
+                <div
+                  key={`cw-${idx}`}
+                  className="bg-gray-900 rounded-xl overflow-hidden flex-shrink-0 w-56 hover:scale-105 transition-transform relative"
+                  onClick={() => { firePopunder(); onAnimeDetail(anime); }}
+                >
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleRemoveContinueWatching(anime.id, season.id, episode.id);
+                    }}
+                    className="absolute top-2 right-2 bg-black/60 hover:bg-red-600 text-white rounded-full p-1 z-10"
+                    title="Retirer de la liste"
+                  >
+                    <X size={14} />
+                  </button>
+                  <div>
+                    <div className="relative aspect-[3/4]">
+                      <img src={anime.poster} alt={anime.title} className="w-full h-full object-cover" />
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
+                        <div
+                          className="h-full bg-red-600"
+                          style={{ width: `${(progress ?? 0) * 100}%` }}
+                        />
+                      </div>
+                      <div className="absolute top-2 left-2 bg-orange-600 px-2 py-1 rounded text-xs font-bold">
+                        {season.title} - {episode.title}
                       </div>
                     </div>
-                  ))
-                )}
-              </div>
-            </section>
-          )}
+                    <div className="p-4">
+                      <h3 className="text-white font-bold truncate">{anime.title}</h3>
+                      <p className="text-xs text-gray-400 truncate">{episode.title}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
-          {/* CLASSIQUES */}
-          {!searchQuery && classiques.length > 0 && (
-            <section className="mb-16">
-              <h2 className="text-white text-3xl font-bold mb-8 text-center">Les Classiques</h2>
-              <div
-                className="
-                  flex gap-4 overflow-x-auto
-                  md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
-                  md:gap-8
-                  scrollbar-hide
-                "
-              >
-                {classiques.map(anime => (
+        {/* AUTRES SECTIONS (Nouveautés, Classiques, Footer, etc.) */}
+
+        {!searchQuery && nouveautes.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-white text-3xl font-bold mb-8 text-center">Nouveautés</h2>
+            <div
+              className="
+                flex gap-4 overflow-x-auto 
+                md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+                md:gap-8
+                scrollbar-hide
+              "
+            >
+              {nouveautes.map(({ anime, saisonsNouveaute }) =>
+                saisonsNouveaute.map(season => (
                   <div
-                    key={anime.id}
+                    key={`${anime.id}-season-${season.number}`}
                     onClick={() => {
                       firePopunder();
                       onAnimeDetail(anime);
@@ -287,16 +246,52 @@ const HomePage: React.FC<HomePageProps> = ({ filter, onPlayAnime, onAnimeDetail,
                     />
                     <div className="p-4">
                       <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                      <p className="text-gray-400 text-sm">{season.title}</p>
                       <p className="text-gray-400 text-sm">{anime.genre.join(', ')}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
-          )}
+                ))
+              )}
+            </div>
+          </section>
+        )}
 
-          <Footer />
-        </div>
+        {!searchQuery && classiques.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-white text-3xl font-bold mb-8 text-center">Les Classiques</h2>
+            <div
+              className="
+                flex gap-4 overflow-x-auto
+                md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+                md:gap-8
+                scrollbar-hide
+              "
+            >
+              {classiques.map(anime => (
+                <div
+                  key={anime.id}
+                  onClick={() => {
+                    firePopunder();
+                    onAnimeDetail(anime);
+                  }}
+                  className="bg-gray-900 w-48 md:w-auto flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
+                >
+                  <img
+                    src={anime.poster}
+                    alt={anime.title}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-xl font-bold text-white">{anime.title}</h3>
+                    <p className="text-gray-400 text-sm">{anime.genre.join(', ')}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <Footer />
       </div>
     </div>
   );
