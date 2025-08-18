@@ -5,11 +5,11 @@ import { Anime, Episode, Season } from '../types';
 interface AnimeDetailProps {
   anime: Anime;
   onBack: () => void;
-  onPlayEpisode: (episode: Episode, season: Season) => void;
+  onPlayEpisode: (anime: Anime, episode: Episode, season: Season) => void; // anime ajouté ici
 }
 
 const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode }) => {
-  const [selectedSeason, setSelectedSeason] = useState(anime.seasons[0]);
+  const [selectedSeason, setSelectedSeason] = useState<Season>(anime.seasons[0]);
 
   return (
     <div className="min-h-screen bg-black pt-4">
@@ -23,7 +23,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
           <span>Retour</span>
         </button>
       </div>
-
+      
       {/* Banner */}
       <div className="relative h-[60vh] overflow-hidden">
         <img
@@ -37,53 +37,50 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
           <div className="max-w-6xl mx-auto">
             <h1 className="text-center flex flex-col items-center text-white text-4xl md:text-6xl font-bold mb-4">{anime.title}</h1>
             <div className="flex justify-center mt-6">
-            <div className="flex items-center space-x-6 text-white mb-6">
-              <div className="flex items-center space-x-2">
-                <Star size={20} className="text-yellow-500" fill="currentColor" />
-                <span>{anime.rating}</span>
+              <div className="flex items-center space-x-6 text-white mb-6">
+                <div className="flex items-center space-x-2">
+                  <Star size={20} className="text-yellow-500" fill="currentColor" />
+                  <span>{anime.rating}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Calendar size={20} />
+                  <span>{anime.year}</span>
+                </div>
+                <span className="bg-red-600 px-3 py-1 rounded text-sm">{anime.status}</span>
               </div>
-
-              <div className="flex items-center space-x-2">
-                <Calendar size={20} />
-                <span>{anime.year}</span>
-              </div>
-              <span className="bg-red-600 px-3 py-1 rounded text-sm">{anime.status}</span>
-            </div>
             </div>
             
             <div className="flex justify-center mt-6">
-            <button
-              onClick={() => onPlayEpisode(selectedSeason.episodes[0], selectedSeason)}
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg flex items-center space-x-3 transition-colors duration-200 text-lg font-semibold"
-            >
-              <Play size={24} fill="white" />
-              <span>Regarder maintenant</span>
-            </button>
+              <button
+                onClick={() => onPlayEpisode(anime, selectedSeason.episodes[0], selectedSeason)}
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg flex items-center space-x-3 transition-colors duration-200 text-lg font-semibold"
+              >
+                <Play size={24} fill="white" />
+                <span>Regarder maintenant</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-
-
+      
       <div className="max-w-6xl mx-auto p-8">
         {/* Description and Info */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2">
             <h2 className="text-center flex flex-col items-center text-white text-2xl font-bold mb-4">Synopsis</h2>
             <p className="text-center flex flex-col items-center text-gray-300 text-lg leading-relaxed mb-6">{anime.description}</p>
-
             <div className="flex justify-center mt-6">
-            <div className="flex flex-wrap gap-2">
-              {anime.genre.map((genre, index) => (
-                <span
-                  key={index}
-                  className="bg-gray-800 text-gray-300 px-4 py-2 rounded-lg text-sm"
-                >
-                  {genre}
-                </span>
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {anime.genre.map((genre, index) => (
+                  <span
+                    key={index}
+                    className="bg-gray-800 text-gray-300 px-4 py-2 rounded-lg text-sm"
+                  >
+                    {genre}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
           </div>
           
           <div className="bg-gray-900 p-6 rounded-lg">
@@ -109,7 +106,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
             </div>
           </div>
         </div>
-
+        
         {/* Seasons */}
         {anime.type === 'serie' && anime.seasons.length > 1 && (
           <div className="mb-8">
@@ -131,7 +128,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
             </div>
           </div>
         )}
-
+        
         {/* Episodes */}
         <div>
           <h2 className="text-white text-2xl font-bold mb-6">
@@ -142,7 +139,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
               <div
                 key={episode.id}
                 className="bg-gray-900 rounded-lg overflow-hidden hover:bg-gray-800 transition-colors duration-200 cursor-pointer group"
-                onClick={() => onPlayEpisode(episode, selectedSeason)}
+                onClick={() => onPlayEpisode(anime, episode, selectedSeason)}
               >
                 <div className="relative aspect-video overflow-hidden">
                   <img
