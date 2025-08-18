@@ -1,8 +1,8 @@
 // src/components/HomePage.tsx
 import React, { useState, useEffect } from 'react';
-import { Anime, ContinueWatching } from '../types';
+import { Anime, ContinueWatching, Season, Episode } from '../types';
 import { animes } from '../data/animes';
-import { getContinueWatching } from '../utils/cookies';
+import { getContinueWatching, removeContinueWatching } from '../utils/cookies';
 import Footer from './Footer';
 import UpcomingEpisodes from './UpcomingEpisodes';
 import { X } from 'lucide-react';
@@ -12,6 +12,7 @@ interface HomePageProps {
   filter: 'all' | 'serie' | 'film';
   onPlayAnime: (anime: Anime) => void;
   onAnimeDetail: (anime: Anime) => void;
+  onPlayEpisode: (anime: Anime, season: Season, episode: Episode) => void;
   searchQuery?: string;
 }
 
@@ -31,6 +32,7 @@ const HomePage: React.FC<HomePageProps> = ({
   filter,
   onPlayAnime,
   onAnimeDetail,
+  onPlayEpisode,
   searchQuery = '',
 }) => {
   const [continueWatchingData, setContinueWatchingData] = useState<ContinueWatching[]>([]);
@@ -40,12 +42,10 @@ const HomePage: React.FC<HomePageProps> = ({
   }, []);
 
   const handleRemoveContinueWatching = (animeId: number, seasonId: number, episodeId: number) => {
-    const current = getContinueWatching();
-    const updated = current.filter(
-      item => item.animeId !== animeId || item.seasonId !== seasonId || item.episodeId !== episodeId,
-    );
-    localStorage.setItem('continueWatching', JSON.stringify(updated));
-    setContinueWatchingData(updated);
+    removeContinueWatching(animeId, seasonId, episodeId);
+    setContinueWatchingData(prev => prev.filter(item =>
+      !(item.animeId === animeId && item.seasonId === seasonId && item.episodeId === episodeId)
+    ));
   };
 
   const filteredAnimes = animes.filter(anime => {
@@ -72,7 +72,6 @@ const HomePage: React.FC<HomePageProps> = ({
     .slice(0, 6);
 
   const classiques = filteredAnimes.filter(anime => anime.category === 'classique');
-
   const nouveautes = filteredAnimes
     .map(anime => ({
       anime,
@@ -143,10 +142,10 @@ const HomePage: React.FC<HomePageProps> = ({
               {continueWatchingAnimes.map(({ anime, season, episode, progress }, idx) => (
                 <div
                   key={`cw-${idx}`}
-                  className="bg-gray-900 rounded-xl overflow-hidden flex-shrink-0 w-56 hover:scale-105 transition-transform relative"
+                  className="bg-gray-900 rounded-xl overflow-hidden flex-shrink-0 w-56 hover:scale-105 transition-transform relative cursor-pointer"
                   onClick={() => {
                     firePopunder();
-                    onAnimeDetail(anime);
+                    onPlayEpisode(anime, season, episode);
                   }}
                 >
                   <button
@@ -165,7 +164,7 @@ const HomePage: React.FC<HomePageProps> = ({
                       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
                         <div className="h-full bg-red-600" style={{ width: `${(progress ?? 0) * 100}%` }} />
                       </div>
-                      <div className="absolute top-2 left-2 bg-orange-600 px-2 py-1 rounded text-xs font-bold">
+                      <div className="absolute top-2 left-2 bg-orange-600 px-2 py-1 rounded text-xs font-bold truncate">
                         {season.title} - {episode.title}
                       </div>
                     </div>
