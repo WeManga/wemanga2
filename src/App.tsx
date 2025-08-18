@@ -19,7 +19,6 @@ function App() {
   const [selectedAnime, setSelectedAnime] = useState<Anime | null>(null);
   const [selectedEpisode, setSelectedEpisode] = useState<Episode | null>(null);
   const [selectedSeason, setSelectedSeason] = useState<Season | null>(null);
-
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   /** Navigation */
@@ -57,7 +56,7 @@ function App() {
   /** Lecture */
   const handlePlayAnime = (anime: Anime) => {
     const firstSeason = anime.seasons[0];
-    const firstEpisode = firstSeason.episodes[0];
+    const firstEpisode = firstSeason.episodes;
     setSelectedAnime(anime);
     setSelectedSeason(firstSeason);
     setSelectedEpisode(firstEpisode);
@@ -71,9 +70,10 @@ function App() {
     scrollToTop();
   };
 
-  const handlePlayEpisode = (episode: Episode, season: Season) => {
+  const handlePlayEpisode = (anime: Anime, season: Season, episode: Episode) => {
     setSelectedEpisode(episode);
     setSelectedSeason(season);
+    setSelectedAnime(anime);
     setCurrentState('player');
     scrollToTop();
   };
@@ -130,7 +130,6 @@ function App() {
           />
         </>
       )}
-
       {/* Pages */}
       {currentState === 'home' && (
         <HomePage
@@ -138,9 +137,9 @@ function App() {
           searchQuery={searchQuery}
           onPlayAnime={handlePlayAnime}
           onAnimeDetail={handleAnimeDetail}
+          onPlayEpisode={handlePlayEpisode} // <== passé ici
         />
       )}
-
       {currentState === 'series' && (
         <SeriesPage
           searchQuery={searchQuery}
@@ -148,7 +147,6 @@ function App() {
           onAnimeDetail={handleAnimeDetail}
         />
       )}
-
       {currentState === 'films' && (
         <FilmsPage
           searchQuery={searchQuery}
@@ -156,7 +154,6 @@ function App() {
           onAnimeDetail={handleAnimeDetail}
         />
       )}
-
       {currentState === 'catalog' && (
         <CatalogPage
           searchQuery={searchQuery}
@@ -164,7 +161,6 @@ function App() {
           onAnimeDetail={handleAnimeDetail}
         />
       )}
-
       {currentState === 'detail' && selectedAnime && (
         <AnimeDetail
           anime={selectedAnime}
@@ -172,7 +168,6 @@ function App() {
           onPlayEpisode={handlePlayEpisode}
         />
       )}
-
       {currentState === 'player' && selectedEpisode && selectedSeason && selectedAnime && (
         <VideoPlayer
           animeId={selectedAnime.id}
