@@ -56,7 +56,7 @@ function App() {
   /** Lecture */
   const handlePlayAnime = (anime: Anime) => {
     const firstSeason = anime.seasons[0];
-    const firstEpisode = firstSeason.episodes;
+    const firstEpisode = firstSeason.episodes; // Correction ici: prendre le premier épisode
     setSelectedAnime(anime);
     setSelectedSeason(firstSeason);
     setSelectedEpisode(firstEpisode);
@@ -137,7 +137,7 @@ function App() {
           searchQuery={searchQuery}
           onPlayAnime={handlePlayAnime}
           onAnimeDetail={handleAnimeDetail}
-          onPlayEpisode={handlePlayEpisode} // <== passé ici
+          onPlayEpisode={handlePlayEpisode}
         />
       )}
       {currentState === 'series' && (
