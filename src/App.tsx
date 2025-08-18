@@ -56,7 +56,7 @@ function App() {
   /** Lecture */
   const handlePlayAnime = (anime: Anime) => {
     const firstSeason = anime.seasons[0];
-    const firstEpisode = firstSeason.episodes; // Correction ici: prendre le premier épisode
+    const firstEpisode = firstSeason.episodes;  // Correction ici : prendre le 1er épisode (objet Episode)
     setSelectedAnime(anime);
     setSelectedSeason(firstSeason);
     setSelectedEpisode(firstEpisode);
