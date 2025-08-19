@@ -19,6 +19,7 @@ function App() {
   const [selectedAnime, setSelectedAnime] = useState<Anime | null>(null);
   const [selectedEpisode, setSelectedEpisode] = useState<Episode | null>(null);
   const [selectedSeason, setSelectedSeason] = useState<Season | null>(null);
+
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   /** Navigation */
@@ -56,7 +57,7 @@ function App() {
   /** Lecture */
   const handlePlayAnime = (anime: Anime) => {
     const firstSeason = anime.seasons[0];
-    const firstEpisode = firstSeason.episodes; // Correction ici : prendre le premier épisode
+    const firstEpisode = firstSeason.episodes; // <<< CORRECTION ICI
     setSelectedAnime(anime);
     setSelectedSeason(firstSeason);
     setSelectedEpisode(firstEpisode);
