@@ -100,8 +100,8 @@ const HomePage: React.FC<HomePageProps> = ({
           </div>
         </div>
 
-        {/* PUB au dessus de "Episodes à venir" */}
-        <AdcashBanner zoneId="10295342" sub1="EPISODES" />
+        {/* PUB au dessus de "Reprendre" */}
+        <AdcashBanner zoneId="10295018" sub1="TOP HOME" />
 
         {/* RECHERCHE */}
         {searchQuery && (
@@ -179,6 +179,10 @@ const HomePage: React.FC<HomePageProps> = ({
           </section>
         )}
 
+
+        {/* PUB au dessus de "Episodes à venir" */}
+        <AdcashBanner zoneId="10295342" sub1="EPISODES" />
+        
                 {/* "Episodes à venir" */}
         {!searchQuery && <UpcomingEpisodes />}
 
