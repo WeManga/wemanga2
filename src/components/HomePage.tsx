@@ -103,9 +103,6 @@ const HomePage: React.FC<HomePageProps> = ({
         {/* PUB au dessus de "Episodes à venir" */}
         <AdcashBanner zoneId="10295342" sub1="EPISODES" />
 
-        {/* "Episodes à venir" */}
-        {!searchQuery && <UpcomingEpisodes />}
-
         {/* RECHERCHE */}
         {searchQuery && (
           <section className="mb-16">
@@ -181,6 +178,9 @@ const HomePage: React.FC<HomePageProps> = ({
             </div>
           </section>
         )}
+
+                {/* "Episodes à venir" */}
+        {!searchQuery && <UpcomingEpisodes />}
 
         {/* PUB au-dessus de Nouveautés */}
         <AdcashBanner zoneId="10295406" sub1="NOUVEAUTES" />
