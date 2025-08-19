@@ -153,7 +153,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
 
         {/* Episodes */}
         <div>
-          <h2 className="text-white text-2xl font-bold mb-6">
+          <h2 className="text-white text-2xl font-bold mb-6 text-center">
             {selectedSeason && anime.type === "serie"
               ? `Épisodes - ${selectedSeason.title}`
               : "Film"}
