@@ -56,14 +56,15 @@ function App() {
 
   /** Lecture */
   const handlePlayAnime = (anime: Anime) => {
-    const firstSeason = anime.seasons[0];
-    const firstEpisode = firstSeason.episodes; // <<< CORRECTION ICI
-    setSelectedAnime(anime);
-    setSelectedSeason(firstSeason);
-    setSelectedEpisode(firstEpisode);
-    setCurrentState('player');
-    scrollToTop();
-  };
+  const firstSeason = anime.seasons[0];
+  const firstEpisode = firstSeason.episodes; // 😊 CORRECT !
+  setSelectedAnime(anime);
+  setSelectedSeason(firstSeason);
+  setSelectedEpisode(firstEpisode);
+  setCurrentState('player');
+  scrollToTop();
+};
+
 
   const handleAnimeDetail = (anime: Anime) => {
     setSelectedAnime(anime);
