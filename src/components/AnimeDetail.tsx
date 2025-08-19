@@ -60,6 +60,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
             </div>
 
             {selectedSeason && selectedSeason.episodes.length > 0 && (
+            <div className="flex justify-center">
               <button
                 onClick={handlePlayNow}
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg flex items-center justify-center space-x-3 transition-colors duration-200 text-lg font-semibold"
@@ -67,6 +68,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
                 <Play size={24} fill="white" />
                 <span>Regarder maintenant</span>
               </button>
+              </div>
             )}
           </div>
         </div>
