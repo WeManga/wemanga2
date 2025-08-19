@@ -129,26 +129,27 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
 <AdcashBanner zoneId="10300510" sub1="saisons" />
         
         {/* Seasons */}
-        {anime.type === "serie" && anime.seasons.length > 1 && (
-          <div className="mb-8">
-            <h2 className="flex justify-center text-white text-2xl font-bold mb-6">Saisons</h2>
-            <div className="flex flex-wrap gap-4">
-              {anime.seasons.map((season) => (
-                <button
-                  key={season.id}
-                  onClick={() => setSelectedSeason(season)}
-                  className={`px-6 py-3 rounded-lg transition-all duration-200 ${
-                    selectedSeason?.id === season.id
-                      ? "bg-red-600 text-white"
-                      : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                  }`}
-                >
-                  {season.title}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+{anime.type === "serie" && anime.seasons.length > 1 && (
+  <div className="mb-8">
+    <h2 className="flex justify-center text-white text-2xl font-bold mb-6">Saisons</h2>
+    <div className="flex flex-wrap gap-4 justify-center">
+      {anime.seasons.map((season) => (
+        <button
+          key={season.id}
+          onClick={() => setSelectedSeason(season)}
+          className={`px-6 py-3 rounded-lg transition-all duration-200 ${
+            selectedSeason?.id === season.id
+              ? "bg-red-600 text-white"
+              : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+          }`}
+        >
+          {season.title}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
+
 
         {/* Episodes */}
         <div>
