@@ -117,7 +117,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
               </div>
               {anime.type === "serie" && (
                 <div>
-                  <span className="text-gray-400">Saisons:</span> {anime.seasons.length}
+                  <span className="flex justify-center text-gray-400">Saisons:</span> {anime.seasons.length}
                 </div>
               )}
             </div>
