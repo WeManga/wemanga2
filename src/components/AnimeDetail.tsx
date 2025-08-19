@@ -73,7 +73,9 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
           </div>
         </div>
       </div>
-
+      
+<AdcashBanner zoneId="10300386" sub1="synopsis" />
+      
       <div className="max-w-6xl mx-auto p-8">
         {/* Description and Info */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
