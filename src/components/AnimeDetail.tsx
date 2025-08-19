@@ -99,31 +99,30 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
             </div>
           </div>
 
-         <div className="flex justify-center items-center min-h-screen">
-  <div className="bg-gray-900 p-6 rounded-lg text-center">
-    <h3 className="text-white text-xl font-bold mb-4">Informations</h3>
-    <div className="space-y-3 text-gray-300">
-      <div>
-        <span className="text-gray-400">Type:</span>{" "}
-        {anime.type === "serie" ? "Série" : "Film"}
-      </div>
-      <div>
-        <span className="text-gray-400">Année:</span> {anime.year}
-      </div>
-      <div>
-        <span className="text-gray-400">Statut:</span> {anime.status}
-      </div>
-      <div>
-        <span className="text-gray-400">Note:</span> {anime.rating}/10
-      </div>
-      {anime.type === "serie" && (
-        <div>
-          <span className="text-gray-400">Saisons:</span> {anime.seasons.length}
+         j'aimerai centrer tout ca :  <div className="bg-gray-900 p-6 rounded-lg">
+            <h3 className="text-white text-xl font-bold mb-4">Informations</h3>
+            <div className="space-y-3 text-gray-300">
+              <div>
+                <span className="text-gray-400">Type:</span>{" "}
+                {anime.type === "serie" ? "Série" : "Film"}
+              </div>
+              <div>
+                <span className="text-gray-400">Année:</span> {anime.year}
+              </div>
+              <div>
+                <span className="text-gray-400">Statut:</span> {anime.status}
+              </div>
+              <div>
+                <span className="text-gray-400">Note:</span> {anime.rating}/10
+              </div>
+              {anime.type === "serie" && (
+                <div>
+                  <span className="text-gray-400">Saisons:</span> {anime.seasons.length}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-      )}
-    </div>
-  </div>
-</div>
 
         {/* Seasons */}
         {anime.type === "serie" && anime.seasons.length > 1 && (
