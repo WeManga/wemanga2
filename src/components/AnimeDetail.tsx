@@ -126,6 +126,8 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
           </div>
         </div>
 
+<AdcashBanner zoneId="10300510" sub1="saisons" />
+        
         {/* Seasons */}
         {anime.type === "serie" && anime.seasons.length > 1 && (
           <div className="mb-8">
