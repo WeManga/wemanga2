@@ -16,7 +16,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
 
   const handlePlayNow = () => {
     if (selectedSeason && selectedSeason.episodes.length > 0) {
-      onPlayEpisode(anime, selectedSeason, selectedSeason.episodes);
+      onPlayEpisode(anime, selectedSeason, selectedSeason.episodes[0]);
     }
   };
 
