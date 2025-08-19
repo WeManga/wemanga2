@@ -56,15 +56,14 @@ function App() {
 
   /** Lecture */
   const handlePlayAnime = (anime: Anime) => {
-  const firstSeason = anime.seasons[0];
-  const firstEpisode = firstSeason.episodes; // 😊 CORRECT !
-  setSelectedAnime(anime);
-  setSelectedSeason(firstSeason);
-  setSelectedEpisode(firstEpisode);
-  setCurrentState('player');
-  scrollToTop();
-};
-
+    const firstSeason = anime.seasons[0];
+    const firstEpisode = firstSeason.episodes;
+    setSelectedAnime(anime);
+    setSelectedSeason(firstSeason);
+    setSelectedEpisode(firstEpisode);
+    setCurrentState('player');
+    scrollToTop();
+  };
 
   const handleAnimeDetail = (anime: Anime) => {
     setSelectedAnime(anime);
@@ -72,7 +71,9 @@ function App() {
     scrollToTop();
   };
 
+  // NOTE : ordre corrigé ici : (anime, season, episode)
   const handlePlayEpisode = (anime: Anime, season: Season, episode: Episode) => {
+    console.log('Lecture épisode:', { anime, season, episode }); // debug
     setSelectedEpisode(episode);
     setSelectedSeason(season);
     setSelectedAnime(anime);
