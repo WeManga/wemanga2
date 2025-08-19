@@ -99,7 +99,9 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
             </div>
           </div>
 
-         j'aimerai centrer tout ca :  <div className="bg-gray-900 p-6 rounded-lg">
+<AdcashBanner zoneId="10300402" sub1="top info" />
+          
+         <div className="bg-gray-900 p-6 rounded-lg">
             <h3 className="text-white text-xl font-bold mb-4">Informations</h3>
             <div className="space-y-3 text-gray-300">
               <div>
