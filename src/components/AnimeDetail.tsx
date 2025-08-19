@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
-import { Play, ArrowLeft, Star, Calendar, Clock } from 'lucide-react';
-import { Anime, Episode, Season } from '../types';
+import React, { useState } from "react";
+import { Play, ArrowLeft, Star, Calendar, Clock } from "lucide-react";
+import { Anime, Episode, Season } from "../types";
 
 interface AnimeDetailProps {
   anime: Anime;
   onBack: () => void;
-  onPlayEpisode: (anime: Anime, episode: Episode, season: Season) => void;
+  // Modifié ici aussi pour respecter l'ordre (anime, season, episode)
+  onPlayEpisode: (anime: Anime, season: Season, episode: Episode) => void;
 }
 
 const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode }) => {
-  // Initialise selectedSeason avec la première saison si elle existe, sinon null
-  const [selectedSeason, setSelectedSeason] = useState<Season | null>(
-    anime.seasons.length > 0 ? anime.seasons[0] : null
+  const [selectedSeason, setSelectedSeason] = useState<Season>(
+    anime.seasons.length > 0 ? anime.seasons[0] : (null as any)
   );
 
-  // Handler sécurisé pour "Regarder maintenant"
   const handlePlayNow = () => {
     if (selectedSeason && selectedSeason.episodes.length > 0) {
-      onPlayEpisode(anime, selectedSeason.episodes, selectedSeason);
+      onPlayEpisode(anime, selectedSeason, selectedSeason.episodes);
     }
   };
 
@@ -45,7 +44,9 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
 
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-white text-4xl md:text-6xl font-bold mb-4">{anime.title}</h1>
+            <h1 className="text-white text-4xl md:text-6xl font-bold mb-4">
+              {anime.title}
+            </h1>
             <div className="flex justify-center mt-6 space-x-6 text-white mb-6">
               <div className="flex items-center space-x-2">
                 <Star size={20} className="text-yellow-500" fill="currentColor" />
@@ -76,7 +77,9 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2">
             <h2 className="text-white text-2xl font-bold mb-4 text-center">Synopsis</h2>
-            <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">{anime.description}</p>
+            <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
+              {anime.description}
+            </p>
             <div className="flex justify-center mt-6">
               <div className="flex flex-wrap gap-2">
                 {anime.genre.map((genre, index) => (
@@ -94,19 +97,30 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
           <div className="bg-gray-900 p-6 rounded-lg">
             <h3 className="text-white text-xl font-bold mb-4">Informations</h3>
             <div className="space-y-3 text-gray-300">
-              <div><span className="text-gray-400">Type:</span> {anime.type === 'serie' ? 'Série' : 'Film'}</div>
-              <div><span className="text-gray-400">Année:</span> {anime.year}</div>
-              <div><span className="text-gray-400">Statut:</span> {anime.status}</div>
-              <div><span className="text-gray-400">Note:</span> {anime.rating}/10</div>
-              {anime.type === 'serie' && (
-                <div><span className="text-gray-400">Saisons:</span> {anime.seasons.length}</div>
+              <div>
+                <span className="text-gray-400">Type:</span>{" "}
+                {anime.type === "serie" ? "Série" : "Film"}
+              </div>
+              <div>
+                <span className="text-gray-400">Année:</span> {anime.year}
+              </div>
+              <div>
+                <span className="text-gray-400">Statut:</span> {anime.status}
+              </div>
+              <div>
+                <span className="text-gray-400">Note:</span> {anime.rating}/10
+              </div>
+              {anime.type === "serie" && (
+                <div>
+                  <span className="text-gray-400">Saisons:</span> {anime.seasons.length}
+                </div>
               )}
             </div>
           </div>
         </div>
 
         {/* Seasons */}
-        {anime.type === 'serie' && anime.seasons.length > 1 && (
+        {anime.type === "serie" && anime.seasons.length > 1 && (
           <div className="mb-8">
             <h2 className="text-white text-2xl font-bold mb-6">Saisons</h2>
             <div className="flex flex-wrap gap-4">
@@ -116,8 +130,8 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
                   onClick={() => setSelectedSeason(season)}
                   className={`px-6 py-3 rounded-lg transition-all duration-200 ${
                     selectedSeason?.id === season.id
-                      ? 'bg-red-600 text-white'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                      ? "bg-red-600 text-white"
+                      : "bg-gray-800 text-gray-300 hover:bg-gray-700"
                   }`}
                 >
                   {season.title}
@@ -130,9 +144,9 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
         {/* Episodes */}
         <div>
           <h2 className="text-white text-2xl font-bold mb-6">
-            {selectedSeason && anime.type === 'serie'
+            {selectedSeason && anime.type === "serie"
               ? `Épisodes - ${selectedSeason.title}`
-              : 'Film'}
+              : "Film"}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -140,7 +154,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
               <div
                 key={episode.id}
                 className="bg-gray-900 rounded-lg overflow-hidden hover:bg-gray-800 transition-colors duration-200 cursor-pointer group"
-                onClick={() => onPlayEpisode(anime, episode, selectedSeason)}
+                onClick={() => onPlayEpisode(anime, selectedSeason, episode)}
               >
                 <div className="relative aspect-video overflow-hidden">
                   <img
@@ -152,12 +166,17 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
                     <Play size={32} className="text-white" fill="white" />
                   </div>
                   <div className="absolute top-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-sm">
-                    {anime.type === 'serie' ? `Ép. ${index + 1}` : 'Film'}
+                    {anime.type === "serie" ? `Ép. ${index + 1}` : "Film"}
                   </div>
                 </div>
+
                 <div className="p-4">
-                  <h3 className="text-white font-semibold mb-2 line-clamp-2">{episode.title}</h3>
-                  <p className="text-gray-400 text-sm mb-3 line-clamp-3">{episode.description}</p>
+                  <h3 className="text-white font-semibold mb-2 line-clamp-2">
+                    {episode.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-3 line-clamp-3">
+                    {episode.description}
+                  </p>
                   <div className="flex items-center text-gray-500 text-sm">
                     <Clock size={14} className="mr-1" />
                     <span>{episode.duration}</span>
