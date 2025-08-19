@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Play, ArrowLeft, Star, Calendar, Clock } from "lucide-react";
 import { Anime, Episode, Season } from "../types";
+import AdcashBanner from './AdcashBanner';
 
 interface AnimeDetailProps {
   anime: Anime;
@@ -74,7 +75,7 @@ const AnimeDetail: React.FC<AnimeDetailProps> = ({ anime, onBack, onPlayEpisode 
         </div>
       </div>
       
-
+<AdcashBanner zoneId="10300386" sub1="synopsis" />
       
       <div className="max-w-6xl mx-auto p-8">
         {/* Description and Info */}
