@@ -214,6 +214,57 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Ajin",
+    description: "À la suite d'un accident, Kei Nagai, un lycéen lambda, découvre qu'il est un Ajin, un être immortel.",
+    poster: "https://media.senscritique.com/media/000013755499/150/ajin.jpg",
+    banner: "https://media.senscritique.com/media/000017925705/0/ajin_semi_humain_tome_1.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2016,
+    rating: 7,
+    type: "serie", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983473" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983476" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983484" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983488" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983492" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983494" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983496" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983501" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983535" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983536" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983540" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3786252" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983544" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983565" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983566" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983567" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983568" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983569" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983570" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983572" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983573" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983574" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983575" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3786253" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983577" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=2983579" },
+	      ]
+      }
+    ]
+  },
+	{
     title: "Arcane",
     description: "Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d'un braquage dans le très huppé Piltover. Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.",
     poster: "https://fr.web.img4.acsta.net/c_310_420/img/51/c7/51c72a38a8d8c443e250c8f1d9f4f643.jpg",
