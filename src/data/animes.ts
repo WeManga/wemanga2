@@ -145,6 +145,85 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "Assassination Classroom",
+    description: "Karma Akabane est un élève qui s'est fait renvoyer du collège de Kunugigaoka à cause de ses problèmes de violence. Alors que sa période de renvoi prend fin, il réintègre l'école dans la classe E, où il va pouvoir assouvir son envie de tuer un professeur...",
+    poster: "https://fr.web.img2.acsta.net/pictures/16/07/20/13/00/124405.png",
+    banner: "https://fr.web.img6.acsta.net/c_640_360/newsv7/20/10/02/14/58/1660745.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2015,
+    rating: 8,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+            { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564949" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564952" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564961" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564965" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564973" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564975" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564978" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564980" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564984" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564988" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564989" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564990" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564991" },
+{ title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564992" },
+{ title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564995" },
+{ title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564997" },
+{ title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3564998" },
+{ title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3565001" },
+{ title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3565002" },
+{ title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3565003" },
+{ title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3565005" },
+{ title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3565007" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566463" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566464" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566465" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566466" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566467" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566468" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566469" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566470" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566471" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566472" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566473" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566474" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566475" },
+{ title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566476" },
+{ title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566477" },
+{ title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566478" },
+{ title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566479" },
+{ title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566480" },
+{ title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566481" },
+{ title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566482" },
+{ title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566483" },
+{ title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566484" },
+{ title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566485" },
+{ title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566486" },
+{ title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3566487" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Film",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5307461" },
+        ]
+      }
+    ]
+  },
   {
     title: "Bleach",
     description: "Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits. Un jour, il croise la route d'une belle Shinigami",
