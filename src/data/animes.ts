@@ -5399,6 +5399,102 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "Overlord",
+    description: "Yggdrasil, le plus célèbre MMORPG au monde est sur le point de fermer. Momonga, jeune geek, attend patiemment l'arrêt du jeu.",
+    poster: "https://fr.web.img6.acsta.net/pictures/19/09/13/16/32/1187788.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_400_200/pictures/19/09/13/16/17/3635785.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2015,
+    rating: 8,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+            { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852274" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852276" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852279" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852283" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852287" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852290" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852294" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852297" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852300" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852304" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852309" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852312" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852317" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852323" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852327" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852329" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852332" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852335" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852338" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852340" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852342" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852345" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852348" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852350" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852352" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852354" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 3",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852362" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852364" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852368" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852370" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852372" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852375" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852377" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852380" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852383" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852385" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852388" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852391" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4852394" }
+        ]
+      },
+      {
+        number: 4,
+        title: "Saison 4",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099655" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099656" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099653" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099657" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099659" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099660" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099661" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099662" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099664" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099654" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099665" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099666" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5099667" }
+        ]
+      },
+      {
+        number: 5,
+        title: "Film : The Sacred Kingdom",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://vidmoly.net/vuj6ghubtwn1" },
+        ]
+      }
+    ]
+  },
  {
     title: " Black Clover",
     description: "Description de l' anime",
