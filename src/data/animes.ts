@@ -91,6 +91,32 @@ const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
 // ------------------------------
 const animeConfigs: SimpleAnimeConfig[] = [
 	{
+    title: "A.I.C.O. Incarnation",
+    description: "Quand Aiko apprend que son existence est fondée sur un terrible mensonge, elle fait équipe avec des Divers pour anéantir le Burst, et peut-être sauver sa famille.",
+    poster: "https://fr.web.img4.acsta.net/pictures/18/03/05/11/22/3066466.jpg",
+    banner: "https://www.programme-tv.net/imgre/fit/~2~collection~02b116a91f828329.jpeg/1200x630/crop-from/top/quality/80/a-i-c-o-incarnation.jpeg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2018,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085821" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085822" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085823" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085824" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085825" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085826" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085827" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085828" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085830" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085831" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085832" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5085833" },
+      // ... plus d'épisodes
+    ]
+  },
+	{
     title: "Arcane",
     description: "Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d'un braquage dans le très huppé Piltover. Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.",
     poster: "https://fr.web.img4.acsta.net/c_310_420/img/51/c7/51c72a38a8d8c443e250c8f1d9f4f643.jpg",
