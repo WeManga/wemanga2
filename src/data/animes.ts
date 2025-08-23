@@ -117,6 +117,43 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Accel World",
+    description: "L'histoire se passe au cours de l'année 2046, dans un monde où le virtuel est omniprésent, notamment grâce aux "neuro-linkers.",
+    poster: "https://fr.web.img4.acsta.net/pictures/18/03/05/11/22/3066466.jpg",
+    banner: "https://media.senscritique.com/media/000006516490/0/accel_world.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2016,
+    rating: 7,
+    type: "serie", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/49r5tfro691m" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/w0wx9ykfqhdi" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/g8354f4qdkgr" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/juhuah5w3pba" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/ljz86eqsiiie" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/bdaqi0vibjav" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/xkvw48sbk3cl" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/fdrepyw5jq98" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/cbwzg18zja4l" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/pv55t7btqyja" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/9a4oypp3491f" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/giorpnjnsx9z" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/ztci846jovtn" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/2qojtmz5hx2g" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/tjxy4a6rag8m" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/2mze082235zn" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/blo3i1flk3wj" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/nqxc9nf8ts3l" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/2i47ja034olg" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/kj5qm5irpg0n" },
+{ title: "Épisode 21", videoUrl: "https://vidmoly.net/n46x6o37u82h" },
+{ title: "Épisode 22", videoUrl: "https://vidmoly.net/y8bj2vk2nykt" },
+{ title: "Épisode 23", videoUrl: "https://vidmoly.net/pd2ntpvxz053" },
+      // ... plus d'épisodes
+    ]
+  },
+	{
     title: "Arcane",
     description: "Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d'un braquage dans le très huppé Piltover. Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.",
     poster: "https://fr.web.img4.acsta.net/c_310_420/img/51/c7/51c72a38a8d8c443e250c8f1d9f4f643.jpg",
