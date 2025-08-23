@@ -3408,8 +3408,8 @@ const animeConfigs: SimpleAnimeConfig[] = [
        { title: "Épisode 1", videoUrl: "https://vidmoly.net/pakicu53nc2r" },
 		{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5974574" },
  		{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5980487" },
- 		{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5986730" }
-		{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5992432" }
+ 		{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5986730" },
+		{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5992432" },
 		{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5996325" }
 	  ]
     }
