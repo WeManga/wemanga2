@@ -401,6 +401,128 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "BAKI",
+    description: "Alors que le champion d'arts martiaux Baki Hanma s'entraîne pour surpasser son père.",
+    poster: "https://fr.web.img4.acsta.net/pictures/19/07/30/16/42/2509986.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_400_200/pictures/19/09/24/14/59/2940182.jpg",
+    genre: ["Action", "Aventure", "Combat"],
+    year: 2018,
+    rating: 8.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506358" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506359" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506360" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506361" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506362" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506363" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506364" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506365" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506367" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506368" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506369" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506371" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3506372" },
+{ title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576547" },
+{ title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576549" },
+{ title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576550" },
+{ title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576551" },
+{ title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576552" },
+{ title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576554" },
+{ title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576555" },
+{ title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576556" },
+{ title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576557" },
+{ title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576558" },
+{ title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576559" },
+{ title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576560" },
+{ title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3576561" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712393" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712396" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712400" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712403" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712407" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712410" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712414" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712415" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712419" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712423" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712429" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712433" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712436" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 1 : Baki Hanma",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712353" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712357" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712359" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712362" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712367" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712371" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712372" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712375" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712376" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712379" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712384" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4712390" }
+        ]
+      },
+      {
+        number: 4,
+        title: "Saison 2 : Baki Hanma",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209355" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209356" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209358" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209359" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209360" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209363" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209366" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209367" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209368" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209369" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209389" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209391" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5209396" },
+{ title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234334" },
+{ title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234335" },
+{ title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234336" },
+{ title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234337" },
+{ title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234338" },
+{ title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234340" },
+{ title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234341" },
+{ title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234342" },
+{ title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234346" },
+{ title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234350" },
+{ title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234355" },
+{ title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234357" },
+{ title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234360" },
+{ title: "Épisode 27", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5234362" }
+        ]
+      },
+      {
+        number: 5,
+        title: "Baki VS Kengan",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5555676" },
+        ]
+      }
+    ]
+  },
   {
     title: "Bleach",
     description: "Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits. Un jour, il croise la route d'une belle Shinigami",
