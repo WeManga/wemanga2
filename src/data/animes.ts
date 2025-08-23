@@ -91,6 +91,49 @@ const createAnime = (id: number, config: SimpleAnimeConfig): Anime => {
 // ------------------------------
 const animeConfigs: SimpleAnimeConfig[] = [
 	{
+    title: "Arcane",
+    description: "Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d'un braquage dans le très huppé Piltover. Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.",
+    poster: "https://fr.web.img4.acsta.net/c_310_420/img/51/c7/51c72a38a8d8c443e250c8f1d9f4f643.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_640_360/newsv7/20/10/02/14/58/1660745.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2021,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+            { title: "Épisode 1", videoUrl: "https://vidmoly.net/ucwd2sz747ad" },
+{ title: "Épisode 2", videoUrl: net/ocvl5016mn1h" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/jtsajvpk5qnh" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/t1mcl6vvb3h7" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/4qtdjmbtulbu" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/u3kfviss5ow6" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/rf6aja82khl6" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/wqree17zzc25" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/j958huf9y02fl" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/ksbbqrk9xoj2" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/9hi9se4psmtc" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/legkasx2lio0" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/em2kprtpucqq" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/fixtahqqo7ja" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/2wy5w8cnay3f" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/8ux0kqmnmq5a" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/dp5bhhc5p9rk" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/z7j8luugkefh" },
+       ]
+      }
+    ]
+  },
+	{
     title: "Arknights VOSTFR",
     description: "Alors qu'une maladie mortelle qui transforme ses victimes en cristaux se propage, Rhodes Island Pharmaceuticals Inc. se lance dans la recherche d'un remède",
     poster: "https://fr.web.img2.acsta.net/pictures/22/10/19/10/05/4846939.jpg",
