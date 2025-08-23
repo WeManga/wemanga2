@@ -119,7 +119,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
 	{
     title: "Accel World",
     description: "L'histoire se passe au cours de l'année 2046, dans un monde où le virtuel est omniprésent, notamment grâce aux neuro-linkers.",
-    poster: "https://fr.web.img4.acsta.net/pictures/18/03/05/11/22/3066466.jpg",
+    poster: "https://www.nautiljon.com/images/anime/00/77/accel_world_2177.webp",
     banner: "https://media.senscritique.com/media/000006516490/0/accel_world.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2016,
@@ -918,6 +918,33 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5235237" },
         ]
       }
+    ]
+  },
+	{
+    title: "Battle Game In 5 Secondes",
+    description: "Akira Shiroyanagi, lycéen fan de jeux et blasé par la monotonie de sa vie. Sur le chemin de l'école, celui-ci se retrouve tout à coup poursuivi par un homme mystérieux. Après qu'Akira parvient à le neutraliser, une jeune femme apparaît et lui tire dessus !",
+    poster: "https://fr.web.img5.acsta.net/pictures/21/07/07/10/57/5623630.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_640_360/newsv7/21/08/09/16/45/3605509.jpg",
+    genre: ["Action", "Aventure", "Horreur"],
+    year: 2021,
+    rating: 8.5,
+    type: "serie", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4401789" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4409607" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4415829" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4429210" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4429212" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4438305" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4447929" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4455282" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4464986" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4484404" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4499766" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4499765" },
+
+      // ... plus d'épisodes
     ]
   },
 {
