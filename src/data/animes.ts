@@ -358,6 +358,49 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "B : The Beginning",
+    description: "A Cremona, une série de meurtres étranges a lieu. En raison des marques que laisse le tueur à chaque fois, on surnomme ce dernier Tueur B. Après dix années d'absence, Keith Kazama Flick connu aussi sous le nom de Genie réintègre la police royale, RIS, dans le but de coincer ce tueur.",
+    poster: "https://fr.web.img4.acsta.net/pictures/19/07/30/16/42/2509986.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_400_200/pictures/19/07/30/16/39/5359483.jpg",
+    genre: ["Action", "Meutre", "Fantaisie"],
+    year: 2018,
+    rating: 8.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://sendvid.com/8b4b10nc" },
+{ title: "Épisode 2", videoUrl: "https://sendvid.com/7oh9ypjv" },
+{ title: "Épisode 3", videoUrl: "https://sendvid.com/wtjm5sf2" },
+{ title: "Épisode 4", videoUrl: "https://sendvid.com/ibzx197e" },
+{ title: "Épisode 5", videoUrl: "https://sendvid.com/1x3udhny" },
+{ title: "Épisode 6", videoUrl: "https://sendvid.com/dvgv5hm7" },
+{ title: "Épisode 7", videoUrl: "https://sendvid.com/m5k5idx9" },
+{ title: "Épisode 8", videoUrl: "https://sendvid.com/yvrc5o61" },
+{ title: "Épisode 9", videoUrl: "https://sendvid.com/aypyn8gk" },
+{ title: "Épisode 10", videoUrl: "https://sendvid.com/k6xtkovh" },
+{ title: "Épisode 11", videoUrl: "https://sendvid.com/ysxpf5i5" },
+{ title: "Épisode 12", videoUrl: "https://sendvid.com/6selobf4" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://sendvid.com/ann1bt8h" },
+{ title: "Épisode 2", videoUrl: "https://sendvid.com/f5nypfn9" },
+{ title: "Épisode 3", videoUrl: "https://sendvid.com/hvzdx2jc" },
+{ title: "Épisode 4", videoUrl: "https://sendvid.com/a4p50wvw" },
+{ title: "Épisode 5", videoUrl: "https://sendvid.com/qydde6pg" },
+{ title: "Épisode 6", videoUrl: "https://sendvid.com/onwprq5m" },
+			   ]
+      }
+    ]
+  },
   {
     title: "Bleach",
     description: "Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits. Un jour, il croise la route d'une belle Shinigami",
