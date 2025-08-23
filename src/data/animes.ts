@@ -3390,7 +3390,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
-    title: "Lord Of Misteries",
+    title: "Lord Of Mysteries",
     description: "Dans un monde steampunk de l'ère victorienne, Zhou Mingrui se réveille sous le nom de Klein Moretti. Il se retrouve confronté à une mystérieuse organisation ...",
     poster: "https://fr.web.img3.acsta.net/img/c0/98/c098c23d1ddd09a1c29082d46d31b383.jpg",
     banner: "https://fr.web.img3.acsta.net/c_400_200/img/c0/98/c098c23d1ddd09a1c29082d46d31b383.jpg",
@@ -3406,9 +3406,11 @@ const animeConfigs: SimpleAnimeConfig[] = [
 	category: "nouveaute",
         episodes: [
        { title: "Épisode 1", videoUrl: "https://vidmoly.net/pakicu53nc2r" },
-  { title: "Épisode 2", videoUrl: "https://vidmoly.net/mh0a7l90jp4d" },
-  { title: "Épisode 3", videoUrl: "https://vidmoly.net/pfpnh70h352m" },
-  { title: "Épisode 4", videoUrl: "https://vidmoly.net/znj2ypou6pim" }
+		{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5974574" },
+ 		{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5980487" },
+ 		{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5986730" }
+		{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5992432" }
+		{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5996325" }
 	  ]
     }
     ]
