@@ -174,6 +174,46 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Afro Samurai",
+    description: "Ikki est le leader du gang qui règne sur son lycée. Malgré sa force, il va connaître sa première défaite lors d'une altercation avec les Skull Sader, un groupe de Stormriders, des riders d'un genre nouveau qui se déplacent en bande sur des Air Trecks, des rollers motorisés.",
+    poster: "https://fr.web.img2.acsta.net/medias/nmedia/18/67/70/12/18993679.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_300_300/medias/nmedia/18/67/70/12/18993707.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2006,
+    rating: 7,
+    type: "serie", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089645" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089646" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089649" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089651" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089653" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089655" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089657" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089660" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089662" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089665" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089667" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089669" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089671" },
+{ title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089672" },
+{ title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089674" },
+{ title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089676" },
+{ title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089678" },
+{ title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089680" },
+{ title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089682" },
+{ title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089683" },
+{ title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089687" },
+{ title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089685" },
+{ title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089689" },
+{ title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089691" },
+{ title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089692" },
+{ title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5089694" },
+      // ... plus d'épisodes
+    ]
+  },
+	{
     title: "Arcane",
     description: "Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d'un braquage dans le très huppé Piltover. Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.",
     poster: "https://fr.web.img4.acsta.net/c_310_420/img/51/c7/51c72a38a8d8c443e250c8f1d9f4f643.jpg",
