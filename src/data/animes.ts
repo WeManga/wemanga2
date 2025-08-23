@@ -94,7 +94,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     title: "Arcane",
     description: "Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d'un braquage dans le très huppé Piltover. Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.",
     poster: "https://fr.web.img4.acsta.net/c_310_420/img/51/c7/51c72a38a8d8c443e250c8f1d9f4f643.jpg",
-    banner: "https://fr.web.img6.acsta.net/c_640_360/newsv7/20/10/02/14/58/1660745.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_640_360/newsv7/22/08/04/16/55/5314314.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2021,
     rating: 8.5,
