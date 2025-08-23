@@ -154,6 +154,26 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Afro Samurai",
+    description: "Dans un Japon futuriste et féodal, un guerrier samouraï afro-américain traque l'assassin de son père.",
+    poster: "https://fr.web.img6.acsta.net/c_310_420/pictures/23/02/27/09/57/2356585.jpg",
+    banner: "https://fr.web.img3.acsta.net/c_640_360/newsv7/21/04/27/14/24/5877883.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2007,
+    rating: 7,
+    type: "serie", // ou "film"
+    status: "Terminé", // ou "Terminé"
+    episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4734184" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4734185" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4734190" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4734193" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4734196" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4734199" },
+      // ... plus d'épisodes
+    ]
+  },
+	{
     title: "Arcane",
     description: "Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d'un braquage dans le très huppé Piltover. Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.",
     poster: "https://fr.web.img4.acsta.net/c_310_420/img/51/c7/51c72a38a8d8c443e250c8f1d9f4f643.jpg",
