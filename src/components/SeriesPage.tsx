@@ -25,7 +25,6 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ searchQuery = '', onPlayAnime, 
       <div className="max-w-7xl mx-auto px-8 py-12">
         {/* Bannière pub au-dessus du titre */}
         <AdcashBanner zoneId="10295754" sub1="SERIES_TOP" />
-
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-center flex flex-col items-center text-white text-4xl font-bold mb-4">
@@ -43,7 +42,6 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ searchQuery = '', onPlayAnime, 
             </div>
           )}
         </div>
-
         {/* Series Grid */}
         <div className="overflow-x-auto scrollbar-hide pb-4 md:overflow-visible">
           <div className="flex gap-6 justify-start px-4 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
@@ -61,28 +59,7 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ searchQuery = '', onPlayAnime, 
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex space-x-3">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onPlayAnime(anime);
-                        }}
-                        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-colors duration-200"
-                      >
-                        <svg className="w-6 h-6" fill="white" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onAnimeDetail(anime);
-                        }}
-                        className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors duration-200"
-                      >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </button>
+                      {/* ✅ Bouton infos supprimé ici */}
                     </div>
                   </div>
                   {/* Badge série */}
@@ -102,10 +79,8 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ searchQuery = '', onPlayAnime, 
                     </span>
                   </div>
                 </div>
-
                 <div className="p-6">
                   <h3 className="text-white font-bold text-xl mb-3 line-clamp-1">{anime.title}</h3>
-
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-3">
                     <div className="flex items-center space-x-2">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,15 +95,12 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ searchQuery = '', onPlayAnime, 
                       <span className="text-yellow-500 font-medium">{anime.rating}</span>
                     </div>
                   </div>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {anime.genre.slice(0, 3).map((g, index) => (
                       <span key={index} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">{g}</span>
                     ))}
                   </div>
-
                   <p className="text-gray-400 text-sm line-clamp-3 mb-4">{anime.description}</p>
-
                   <div className="flex items-center justify-between text-xs text-gray-500">
                     <span>{anime.seasons.length} saison{anime.seasons.length > 1 ? 's' : ''}</span>
                     <span>{anime.seasons.reduce((total, season) => total + season.episodes.length, 0)} épisodes</span>
@@ -138,7 +110,6 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ searchQuery = '', onPlayAnime, 
             ))}
           </div>
         </div>
-
         {seriesAnimes.length === 0 && (
           <div className="text-center py-20">
             <div className="text-gray-400 text-xl mb-4">
@@ -150,7 +121,6 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ searchQuery = '', onPlayAnime, 
           </div>
         )}
       </div>
-
       {/* Bannière pub en bas */}
       <AdcashBanner zoneId="10295762" sub1="SERIES_BOTTOM" />
     </div>
