@@ -266,8 +266,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 	{
     title: "Angel Beats",
-    description: "
-Après un accident mystérieux, un lycéen se réveille et réalise qu'il est prisonnier d'une forme de vie après la mort ultra violente. Comme il a besoin de se réapprovisionner en armes pour combattre l'Ange, le groupe descend à la Guilde. Mais l'endroit est truffé de pièges mortels.",
+    description: "Après un accident mystérieux, un lycéen se réveille et réalise qu'il est prisonnier d'une forme de vie après la mort ultra violente. Comme il a besoin de se réapprovisionner en armes pour combattre l'Ange, le groupe descend à la Guilde. Mais l'endroit est truffé de pièges mortels.",
     poster: "https://fr.web.img4.acsta.net/pictures/19/07/11/16/29/5830043.jpg",
     banner: "https://fr.web.img2.acsta.net/c_640_360/newsv7/22/04/20/18/02/3974631.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
