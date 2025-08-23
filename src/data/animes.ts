@@ -106,7 +106,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
         title: "Saison 1",
         episodes: [
             { title: "Épisode 1", videoUrl: "https://vidmoly.net/ucwd2sz747ad" },
-{ title: "Épisode 2", videoUrl: net/ocvl5016mn1h" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.to/ocvl5016mn1h" },
 { title: "Épisode 3", videoUrl: "https://vidmoly.net/jtsajvpk5qnh" },
 { title: "Épisode 4", videoUrl: "https://vidmoly.net/t1mcl6vvb3h7" },
 { title: "Épisode 5", videoUrl: "https://vidmoly.net/4qtdjmbtulbu" },
@@ -264,6 +264,97 @@ const animeConfigs: SimpleAnimeConfig[] = [
         episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5307461" },
         ]
+      }
+    ]
+  },
+	{
+    title: "Avatar, Le Dernier Maitre De L'air",
+    description: "Katara et Sokka découvrent un jeune garçon de 12 ans congelé dans un iceberg. Selon Katara, il pourrait être l'Avatar, la sauveur que le monde attend depuis une centaine d'années. Mais les chefs de la puissante Nation du Feu ne l'entendent pas de cette oreille.",
+    poster: "https://fr.web.img3.acsta.net/pictures/24/03/01/11/32/3580011.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_400_200/pictures/24/03/01/11/33/1239724.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2005,
+    rating: 8.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/wi5t7403t6iv" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/od7pt3vsetim" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/fn1forhhrwku" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/vxtosvuge97t" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/tgeeoehg91gr" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/gujn71cnbkqs" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/am8ocyo3vma1" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/pjwfztlf8pf8" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/zp2f9b4g2ba4" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/vi1yz0g3do0t" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/umh02oidfaej" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/ysgwwd1rexqp" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/sd6xo7n7ar96" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/m2mnsyq6y9sg" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/enr54hdt6pu9" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/poiktg37f3u4" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/nq6wtl2aviyy" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/kdtg92u8u36r" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/hgy60f7qc1y2" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/ow9wyxz6i8i3" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/vbp1mmg9ua13" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/40ido6tzg3m8" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/d3ykgrz1iyib" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/m1ivlvqypavi" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/yc5nverf8t96" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/48swb7mzhn69" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/eg1fgbu7i0hl" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/otrwym62rwc6" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/awebn60u5ece" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/vjbv2bi1pedk" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/6a85iddv6xls" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/ktvt99yiut09" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/ox8xny3s1gtl" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/yurdpka1wdpl" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/qtwun2rmri1t" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/uife0sbezyi3" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/3fcxwggkab9y" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/grat11wlndbp" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/biomiuks4q9o" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/8fd04icop2nq" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 3",
+        episodes: [
+      { title: "Épisode 1", videoUrl: "https://vidmoly.net/wsqx4ilqvvnt" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/u0njl9goh15a" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/fhmbk5d7bpyj" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/vslexgt97fge" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/0ysmx4xpm0tb" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/a4oqvviz784r" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/axsa36szccrw" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/twqecqohhajw" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/h53m9bqakea5" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/on0vbpzh4ln6" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/3m5hch8j9ngp" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/v9435n3zgnwb" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/ufx5emk4kdg6" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/hk55tajumdwg" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/5hy2gopkbo6q" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/2pgk1x5tqrfy" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/jrl14yz7vt42" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/iaehrsk6op7z" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/ugxfh41irx5c" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/9ao5qiout6qm" },
+   ]
       }
     ]
   },
