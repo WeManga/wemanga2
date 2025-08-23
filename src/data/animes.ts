@@ -634,8 +634,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
-	CODE POUR PLUSIEURS SAISONS
-
 {
     title: "DETECTIVE CONAN",
     description: "Shinichi Kudo est un jeune homme de 17 ans, détective de génie à ses heures. Au cours d'une enquête, il est fait prisonnier. Mais plutôt que de le tuer, les bandits, des hommes en noir lui font absorber une substance qui le transforme en garçon de 6 ans",
