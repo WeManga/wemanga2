@@ -118,7 +118,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 	{
     title: "Accel World",
-    description: "L'histoire se passe au cours de l'année 2046, dans un monde où le virtuel est omniprésent, notamment grâce aux "neuro-linkers.",
+    description: "L'histoire se passe au cours de l'année 2046, dans un monde où le virtuel est omniprésent, notamment grâce aux neuro-linkers.",
     poster: "https://fr.web.img4.acsta.net/pictures/18/03/05/11/22/3066466.jpg",
     banner: "https://media.senscritique.com/media/000006516490/0/accel_world.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
