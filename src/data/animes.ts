@@ -637,7 +637,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
 {
     title: "DETECTIVE CONAN",
     description: "Shinichi Kudo est un jeune homme de 17 ans, détective de génie à ses heures. Au cours d'une enquête, il est fait prisonnier. Mais plutôt que de le tuer, les bandits, des hommes en noir lui font absorber une substance qui le transforme en garçon de 6 ans",
-    poster: "https://fr.web.img2.acsta.net/c_310_420/medias/nmedia/18/65/13/65/18831822.jpg",
+    poster: "https://fr.web.img4.acsta.net/c_640_360/newsv7/22/05/17/14/58/0054237.jpg",
     banner: "https://fr.web.img4.acsta.net/r_640_360/videothumbnails/22/05/12/09/31/3924118.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 1996,
@@ -696,7 +696,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
       {
         number: 2,
         title: "Saison 2",
-	category: "nouveaute",
         episodes: [
        { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5182657" },
           { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5182659" },
@@ -746,7 +745,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
       {
         number: 3,
         title: "Saison 3",
-	category: "nouveaute",
         episodes: [
       { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5182712" },
           { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5182713" },
