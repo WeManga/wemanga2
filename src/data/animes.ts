@@ -404,7 +404,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
 	{
     title: "BAKI",
     description: "Alors que le champion d'arts martiaux Baki Hanma s'entraîne pour surpasser son père.",
-    poster: "https://fr.web.img4.acsta.net/pictures/19/07/30/16/42/2509986.jpg",
+    poster: "https://fr.web.img6.acsta.net/pictures/19/09/24/14/21/3795092.jpg",
     banner: "https://fr.web.img2.acsta.net/c_400_200/pictures/19/09/24/14/59/2940182.jpg",
     genre: ["Action", "Aventure", "Combat"],
     year: 2018,
