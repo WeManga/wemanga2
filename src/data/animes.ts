@@ -6010,7 +6010,8 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 2", videoUrl: "https://sendvid.com/ariluppd" },
       { title: "Épisode 3", videoUrl: "https://sendvid.com/c95j1ukm" },
       { title: "Épisode 4", videoUrl: "https://sendvid.com/ihaj6og7" },
-		{ title: "Épisode 5", videoUrl: "https://vidmoly.net/8h4cdfbctmpm" }
+		{ title: "Épisode 5", videoUrl: "https://vidmoly.net/8h4cdfbctmpm" },
+	{ title: "Épisode 6", videoUrl: "https://vidmoly.to/gkzdiqh6ien9" }
 	    ]
       }
     ]
