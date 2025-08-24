@@ -8125,7 +8125,11 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 53", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5948967" },
   { title: "Épisode 54", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5955442" },
   { title: "Épisode 55", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5963246" },
-  { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976654" }
+  { title: "Épisode 56", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976654" },
+ { title: "Épisode 57", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981928" },
+ { title: "Épisode 58", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5988035" },
+ { title: "Épisode 59", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5992453" },
+ { title: "Épisode 60", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5997536" }
         ]
       }
     ]
@@ -8819,7 +8823,9 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969001" },
       { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5975491" },
       { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5980904" },
-      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987375" }
+      { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987375" },
+	  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5991780" },
+	  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5996868" }
      ]
       }
     ]
