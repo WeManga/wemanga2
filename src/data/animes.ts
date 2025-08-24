@@ -174,7 +174,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
-    title: "Afro Samurai",
+    title: "Air Gear",
     description: "Ikki est le leader du gang qui règne sur son lycée. Malgré sa force, il va connaître sa première défaite lors d'une altercation avec les Skull Sader, un groupe de Stormriders, des riders d'un genre nouveau qui se déplacent en bande sur des Air Trecks, des rollers motorisés.",
     poster: "https://fr.web.img2.acsta.net/medias/nmedia/18/67/70/12/18993679.jpg",
     banner: "https://fr.web.img6.acsta.net/c_300_300/medias/nmedia/18/67/70/12/18993707.jpg",
@@ -2130,7 +2130,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     year: 2012,
     rating: 8,
     type: "serie",
-    status: "En cours",
+    status: "Terminé",
     seasons: [
       {
         number: 1,
@@ -2161,7 +2161,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     year: 2024,
     rating: 7.5,
     type: "serie",
-    status: "En cours",
+    status: "Terminé",
     seasons: [
       {
         number: 1,
@@ -2217,9 +2217,9 @@ const animeConfigs: SimpleAnimeConfig[] = [
     banner: "https://fr.web.img2.acsta.net/pictures/20/09/28/15/14/4796147.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2023,
-    rating: 7.5,
+    rating: 7,
     type: "serie",
-    status: "En cours",
+    status: "Terminé",
     seasons: [
       {
         number: 1,
@@ -2726,7 +2726,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
 	{
     title: "Chillin' in Another World With Level 2 Super Cheat",
     description: "Chaque année, le royaume magique de Klyrode invoque des centaines de héros venus d'autres mondes pour combattre une armée de puissants démons.",
-    poster: "https://fr.web.img6.acsta.net/pictures/23/12/11/10/58/3481460.jpgg",
+    poster: "https://fr.web.img6.acsta.net/pictures/23/12/11/10/58/3481460.jpg",
     banner: "https://fr.web.img5.acsta.net/c_400_200/img/94/c0/94c0b9e1c6e8ceb36a4d7d583ca880dd.png",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2024,
@@ -3002,7 +3002,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
 {
     title: "Cowboy Bebop",
     description: "Les Humains ont dû partir, coloniser d'autres planètes. Cet exode a créé un chaos dans tout l'univers, laissant une totale liberté aux criminels les plus dangereux. Un vrai terrain de jeu pour les chasseurs de primes. Parmi cette clique : le Bebop, un vaisseau spatial abritant Spike Spiegel et Jet...",
-    poster: "https://fr.web.img6.acsta.net/c_225_300/medias/nmedia/18/69/71/22/19072970.jpg",
+    poster: "https://fr.web.img6.acsta.net/pictures/21/09/24/16/18/3676837.jpg",
     banner: "https://fr.web.img6.acsta.net/c_400_225/newsv7/18/07/09/15/48/5637421.jpg",
     genre: ["Action", "Aventure", "Comédie"],
     year: 2007,
