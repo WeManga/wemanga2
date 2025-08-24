@@ -2091,6 +2091,198 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Brand New Animal",
+    description: "Michiru, une jeune humaine, se transforme un jour en tanuki : choquée par sa nouvelle forme, elle se réfugie à Anima City",
+    poster: "https://fr.web.img6.acsta.net/c_310_420/pictures/20/05/20/17/05/5773186.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/20/05/20/17/03/1620988.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2020,
+    rating: 8,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/36c1n1voep1u" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/ad56flss6uaw" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/ygqdyqcxiqsq" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/rqo4acbt6f9j" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/qtzx1fjv97c1" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/esebn7izd5p5" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/k57yeauejhfj" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/g47i15ikh4sa" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/yjyhbpo9sfjz" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/nkg15xr930pj" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/b3183d3gd0u4" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/iv8dqht61qnl" },
+       ]
+      }
+    ]
+  },
+	{
+    title: "Btooom",
+    description: "Un jour, il se réveille sur une île tropicale, et réalise qu'il se trouve coincé à l'intérieur de son jeu favoris. Il y trouve Himiko, sa femme virtuelle, et ensemble ils doivent trouver un moyen de retourner dans le monde réel.",
+    poster: "https://fr.web.img4.acsta.net/pictures/18/03/06/10/35/3322449.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/18/03/06/10/35/3322449.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2012,
+    rating: 8,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236443" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236446" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236447" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236448" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236449" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236451" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236456" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236458" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236459" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236460" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236464" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=3236467" },
+	       ]
+      }
+    ]
+  },
+	{
+    title: "Bucchigiri?!",
+    description: "Les retrouvailles d'Arajin Tomoshibi avec son vieil ami de lycée Matakara Asamine prennent une tournure inattendue lorsqu'ils sont entraînés dans une bagarre avec les caïds du coin.",
+    poster: "https://fr.web.img5.acsta.net/pictures/23/11/24/15/51/3509856.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_640_360/img/81/81/81817f1e02908a757e9865e24ca58dd3.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2024,
+    rating: 7.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5421722" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5428428" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5436001" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5445008" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5453298" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5462154" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5480272" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5488315" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5496866" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5504166" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5518300" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5518303" },
+		       ]
+      }
+    ]
+  },
+	{
+    title: "Bullet/Bullet",
+    description: "Un garçon nommé Gear, un joueur nommé Shirokuma et un robot nommé Qu-0213, gèrent une petite entreprise où ils restituent des objets volés.",
+    poster: "https://fr.web.img4.acsta.net/img/3f/62/3f620a323ec3a6b1ae2f36f7bd35ffc4.jpg",
+    banner: "https://fr.web.img4.acsta.net/img/3f/62/3f620a323ec3a6b1ae2f36f7bd35ffc4.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 7.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982843" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982848" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982851" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982853" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982858" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982859" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982860" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982863" },
+     ]
+      }
+    ]
+  },
+	{
+    title: "Burn The Witch",
+    description: "Seuls les habitants de la partie cachée de Londres peuvent les voir. Mais parmi ces gens, à peine quelques rares élus deviennent des sorciers ou des sorcières, seuls êtres habilités à entrer en contact avec eux.",
+    poster: "https://fr.web.img5.acsta.net/pictures/23/10/24/14/41/1472292.jpg",
+    banner: "https://fr.web.img2.acsta.net/pictures/20/09/28/15/14/4796147.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2023,
+    rating: 7.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://sendvid.com/g8q4ebx1" },
+{ title: "Épisode 2", videoUrl: "https://sendvid.com/at0gg2sy" },
+{ title: "Épisode 3", videoUrl: "https://sendvid.com/lxnqh561" },
+	     ]
+      }
+    ]
+  },
+	
+{
+    title: "By The Grace Of The God",
+    description: "Après avoir vécu 39 ans d'une vie remplie de malheur, Ryoma Takebayashi s'éteint dans son sommeil ! Prenant pitié de lui, trois êtres divins font preuve de compassion en le réincarnant en jeune garçon dans un monde de magie.",
+    poster: "https://fr.web.img5.acsta.net/pictures/20/11/18/12/52/2911955.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/20/12/21/11/56/0025770.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2020,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5027906" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5027907" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5032833" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5041204" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5041195" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5041214" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5051069" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5051080" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5059936" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5059943" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5068643" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5068646" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5075046" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5075045" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5081355" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5081356" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5088252" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5088255" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5095050" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5095051" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5101380" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5101381" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5107990" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5107997" },
+   ]
+      }
+    ]
+  },
+	{
     title: "Chainsaw Man",
     description: "Après avoir mit hors d'état de nuire Katana Man, Denji va faire la rencontre de Reze, une jeune femme qui semble s'intéresser à lui.",
     poster: "https://fr.web.img4.acsta.net/img/09/e2/09e24b1cd13cd6c05a7a67bb737f638b.jpg",
