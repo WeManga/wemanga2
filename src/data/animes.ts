@@ -8730,7 +8730,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
-    title: "To Be A Hero X",
+    title: "To Be Hero X",
     description: "Tous les deux ans, les meilleurs héros se réunissent pour participer à un tournoi. Leur performance met à jour leur “taux de confiance“ et le classement évolue.",
     poster: "https://fr.web.img2.acsta.net/c_310_420/img/d5/2a/d52a37aa61a0b1682fd088d2e09de360.jpg",
     banner: "https://fr.web.img4.acsta.net/img/7c/1f/7c1f50e479615bfc29cb13ff2ae261f3.jpg",
@@ -8763,7 +8763,9 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969850" },
       { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976122" },
       { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981456" },
-      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987652" }
+      { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987652" },
+	  { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5992143" },
+	  { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5997074" }
         ]
       }
     ]
