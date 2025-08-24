@@ -5256,7 +5256,9 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5963187" },
       { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5976520" },
       { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981805" },
-      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5988006" }
+      { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5988006" },
+	{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5992415" },
+	{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5997438" }
       ]
       }
     ]
