@@ -6870,18 +6870,17 @@ const animeConfigs: SimpleAnimeConfig[] = [
         number: 1,
         title: "Saison 1",
         episodes: [
-            { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845334" },
-  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845335" },
-  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845336" },
-  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845337" },
-  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845339" },
-  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858298" },
-  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858300" },
-  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858302" },
-  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858304" },
-  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858307" },
-  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858310" },
-  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858311" }
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5935015" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5944130" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5947379" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5956667" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5972461" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5972463" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5977733" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5983321" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5989295" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5996334" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5996335" }
         ]
       },
       {
