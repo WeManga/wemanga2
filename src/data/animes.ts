@@ -3062,7 +3062,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
-    title: "D Gray Man,
+    title: "D Gray Man",
     description: "Gray Man est le nom de code de l'agent de la CIA Court Gentry, alias Sierra Six. Recruté dans une prison fédérale par son officier traitant, Donald Fitzroy, Gentry était autrefois un redoutable tueur à gages à la solde de la CIA.",
     poster: "https://fr.web.img4.acsta.net/pictures/20/08/12/15/24/0876341.jpg",
     banner: "https://fr.web.img2.acsta.net/c_400_200/pictures/20/08/12/15/02/3922315.jpg",
