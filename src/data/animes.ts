@@ -6870,6 +6870,25 @@ const animeConfigs: SimpleAnimeConfig[] = [
         number: 1,
         title: "Saison 1",
         episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845334" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845335" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845336" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845337" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5845339" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858298" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858300" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858302" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858304" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858307" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858310" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5858311" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+	category: "nouveaute",
+        episodes: [
 { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5935015" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5944130" },
 { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5947379" },
@@ -6881,25 +6900,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5989295" },
 { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5996334" },
 { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5996335" }
-        ]
-      },
-      {
-        number: 2,
-        title: "Saison 2",
-	category: "nouveaute",
-        episodes: [
-       { title: "Épisode 1", videoUrl: "https://vidmoly.net/p358s4rb4cx4" },
-  { title: "Épisode 2", videoUrl: "https://vidmoly.net/521n6t0r9azt" },
-  { title: "Épisode 3", videoUrl: "https://vidmoly.net/8m0fly0ebnbz" },
-  { title: "Épisode 4", videoUrl: "https://vidmoly.net/vsbykh1wb26h" },
-  { title: "Épisode 5", videoUrl: "https://vidmoly.net/01iw0u2tjkhx" },
-  { title: "Épisode 6", videoUrl: "https://vidmoly.net/lx26db85526o" },
-  { title: "Épisode 7", videoUrl: "https://vidmoly.net/8xj6zai9czz7" },
-  { title: "Épisode 8", videoUrl: "https://vidmoly.net/qe55kldjihqi" },
-  { title: "Épisode 9", videoUrl: "https://vidmoly.net/24yy4e7sbloc" },
-  { title: "Épisode 10", videoUrl: "https://vidmoly.net/oz4vvuixz8t8" },
-  { title: "Épisode 11", videoUrl: "https://vidmoly.net/c9t16rmv6cjy" },
-  { title: "Épisode 12", videoUrl: "https://vidmoly.net/c749ssdyocc5" }
     ]
       }
     ]
