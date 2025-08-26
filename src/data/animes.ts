@@ -3381,7 +3381,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
 	
 {
     title: "Darker Than Black",
-    description: "Il y a 10 ans est apparu un champ de force d'origine inconnue autour de Tokyo que l'on nomme "La porte des Enfer". Une semaine après sa création, la police découvre l'existence des Pactisants et des Poupées.",
+    description: "Il y a 10 ans est apparu un champ de force d'origine inconnue autour de Tokyo que l'on nomme La porte des Enfer. Une semaine après sa création, la police découvre l'existence des Pactisants et des Poupées.",
     poster: "https://fr.web.img6.acsta.net/medias/nmedia/18/71/08/45/19122612.jpg",
     banner: "https://fr.web.img6.acsta.net/medias/nmedia/18/71/08/45/19122612.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
