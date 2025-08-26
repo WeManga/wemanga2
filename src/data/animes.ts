@@ -3527,7 +3527,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 {
     title: "Date A Live VOSTFR",
-    description: "Un phénomène étrange appelé "séisme spatial" dévaste le centre de l'Eurasie, faisant au moins 150 millions de victimes. Au cours des 30 prochaines années, de petits séismes spatiaux envahissent le monde de manière irrégulière. Dans le présent, Itsuka Shido est un lycéen ordinaire pas doué avec les filles.",
+    description: "Un phénomène étrange appelé séisme spatial dévaste le centre de l'Eurasie, faisant au moins 150 millions de victimes. Au cours des 30 prochaines années, de petits séismes spatiaux envahissent le monde de manière irrégulière. Dans le présent, Itsuka Shido est un lycéen ordinaire pas doué avec les filles.",
     poster: "https://fr.web.img3.acsta.net/pictures/22/02/16/16/46/1613273.jpg",
     banner: "https://fr.web.img6.acsta.net/c_400_200/pictures/22/04/07/14/07/3155538.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
