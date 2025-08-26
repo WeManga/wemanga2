@@ -6458,7 +6458,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 {
-    title: "Elfen Lied",
+    title: "Evangelion",
     description: "Pour les combattre, l'organisation secrète NERV a mis au point des Evangelions, appelés aussi Eva, d'immenses créatures bio-mécaniques pilotées par de jeunes adolescents. Espérant gagner l'affection de son père, Shinji Ikari prend les commandes de l'Eva-01.",
     poster: "https://fr.web.img3.acsta.net/pictures/18/11/27/10/45/1115924.jpg",
     banner: "https://fr.web.img3.acsta.net/c_400_200/pictures/18/11/27/10/45/2445620.jpg",
