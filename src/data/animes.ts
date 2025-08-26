@@ -5541,7 +5541,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
       {
         number: 6,
         title: "Saison 4 Part 2",
-	category: "nouveaute"
+	category: "nouveaute",
         episodes: [
 { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5959597" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5966790" },
