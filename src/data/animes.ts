@@ -3630,7 +3630,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 {
     title: "Dead Mount Death Play",
-    description: "Shagrua, un membre de l'Eglise possédant les yeux du démon est chargé d'éliminer la menace. Le Dieu des Cadavres lui propose alors le "jeu des enfants", une magie inconnue. Bien que Shagrua refuse avec violence, le jeune homme disparaît brutalement dans un faisceau de lumière.",
+    description: "Shagrua, un membre de l'Eglise possédant les yeux du démon est chargé d'éliminer la menace. Le Dieu des Cadavres lui propose alors le jeu des enfants, une magie inconnue. Bien que Shagrua refuse avec violence, le jeune homme disparaît brutalement dans un faisceau de lumière.",
     poster: "https://fr.web.img2.acsta.net/pictures/23/03/23/09/45/5134323.jpg",
     banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/23/12/19/11/15/4369381.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
@@ -3679,7 +3679,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 {
     title: "Death March",
-    description: "uzuki Ichirou, un programmeur âgé de 29 ans se retrouve transporté dans le jeu qu'il était en train de créer. Dans "le jeu", ce dernier se nomme Satou et est âgé de 15 ans. Bien qu'au départ il pensait être en train de rêver, il se rend compte que son jeu est un peu trop réel.",
+    description: "Uzuki Ichirou, un programmeur âgé de 29 ans se retrouve transporté dans le jeu qu'il était en train de créer. Dans le jeu, ce dernier se nomme Satou et est âgé de 15 ans. Bien qu'au départ il pensait être en train de rêver, il se rend compte que son jeu est un peu trop réel.",
     poster: "https://fr.web.img4.acsta.net/img/b0/f5/b0f520942bd822cf1fa55cd659e6b692.jpg",
     banner: "https://fr.web.img4.acsta.net/c_400_200/img/b0/f5/b0f520942bd822cf1fa55cd659e6b692.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
