@@ -3630,7 +3630,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 {
     title: "Dead Mount Death Play",
-    description: "Shagrua, un membre de l'Eglise possédant les "yeux du démon" est chargé d'éliminer la menace. Le Dieu des Cadavres lui propose alors le "jeu des enfants", une magie inconnue. Bien que Shagrua refuse avec violence, le jeune homme disparaît brutalement dans un faisceau de lumière.",
+    description: "Shagrua, un membre de l'Eglise possédant les yeux du démon est chargé d'éliminer la menace. Le Dieu des Cadavres lui propose alors le "jeu des enfants", une magie inconnue. Bien que Shagrua refuse avec violence, le jeune homme disparaît brutalement dans un faisceau de lumière.",
     poster: "https://fr.web.img2.acsta.net/pictures/23/03/23/09/45/5134323.jpg",
     banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/23/12/19/11/15/4369381.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
