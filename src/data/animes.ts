@@ -6876,6 +6876,37 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Farming Life in Another World",
+    description: "Au Granbell Kingdom, un parc d'attractions abandonné, Shiki a vécu toute sa vie parmi les machines. Un jour, Rebecca et son chat bleu, Happy, apparaissent aux portes du parc. Parallèlement, les robots deviennent menaçants. Shiki rejoint alors Rebecca et Happy dans leur vaisseau spatial.",
+    poster: "https://fr.web.img6.acsta.net/pictures/23/01/03/17/53/3326693.jpg",
+    banner: "https://fr.web.img5.acsta.net/c_400_200/pictures/23/01/09/09/29/4912910.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2023,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609090" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609091" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609093" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609094" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609095" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609096" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609097" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609098" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609099" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609100" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609101" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5609102" }
+        ]
+      }
+    ]
+  },
+	{
     title: "Full Metal Alchemist Brotherhood",
     description: "Les frères Elric participent à une chasse à l'homme pour débusquer le dangereux Isaac le Freezer, ex-alchimiste d'État voulant détruire le Führer Bradley.",
     poster: "https://fr.web.img6.acsta.net/pictures/19/07/29/15/50/2364027.jpg",
