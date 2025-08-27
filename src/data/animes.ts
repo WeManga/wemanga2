@@ -7140,6 +7140,196 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Food Wars",
+    description: "Sôma est un jeune Chef bien décidé à prendre du restaurant familial. Envoyé à l'académie Tootsuki, le jeune homme découvre un univers exigeant. Et malheur à ceux qui n'auraient pas le niveau : l'expulsion est un sanction fréquente à l'académie Tootsuki !",
+    poster: "https://fr.web.img2.acsta.net/pictures/19/09/02/16/43/5616917.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/19/04/09/17/04/1160188.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2019,
+    rating: 8,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/vhpf9n1uc0d5" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/q65uuphl9ag6" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/qc210577aulg" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/w0md747i28kd" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/ecgd7un23fh4" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/qyc1myw12wdh" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/vt1lb84puzbm" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/hh6dhxm2mu18" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/novef6zz3oqo" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/dgspep70bk6q" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/hu8fbivpma1f" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/s8osjiceeb17" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/qme0z920yq87" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/l3lkjhety5nl" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/4r0dvbac0u3x" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/wcnoxob65oam" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/owrwajgmz7tp" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/zcpykkky4tgb" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/6vz3codejrsa" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/8gqv6qtnljml" },
+{ title: "Épisode 21", videoUrl: "https://vidmoly.net/y90nxesoupnd" },
+{ title: "Épisode 22", videoUrl: "https://vidmoly.net/fn9eyk2l83hb" },
+{ title: "Épisode 23", videoUrl: "https://vidmoly.net/1ghsmnyrow7b" },
+{ title: "Épisode 24", videoUrl: "https://vidmoly.net/0qeouenbq19x" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/q2cq7h8xyg5e" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/smv77wjfhyok" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/1dyrdymbslh1" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/kh2gxfvgorsv" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/d6yotm75zxd2" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/k2x61nvavouo" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/lhpg3uesdfpt" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/bfqdfofxggqm" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/rlp681oeanzt" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/say2zoijt752" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/xct4jvo0al65" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/kmyxmfyf8k3g" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/uult4l48skjp" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 3",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/t4qqc2j4oin0" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/cpjfsvtgoprs" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/7gtv8jns33aw" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/9i4v0luleb3d" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/bafdjp5f69je" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/6mpfo21w7zyv" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/m6mhx24e8xyf" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/0978twsi9sza" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/86vuhdz2dde3" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/tssjno8ek9mx" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/5sq2fzkbnswb" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/ijhzkwz0cz1p" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/edmui1h2hghh" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/xoztf66y0tht" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/0xcglejo7jx0" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/zhiux5fvj2ij" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/q272i5fpntat" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/q7re6ok85pee" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/e9hlpwdjrazi" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/1s2afp08sjfz" },
+{ title: "Épisode 21", videoUrl: "https://vidmoly.net/ogxzh102mwci" },
+{ title: "Épisode 22", videoUrl: "https://vidmoly.net/7nzkzavvuz61" },
+{ title: "Épisode 23", videoUrl: "https://vidmoly.net/uqsi1p7m74bn" },
+{ title: "Épisode 24", videoUrl: "https://vidmoly.net/xarvfo1814no" }
+        ]
+      },
+      {
+        number: 4,
+        title: "Saison 4",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/zpw9v6l1vbtk" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/aizdgvl7b4f3" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/idaq09vf0etp" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/vu5yw73kphew" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/amx8tepes6ed" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/urt7bskhq88d" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/s9qk64ggqbkz" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/ipljkdp87l5i" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/pxybuw6ykq2u" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/wn40qhgtogr3" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/jm40ymmea3sz" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/ji7mw05nflho" }
+        ]
+      },
+      {
+        number: 5,
+        title: "Saison 5",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/jx7945v51cry" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/a89jokqocdoc" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/ousjqf3fgjxe" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/ev30jewl477y" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/cikucs2osck9" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/dl7ymjj1kuvt" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/pkhnjm27e320" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/zc0dkmr4ypkx" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/f4oibhqu3ej1" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/4p2zxkypqit1" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/1butbsqso4db" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/q4exmpw4mqcr" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/3zngjrvih4dm" }
+	   ]
+      }
+    ]
+  },
+	{
+    title: "Seven Deadly Sins: Four Knights of the Apocalypse",
+    description: "Percival vit seul avec son grand-père Bargis, au sommet d'une haute montagne nommée le "Doigt divin". Il y mène une vie heureuse, préservé du monde extérieur. Mais le jour de ses 16 ans, son destin bascule : un mystérieux guerrier à l'armure rouge s'en prend violemment à lui et à son grand-père.",
+    poster: "https://fr.web.img3.acsta.net/pictures/23/01/25/09/31/5311791.jpg",
+    banner: "https://fr.web.img6.acsta.net/videothumbnails/23/01/25/10/37/3349121.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2019,
+    rating: 8,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422227" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422228" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422230" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422231" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422233" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422234" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422236" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422238" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422240" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422242" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5422244" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578627" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578628" },
+{ title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578630" },
+{ title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578632" },
+{ title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578633" },
+{ title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578634" },
+{ title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578635" },
+{ title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578636" },
+{ title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578638" },
+{ title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578639" },
+{ title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578641" },
+{ title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578643" },
+{ title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5578646" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810634" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810636" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810637" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810641" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810644" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810645" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810648" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810649" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810651" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810654" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810655" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5810657" }
+        ]
+      }
+    ]
+  },
+	{
     title: "Full Metal Alchemist Brotherhood",
     description: "Les frères Elric participent à une chasse à l'homme pour débusquer le dangereux Isaac le Freezer, ex-alchimiste d'État voulant détruire le Führer Bradley.",
     poster: "https://fr.web.img6.acsta.net/pictures/19/07/29/15/50/2364027.jpg",
