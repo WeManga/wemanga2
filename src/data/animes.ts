@@ -7049,6 +7049,97 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "Fire Force",
+    description: "L'humanité est terrifiée par le phénomène de combustion humaine. Des brigades spéciales Fire Force ont donc été mises en place avec pour mission de trouver la cause de ce mystérieux phénomène ! Le jeune Shinra, nouvelle recrue surnommée le Démon, rêve de devenir un héros.",
+    poster: "https://fr.web.img5.acsta.net/pictures/19/09/16/16/21/4933552.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_400_200/pictures/19/09/16/15/59/3682712.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2019,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799682" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799686" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799688" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799689" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799691" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799693" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799696" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799697" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799699" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799700" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799701" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799702" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799704" },
+{ title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799707" },
+{ title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799708" },
+{ title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799709" },
+{ title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799710" },
+{ title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799712" },
+{ title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799713" },
+{ title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799715" },
+{ title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799716" },
+{ title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799717" },
+{ title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799719" },
+{ title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4799721" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696734" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696737" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696740" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696743" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696745" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696748" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696751" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696753" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696755" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696758" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696762" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696766" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696769" },
+{ title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696770" },
+{ title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696772" },
+{ title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696774" },
+{ title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696776" },
+{ title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696780" },
+{ title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696782" },
+{ title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696784" },
+{ title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696786" },
+{ title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696789" },
+{ title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696791" },
+{ title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4696796" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 3 Part 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5892668" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5899606" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5906897" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5913866" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5920282" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5925932" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5931026" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5936587" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5941940" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5947856" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5953737" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961614" }
+	        ]
+      }
+    ]
+  },
+	{
     title: "Full Metal Alchemist Brotherhood",
     description: "Les frères Elric participent à une chasse à l'homme pour débusquer le dangereux Isaac le Freezer, ex-alchimiste d'État voulant détruire le Führer Bradley.",
     poster: "https://fr.web.img6.acsta.net/pictures/19/07/29/15/50/2364027.jpg",
