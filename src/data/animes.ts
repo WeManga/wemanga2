@@ -6907,6 +6907,148 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
+    title: "FATE",
+    description: "Découvrez les séries FATE",
+    poster: "https://fr.web.img6.acsta.net/medias/nmedia/18/73/24/79/19196078.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_400_200/medias/nmedia/18/73/24/79/19196078.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2020,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Stay Night",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/wi60ylg190rt" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/m7btk2edyf03" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/onheroarky2l" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/66qqw24l7ric" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/wtdvpajhr05w" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/vab5fl7x9y3c" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/8ab6r0486bz7" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/kgsylqcepwvh" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/0bpvwop0mtbu" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/pm1kvxrmyt2l" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/g5f3wdt84z5j" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/o8y6bpw81yiy" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/nhe5gslezqml" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/oexo507sze2f" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/7nnunc7jojtg" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/fdvj105kvbyr" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/tcgxmgdehcwl" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/nakvgdd1czu1" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/0qkbwsz7hvyc" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/2aiqtmoo6onh" },
+{ title: "Épisode 21", videoUrl: "https://vidmoly.net/d9g70p4k7ajc" },
+{ title: "Épisode 22", videoUrl: "https://vidmoly.net/nv6ue5485awx" },
+{ title: "Épisode 23", videoUrl: "https://vidmoly.net/7ontx646h7jv" },
+{ title: "Épisode 24", videoUrl: "https://vidmoly.net/5p19j6f3229c" },
+{ title: "Épisode 25", videoUrl: "https://vidmoly.net/x4ksymm2yzn4" },
+{ title: "Épisode 26", videoUrl: "https://vidmoly.net/5qxz2ufh5ys9" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Zero VOSTFR",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/l8i919l0x5wf" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/0webs8284zr1" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/mnm7jm5r8vbv" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/exp95b6zog65" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/j1m49vzatx5p" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/tpgm8zuwb4k5" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/0svb4emjqthb" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/njwibuw5lxk1" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/zwrgwckkdsfx" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/coid38akpqtp" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/x2zaps5zs5bg" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/cpx1scsjmu8v" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/l9d23db6awzj" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/islqsr9z9phq" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/3u4czb622qt6" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/w0znx26glscd" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/y0kxmyehgcx4" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/34oblb5mdak8" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/qniqz6h3uu1z" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/45r4ecyc4qxd" },
+{ title: "Épisode 21", videoUrl: "https://vidmoly.net/gsl4oe51ijm9" },
+{ title: "Épisode 22", videoUrl: "https://vidmoly.net/ywkeefiwn0o6" },
+{ title: "Épisode 23", videoUrl: "https://vidmoly.net/grdw7gacxkl3" },
+{ title: "Épisode 24", videoUrl: "https://vidmoly.net/n86e44erjp2i" },
+{ title: "Épisode 25", videoUrl: "https://vidmoly.net/klobc2odgd45" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Heaven's Feel VOSTFR",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/dwgtdltgwwi2" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/fdo6xp3scf2h" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/47lx1x2f2342" }
+        ]
+      },
+      {
+        number: 4,
+        title: "Grand Order First Order",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4924859" }
+        ]
+      },
+      {
+        number: 5,
+        title: "Grand Order Camelot VOSTFR",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5054096" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5054071" }
+        ]
+      },
+      {
+        number: 6,
+        title: "Grand Order Absolut Demonic Front VOSTFR",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://vidmoly.net/5qrep2yhqzu1" },
+{ title: "Épisode 2", videoUrl: "https://vidmoly.net/bdilbqmltdc0" },
+{ title: "Épisode 3", videoUrl: "https://vidmoly.net/cmgcmuj32yc9" },
+{ title: "Épisode 4", videoUrl: "https://vidmoly.net/p0la6my5mvj6" },
+{ title: "Épisode 5", videoUrl: "https://vidmoly.net/z0a5xrwzwsnw" },
+{ title: "Épisode 6", videoUrl: "https://vidmoly.net/b8c3xuok5q2r" },
+{ title: "Épisode 7", videoUrl: "https://vidmoly.net/mscfvazb535c" },
+{ title: "Épisode 8", videoUrl: "https://vidmoly.net/lzpqv1ptahp0" },
+{ title: "Épisode 9", videoUrl: "https://vidmoly.net/6z5mwmp05ktj" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/phncffasxqtf" },
+{ title: "Épisode 11", videoUrl: "https://vidmoly.net/8yr5w9d22fyn" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/vjlccqx5r7wj" },
+{ title: "Épisode 13", videoUrl: "https://vidmoly.net/etcdw3mog6ob" },
+{ title: "Épisode 14", videoUrl: "https://vidmoly.net/fb2xfsw6m45n" },
+{ title: "Épisode 15", videoUrl: "https://vidmoly.net/rlogrekp8jon" },
+{ title: "Épisode 16", videoUrl: "https://vidmoly.net/0zjscy22r70x" },
+{ title: "Épisode 17", videoUrl: "https://vidmoly.net/4l2pnezzo5ya" },
+{ title: "Épisode 18", videoUrl: "https://vidmoly.net/n8a39g96wtt6" },
+{ title: "Épisode 19", videoUrl: "https://vidmoly.net/kbrdqehx4vsr" },
+{ title: "Épisode 20", videoUrl: "https://vidmoly.net/8thjza2nrmks" },
+{ title: "Épisode 21", videoUrl: "https://vidmoly.net/pllpha9o4nx6" },
+{ title: "Épisode 22", videoUrl: "https://vidmoly.net/ycj8kusn3guy" }
+        ]
+      },
+      {
+        number: 7,
+        title: "Grand Order Final VOSTFR",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5054128" }
+        ]
+      },
+      {
+        number: 8,
+        title: "Grand Order Moonlight VOSTFR",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5969406" }
+        ]
+      }
+    ]
+  },
+	{
     title: "Full Metal Alchemist Brotherhood",
     description: "Les frères Elric participent à une chasse à l'homme pour débusquer le dangereux Isaac le Freezer, ex-alchimiste d'État voulant détruire le Führer Bradley.",
     poster: "https://fr.web.img6.acsta.net/pictures/19/07/29/15/50/2364027.jpg",
