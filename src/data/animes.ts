@@ -6908,14 +6908,14 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 	{
     title: "FATE",
-    description: "Découvrez les séries FATE",
+    description: "Découvrez la trame principale FATE",
     poster: "https://fr.web.img6.acsta.net/medias/nmedia/18/73/24/79/19196078.jpg",
     banner: "https://fr.web.img6.acsta.net/c_400_200/medias/nmedia/18/73/24/79/19196078.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2020,
     rating: 8.5,
     type: "serie",
-    status: "En cours",
+    status: "Terminé",
     seasons: [
       {
         number: 1,
