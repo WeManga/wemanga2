@@ -7397,6 +7397,21 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+{
+    title: "Frieren",
+    description: "L'elfe Frieren a vaincu le roi des démons aux côtés du groupe mené par le jeune héros Himmel. Après dix années d'efforts, ils ont ramené la paix dans le royaume. Parce qu'elle est une elfe, Frieren peut vivre plus de mille ans.",
+    poster: "https://fr.web.img4.acsta.net/c_310_420/pictures/23/07/31/10/02/0006409.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/24/02/05/09/49/0269530.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2023,
+    rating: 8,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
 	{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5289523" },
 { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5289524" },
 { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5289526" },
@@ -7425,7 +7440,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5487053" },
 { title: "Épisode 27", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5495416" },
 { title: "Épisode 28", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5504164" }
-	        ]
+	   ]
       }
     ]
   },
