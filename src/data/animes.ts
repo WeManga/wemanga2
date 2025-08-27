@@ -8000,7 +8000,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 {
     title: "Great Pretender",
-    description: "Travaillant comme cuisinier dans un restaurant japonais en France, Makoto tente de monter une arnaque, sans l'aide de Laurent, contre un Anglais arrogant. À Londres, Laurent et son équipe mettent en place leurs représailles contre le "007 du monde de l'art". Cynthia évoque des souvenirs liés à l'art et à l'amour.",
+    description: "Travaillant comme cuisinier dans un restaurant japonais en France, Makoto tente de monter une arnaque, sans l'aide de Laurent, contre un Anglais arrogant. À Londres, Laurent et son équipe mettent en place leurs représailles contre le 007 du monde de l'art. Cynthia évoque des souvenirs liés à l'art et à l'amour.",
     poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5eas7bOHFaUHBZLJ36yV633h9yghcuyEPNA&s",
     banner: "https://fr.web.img2.acsta.net/c_400_200/pictures/20/07/29/11/30/4311981.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
