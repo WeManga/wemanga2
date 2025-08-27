@@ -7775,7 +7775,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 {
     title: "Goblin Slayer",
-    description: "Une jeune prêtresse vient de former son premier groupe d'aventuriers, cependant ils se trouvent rapidement dans une situation dangereuse. Attaqués par une troupe de gobelins, ils se font sauver par le "Goblin Slayer", une personne qui voue sa vie à l'extermination des gobelins, et par n'importe quel moyen.",
+    description: "Une jeune prêtresse vient de former son premier groupe d'aventuriers, cependant ils se trouvent rapidement dans une situation dangereuse. Attaqués par une troupe de gobelins, ils se font sauver par le Goblin Slayer, une personne qui voue sa vie à l'extermination des gobelins, et par n'importe quel moyen.",
     poster: "https://fr.web.img2.acsta.net/pictures/19/09/18/15/38/4134067.jpg",
     banner: "https://fr.web.img6.acsta.net/c_640_360/newsv7/21/02/02/12/44/2219975.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
