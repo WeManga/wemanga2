@@ -7644,7 +7644,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 {
     title: "Gambling School",
-    description: "Mary Saotome est une élève qui vient d'être transférée à l'Académie privée Hyakkaô et prétend déjà être la "jumelle" de la célèbre Yumeko aux jeux de hasard. Mary est bien décidée à écraser ses camarades et adversaires et se découvre une personnalité plus que sadique.",
+    description: "Mary Saotome est une élève qui vient d'être transférée à l'Académie privée Hyakkaô et prétend déjà être la jumelle de la célèbre Yumeko aux jeux de hasard. Mary est bien décidée à écraser ses camarades et adversaires et se découvre une personnalité plus que sadique.",
     poster: "https://fr.web.img5.acsta.net/pictures/19/06/21/15/38/4017193.jpg",
     banner: "https://fr.web.img6.acsta.net/c_400_200/pictures/19/06/21/15/38/4535943.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
