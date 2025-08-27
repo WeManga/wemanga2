@@ -7270,7 +7270,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 	{
     title: "Seven Deadly Sins: Four Knights of the Apocalypse",
-    description: "Percival vit seul avec son grand-père Bargis, au sommet d'une haute montagne nommée le "Doigt divin". Il y mène une vie heureuse, préservé du monde extérieur. Mais le jour de ses 16 ans, son destin bascule : un mystérieux guerrier à l'armure rouge s'en prend violemment à lui et à son grand-père.",
+    description: "Percival vit seul avec son grand-père Bargis, au sommet d'une haute montagne nommée le Doigt divin. Il y mène une vie heureuse, préservé du monde extérieur. Mais le jour de ses 16 ans, son destin bascule : un mystérieux guerrier à l'armure rouge s'en prend violemment à lui et à son grand-père.",
     poster: "https://fr.web.img3.acsta.net/pictures/23/01/25/09/31/5311791.jpg",
     banner: "https://fr.web.img6.acsta.net/videothumbnails/23/01/25/10/37/3349121.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
