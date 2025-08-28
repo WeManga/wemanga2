@@ -8934,159 +8934,6 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
-{
-    title: "I Was Reincarnated as the 7th Prince",
-    description: "Un garçon né roturier se réincarne en Lloyd, septième prince du royaume de Saloum, en ayant gardé tous ses souvenirs. Il décide de profiter de sa nouvelle vie pour maîtriser la magie. Lloyd continue de s'entraîner à la magie, mais comme il doit cacher ses pouvoirs, quelques situations cocasses se produisent.",
-    poster: "https://fr.web.img6.acsta.net/pictures/23/07/04/10/42/5363406.jpg",
-    banner: "https://fr.web.img3.acsta.net/c_400_200/img/4d/03/4d0301f77efaa705b2114f3bbe25d106.jpg",
-    genre: ["Action", "Aventure", "Fantaisie"],
-    year: 2024,
-    rating: 7.5,
-    type: "serie",
-    status: "En cours",
-    seasons: [
-      {
-        number: 1,
-        title: "Saison 1",
-        episodes: [
-{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5513988" },
-{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5520197" },
-{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5535730" },
-{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5541964" },
-{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5548377" },
-{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5555062" },
-{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5560249" },
-{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5567406" },
-{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5576545" },
-{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5583333" },
-{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5590809" },
-{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5598110" }
-        ]
-      },
-      {
-        number: 2,
-        title: "Saison 2",
-        episodes: [
-{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5991391" },
-{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5991392" },
-{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5991397" },
-{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5994681" }
-	 ]
-      }
-    ]
-  },
-{
-    title: "I Will Parry All",
-    description: "Noor doit utiliser toute sa force pour parer son défi le plus difficile à ce jour : un rayon de lumière magique ! Dans la capitale royale dévastée, Noor de retourne à la guilde d'aventuriers. En contemplant l'enseigne qu'il a ramassée par terre, il se remémore ses jeunes années de formation.",
-    poster: "https://fr.web.img2.acsta.net/img/a8/da/a8dabd07ee11431241d0284cfcdf7514.jpg",
-    banner: "https://fr.web.img2.acsta.net/c_300_300/img/1a/51/1a51ccd7df1b0153f549badc4a9cdcae.jpg",
-    genre: ["Action", "Aventure", "Fantaisie"],
-    year: 2024,
-    rating: 7.5,
-    type: "serie",
-    status: "En cours",
-    seasons: [
-      {
-        number: 1,
-        title: "Saison 1",
-        episodes: [
-{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961651" },
-{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961659" },
-{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961663" },
-{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961667" },
-{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961672" },
-{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961676" },
-{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961682" },
-{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961686" },
-{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961689" },
-{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961693" },
-{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961695" },
-{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961699" }
-		 ]
-      }
-    ]
-  },
-{
-    title: "I'll Become a Villainess Who Goes Down in History",
-    description: "Gravement malade, une jeune fille a passé la majeure partie de sa vie dans une chambre d'hôpital à jouer à des otome games pour passer le temps. Mais un jour, elle se retrouve dans la peau de Irene Loren D'Autriche, la méchante de l'un de ses jeux.",
-    poster: "https://fr.web.img2.acsta.net/img/61/27/612765b791b31b8fdf0d317486ed731b.jpg",
-    banner: "https://fr.web.img2.acsta.net/img/61/27/612765b791b31b8fdf0d317486ed731b.jpg",
-    genre: ["Action", "Aventure", "Fantaisie"],
-    year: 2024,
-    rating: 7.5,
-    type: "serie",
-    status: "En cours",
-    seasons: [
-      {
-        number: 1,
-        title: "Saison 1",
-        episodes: [
-{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5726412" },
-{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5735036" },
-{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5743150" },
-{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5750862" },
-{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5757491" },
-{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5763737" },
-{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5768063" },
-{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5772060" },
-{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5779094" },
-{ title: "Épisode 10", videoUrl: "https://vidmoly.net/48h2dvodhsop" },
-{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5788534" },
-{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5793354" },
-{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5799191" }
-		 ]
-      }
-    ]
-  },
-{
-    title: "I'm Standing on a Million Lives",
-    description: "Un jour, Yusuke Yotsuya et ses camarades de classes se retrouvent dans un autre monde où ils vont devoir travailler ensemble pour survivre. En arrivant, ils vont à la rencontre du Game Master, une personne leur donnant une quête limitée dans le temps.",
-    poster: "https://fr.web.img6.acsta.net/pictures/20/10/14/16/55/1949356.jpg",
-    banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/20/10/14/16/53/3673570.jpg",
-    genre: ["Action", "Aventure", "Fantaisie"],
-    year: 2020,
-    rating: 7.5,
-    type: "serie",
-    status: "Terminé",
-    seasons: [
-      {
-        number: 1,
-        title: "Saison 1",
-        episodes: [
-{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4139337" },
-{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4146922" },
-{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4155768" },
-{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4162705" },
-{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4169771" },
-{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4176778" },
-{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4191463" },
-{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4198875" },
-{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4204334" },
-{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4210298" },
-{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4214631" },
-{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4219729" }
-        ]
-      },
-      {
-        number: 2,
-        title: "Saison 2",
-        episodes: [
-{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4399098" },
-{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4406304" },
-{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4412634" },
-{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4418801" },
-{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4425920" },
-{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4433960" },
-{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4442717" },
-{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4451425" },
-{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4473732" },
-{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4473735" },
-{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4484381" },
-{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4494983" }
-		 ]
-      }
-    ]
-  },
   {
     title: "Hunter X Hunter ",
     description: "Gon Freecss a douze ans, et rêve de devenir hunter. Les hunters sont des aventuriers d'élite qui peuvent être chasseurs de prime, chefs-cuisinier, archéologues, zoologues, justiciers ou consultants dans divers domaines.",
@@ -9247,6 +9094,239 @@ const animeConfigs: SimpleAnimeConfig[] = [
       { title: "Épisode 147", videoUrl: "https://movearnpre.com/8jstexgbsmp3" },
       { title: "Épisode 148", videoUrl: "https://movearnpre.com/tn58rpgh5fxu" },
           ]
+  },
+	{
+    title: "I Was Reincarnated as the 7th Prince",
+    description: "Un garçon né roturier se réincarne en Lloyd, septième prince du royaume de Saloum, en ayant gardé tous ses souvenirs. Il décide de profiter de sa nouvelle vie pour maîtriser la magie. Lloyd continue de s'entraîner à la magie, mais comme il doit cacher ses pouvoirs, quelques situations cocasses se produisent.",
+    poster: "https://fr.web.img6.acsta.net/pictures/23/07/04/10/42/5363406.jpg",
+    banner: "https://fr.web.img3.acsta.net/c_400_200/img/4d/03/4d0301f77efaa705b2114f3bbe25d106.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2024,
+    rating: 7.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5513988" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5520197" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5535730" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5541964" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5548377" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5555062" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5560249" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5567406" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5576545" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5583333" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5590809" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5598110" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5991391" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5991392" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5991397" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5994681" }
+	 ]
+      }
+    ]
+  },
+{
+    title: "I Will Parry All",
+    description: "Noor doit utiliser toute sa force pour parer son défi le plus difficile à ce jour : un rayon de lumière magique ! Dans la capitale royale dévastée, Noor de retourne à la guilde d'aventuriers. En contemplant l'enseigne qu'il a ramassée par terre, il se remémore ses jeunes années de formation.",
+    poster: "https://fr.web.img2.acsta.net/img/a8/da/a8dabd07ee11431241d0284cfcdf7514.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_300_300/img/1a/51/1a51ccd7df1b0153f549badc4a9cdcae.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2024,
+    rating: 7.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961651" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961659" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961663" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961667" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961672" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961676" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961682" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961686" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961689" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961693" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961695" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5961699" }
+		 ]
+      }
+    ]
+  },
+{
+    title: "I'll Become a Villainess Who Goes Down in History",
+    description: "Gravement malade, une jeune fille a passé la majeure partie de sa vie dans une chambre d'hôpital à jouer à des otome games pour passer le temps. Mais un jour, elle se retrouve dans la peau de Irene Loren D'Autriche, la méchante de l'un de ses jeux.",
+    poster: "https://fr.web.img2.acsta.net/img/61/27/612765b791b31b8fdf0d317486ed731b.jpg",
+    banner: "https://fr.web.img2.acsta.net/img/61/27/612765b791b31b8fdf0d317486ed731b.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2024,
+    rating: 7.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5726412" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5735036" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5743150" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5750862" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5757491" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5763737" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5768063" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5772060" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5779094" },
+{ title: "Épisode 10", videoUrl: "https://vidmoly.net/48h2dvodhsop" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5788534" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5793354" },
+{ title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5799191" }
+		 ]
+      }
+    ]
+  },
+{
+    title: "I'm Standing on a Million Lives",
+    description: "Un jour, Yusuke Yotsuya et ses camarades de classes se retrouvent dans un autre monde où ils vont devoir travailler ensemble pour survivre. En arrivant, ils vont à la rencontre du Game Master, une personne leur donnant une quête limitée dans le temps.",
+    poster: "https://fr.web.img6.acsta.net/pictures/20/10/14/16/55/1949356.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/20/10/14/16/53/3673570.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2020,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4139337" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4146922" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4155768" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4162705" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4169771" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4176778" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4191463" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4198875" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4204334" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4210298" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4214631" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4219729" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4399098" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4406304" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4412634" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4418801" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4425920" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4433960" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4442717" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4451425" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4473732" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4473735" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4484381" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4494983" }
+		 ]
+      }
+    ]
+  },
+	{
+    title: "I'm The Villainess, So I'm Taming The Final Boss",
+    description: "Gravement malade, une jeune fille a passé la majeure partie de sa vie dans une chambre d'hôpital à jouer à des otome games pour passer le temps.",
+    poster: "https://fr.web.img5.acsta.net/pictures/22/09/22/09/36/1279298.jpg",
+    banner: "https://fr.web.img5.acsta.net/pictures/22/09/22/09/36/1279298.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2022,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4927662" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4927296" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4934326" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4942585" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4950310" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4957351" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4963920" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4969618" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4975606" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4981490" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4989588" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4995376" }
+		 ]
+      }
+    ]
+  },
+	{
+    title: "In Another World With My Smartphone",
+    description: "Tôya Mochizuki est accidentellement tué. Pour s'excuser, Dieu l'autorise à revivre dans un monde fantastique en exauçant l'un de ses vœux. Tôya décide de garder son téléphone dans ce nouveau monde.",
+    poster: "https://fr.web.img2.acsta.net/pictures/23/03/31/10/01/2712464.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_400_200/pictures/23/03/31/10/01/2980789.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2017,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4927662" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4927296" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4934326" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4942585" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4950310" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4957351" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4963920" },
+{ title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4969618" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4975606" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4981490" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4989588" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4995376" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+{ title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5123656" },
+{ title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5130357" },
+{ title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5141258" },
+{ title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5149506" },
+{ title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5163199" },
+{ title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5169841" },
+{ title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5169922" },
+{ title: "Épisode 8", videoUrl: "https://sendvid.com/rtirgm9t" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5181738" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5187295" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5194248" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5200664" }
+        ]
+      }
+    ]
   },
   {
     title: "Jujutsu Kaisen",
