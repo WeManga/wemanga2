@@ -8168,7 +8168,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     title: "Gurren Lagann",
     description: "Simon & Kamina vivent à Jehaa, un village reclus et isolé sous terre. Leur destin est amené à changer lorsque Simon découvre une étrange clé lors d'une ...",
     poster: "https://fr.web.img6.acsta.net/medias/nmedia/18/77/66/64/19418527.jpg",
-    banner: "https://fr.web.img6.acsta.net/c_400_200/medias/nmedia/18/77/66/64/19418527.jpg,
+    banner: "https://fr.web.img6.acsta.net/c_400_200/medias/nmedia/18/77/66/64/19418527.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2007,
     rating: 7.5,
