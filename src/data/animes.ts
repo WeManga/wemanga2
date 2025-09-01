@@ -11205,10 +11205,10 @@ const animeConfigs: SimpleAnimeConfig[] = [
     ]
   },
 	{
-    title: "Koroshi AI",
-    description: "Kazuma choisit… la déesse ! Les voici transportés dans un pays sous la coupe d'un terrible roi démon.",
-    poster: "https://fr.web.img5.acsta.net/pictures/21/12/30/17/01/5796556.jpg",
-    banner: "https://fr.web.img5.acsta.net/pictures/21/12/30/17/01/5796556.jpg",
+    title: "Kotaro En Solo",
+    description: "Un petit garçon emménage tout seul dans un immeuble délabré et sympathise avec son voisin, un auteur de manga fauché.",
+    poster: "https://fr.web.img6.acsta.net/pictures/22/03/07/15/31/0476721.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_400_200/pictures/22/03/11/09/14/3983467.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2022,
     rating: 7.5,
