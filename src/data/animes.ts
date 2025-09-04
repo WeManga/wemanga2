@@ -12436,6 +12436,210 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "MAGILUMIERE",
+    description: "Kana Sakuragi vient de terminer ses études et cherche désespérément un emploi, sans grand succès. Un jour, elle est victime d'une attaque de Kaii et fait la connaissance d'Hitomi. Une rencontre qui va bouleverser sa vie",
+    poster: "https://fr.web.img3.acsta.net/img/bc/83/bc832e6fc460f5d98a248b7c6b3fc496.jpg",
+    banner: "https://fr.web.img3.acsta.net/img/bc/83/bc832e6fc460f5d98a248b7c6b3fc496.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842727" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842728" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842730" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842732" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842733" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842734" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842735" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842736" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842739" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842740" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842741" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5842742" }
+			]
+      }
+    ]
+  },
+	{
+    title: "Magic Maker",
+    description: "La nuit de son 30e anniversaire, un homme décède subitement, mais voit son rêve le plus cher sur le point de se réaliser : pratiquer la magie.",
+    poster: "https://fr.web.img3.acsta.net/img/be/44/be44df3232ef59186581ea191438663e.jpg",
+    banner: "https://media.senscritique.com/media/000023015215/1200/magic_maker_how_to_make_magic_in_another_world.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 7.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5793346" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5799043" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5804898" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5809337" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5816509" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5822915" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5830003" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5836939" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5843439" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5849685" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5855024" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5861264" }
+			]
+      }
+    ]
+  },
+	{
+    title: "Mahou Shoujo Madoka Magica VOSTFR",
+    description: "Madoka Kaname est une jeune collégienne ordinaire de 14 ans partagée entre sa famille, les amis, les moments de joie et de tristesse etc. Un jour elle fait une rencontre extraordinaire qui va changer sa vie et son destin. C'est alors que commence la fantastique histoire de la magical girl !",
+    poster: "https://fr.web.img3.acsta.net/pictures/14/08/26/16/38/455981.jpg",
+    banner: "https://fr.web.img6.acsta.net/r_640_360/videothumbnails/195/396/19539679_2013110610324247.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2011,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295781" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295786" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295787" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295790" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295791" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295793" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295796" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295797" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295798" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295801" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295805" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5295807" }
+			]
+      }
+    ]
+  },
+	{
+    title: "Mahoutsukai Reimeiki",
+    description: "Seville est un étudiant d'une académie de magie qui ne se souvient de rien avant d'avoir rejoint l'école.",
+    poster: "https://fr.web.img6.acsta.net/pictures/21/11/22/11/40/2078486.jpg",
+    banner: "https://fr.web.img6.acsta.net/pictures/21/11/22/11/40/2078486.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2022,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4693117" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4703960" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4710494" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4720189" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4729265" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4736944" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4754909" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4763250" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4773470" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4781297" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4794732" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4797604" }
+			]
+      }
+    ]
+  },
+	{
+    title: "Maou 2099",
+    description: "À l'académie d'Akihabara, Veltol tombe sur un jeune élève particulièrement énervant appartenant à une famille noble, du nom de Albert Heygrams.",
+    poster: "https://fr.web.img4.acsta.net/img/70/04/70048a5cbb5bb52a6804865d87e2a03f.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_208_117/img/c7/f5/c7f508944a20ad89b490590e430d1f39.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2024,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5739624" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5746951" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5753715" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5761070" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5765922" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5770042" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5774692" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5780635" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5785668" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5791081" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5796576" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5802290" }
+			]
+      }
+    ]
+  },
+	{
+    title: "Mashle",
+    description: "Il existe un royaume où la magie est omniprésente et est considérée comme un don divin. Dans cette société, le rang social est déterminé par le potentiel magique et ceux qui n'en disposent pas sont punis de mort. C'est notamment le cas de Mash Burnedead.",
+    poster: "https://fr.web.img6.acsta.net/pictures/23/02/27/09/15/2480600.jpg",
+    banner: "https://fr.web.img3.acsta.net/c_400_225/img/74/77/74775ab456e6482ee9f232a43c2e58ea.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2023,
+    rating: 7.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5120360" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5127513" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5136034" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5146256" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5153628" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5160194" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5174350" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5180164" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5184994" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5191419" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5198430" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5203955" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5414806" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5421442" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5428307" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5435946" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5444918" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5462070" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5470711" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5480266" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5488310" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5496851" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5504163" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5511510" }
+			]
+      }
+    ]
+  },
       {
     title: "Naruto",
     description: "Naruto Uzumaki est un ninja adolescent qui cherche à devenir Hokage.",
