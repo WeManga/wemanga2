@@ -12598,9 +12598,9 @@ const animeConfigs: SimpleAnimeConfig[] = [
     banner: "https://fr.web.img3.acsta.net/c_400_225/img/74/77/74775ab456e6482ee9f232a43c2e58ea.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
     year: 2023,
-    rating: 7.5,
+    rating: 8.5,
     type: "serie",
-    status: "Terminé",
+    status: "En cours",
     seasons: [
       {
         number: 1,
@@ -12636,6 +12636,137 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5496851" },
   { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5504163" },
   { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5511510" }
+			]
+      }
+    ]
+  },
+	{
+    title: "Medalist",
+    description: "Tsukasa Akeuraji fait la connaissance d'Inori Yuitsuka, en laquelle il voit le reflet de celui qu'il était autrefois. Convaincu par le potentiel de la jeune patineuse, il décide de l'entrainer et de faire d'elle une médaillée !",
+    poster: "https://fr.web.img2.acsta.net/img/44/1b/441ba18c9c9cb085b7bbcdae96e73e62.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_300_300/img/d7/37/d7376ecdbde311c57ed92c6f1ebcf75f.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877751" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877755" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877759" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877763" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877768" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877773" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877777" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877782" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877787" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877792" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877798" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877801" },
+  { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5877809" }
+			]
+      }
+    ]
+  },
+	{
+    title: "Meikyuu Black Company",
+    description: "Kinji Ninomiya est un jeune homme ne possédant aucune éthique de travail qui se retrouve transporté dans un autre monde.",
+    poster: "https://fr.web.img2.acsta.net/c_300_300/pictures/21/07/02/18/00/3277705.jpg",
+    banner: "https://fr.web.img2.acsta.net/c_300_300/pictures/21/07/02/18/00/3277705.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2021,
+    rating: 8.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4374133" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4374136" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4379820" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4385892" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4392572" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4398922" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4406303" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4412746" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4418786" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4426047" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4433969" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4442725" }
+			]
+      }
+    ]
+  },
+	{
+    title: "Mob Psycho 100",
+    description: "Shigeo Kageyama, surnommé Mob, est un lycéen tout ce qu'il y a de plus ordinaire. Pourtant, il possède de puissants pouvoirs psychiques, mais il préfère rester discret, afin d'avoir une vie la plus normale possible.",
+    poster: "https://fr.web.img2.acsta.net/pictures/20/11/12/14/25/3371142.jpg",
+    banner: "https://fr.web.img4.acsta.net/c_400_200/pictures/20/11/12/14/23/1929619.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2016,
+    rating: 8.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://vidmoly.net/3eqn4neuqvy9" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/vja95g9upipd" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/rr3y3lovtdmm" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/imh2889nmp1m" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/plfdmy3e729a" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/umtbeizm1si4" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/ypnnpz8silsx" },
+  { title: "Épisode 8", videoUrl: "https://vidmoly.net/ylaacetyonga" },
+  { title: "Épisode 9", videoUrl: "https://vidmoly.net/wc4kvz7bvm7f" },
+  { title: "Épisode 10", videoUrl: "https://vidmoly.net/fuy3rrkv44a0" },
+  { title: "Épisode 11", videoUrl: "https://vidmoly.net/clcc4bku66z7" },
+  { title: "Épisode 12", videoUrl: "https://vidmoly.net/1r1izupijd1l" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://vidmoly.net/uje838g4gthz" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/61uq6pvfm7cp" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/hb82jnh46n20" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/wh4rf3hv5891" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/7kvx1yujdmer" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/uqx1ma0qjbnd" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/fg862d4va3vw" },
+  { title: "Épisode 8", videoUrl: "https://vidmoly.net/pe2dg0vz9nnk" },
+  { title: "Épisode 9", videoUrl: "https://vidmoly.net/zm858aqrhcb5" },
+  { title: "Épisode 10", videoUrl: "https://vidmoly.net/ltuld0b4eeb2" },
+  { title: "Épisode 11", videoUrl: "https://vidmoly.net/hoc0bl5x5w6e" },
+  { title: "Épisode 12", videoUrl: "https://vidmoly.net/82cro2xqg4rc" },
+  { title: "Épisode 13", videoUrl: "https://vidmoly.net/6q1zu36csh5i" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 3",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://vidmoly.net/hf7zrkyfbqdy" },
+  { title: "Épisode 2", videoUrl: "https://vidmoly.net/fdlz5uz0txgv" },
+  { title: "Épisode 3", videoUrl: "https://vidmoly.net/7booypqltpxx" },
+  { title: "Épisode 4", videoUrl: "https://vidmoly.net/r5i3k8cmkoey" },
+  { title: "Épisode 5", videoUrl: "https://vidmoly.net/ibniw9sp983c" },
+  { title: "Épisode 6", videoUrl: "https://vidmoly.net/uxr7pcjne5bv" },
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/6xi6b59lco0u" },
+  { title: "Épisode 8", videoUrl: "https://vidmoly.net/pt56wkrfyzko" },
+  { title: "Épisode 9", videoUrl: "https://vidmoly.net/ujh5nxrl8mgq" },
+  { title: "Épisode 10", videoUrl: "https://vidmoly.net/5pan9zmw70j9" },
+  { title: "Épisode 11", videoUrl: "https://vidmoly.net/f5gc892x8x9g" },
+  { title: "Épisode 12", videoUrl: "https://vidmoly.net/01w3461hqdtt" }
 			]
       }
     ]
