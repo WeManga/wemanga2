@@ -13256,6 +13256,133 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "My Hero Academia : Vigilantes",
+    description: "Koichi Haimawari, étudiant tout à fait ordinaire, fait deux rencontres qui vont changer sa vie dans une ruelle sombre et mal famée. Knuckle Duster interroge un homme suspect, mais Eraser Head s'en mêle. Un fan de Pop, l'idole des jeunes, essaie de lui faire un câlin un peu trop baveux.",
+    poster: "https://fr.web.img4.acsta.net/pictures/21/12/20/17/56/1830087.jpg",
+    banner: "https://fr.web.img5.acsta.net/c_400_200/pictures/22/03/14/10/02/5779594.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2025,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5871164" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5879053" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5887182" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5895450" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5902223" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5909546" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5916132" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5922199" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5927789" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5932804" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5938241" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5944128" },
+  { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5949655" }
+			]
+      }
+    ]
+  },
+	{
+    title: "My Happy Marriage",
+    description: "Miyo Saimori est une jeune fille qui est née dans une famille aisée, dite de sang pur. Hélas, elle n'a jamais pu bénéficier des privilèges de son statut, sa demi-sœur l'en ayant toujours empêchée.",
+    poster: "https://fr.web.img4.acsta.net/pictures/21/12/20/17/56/1830087.jpg",
+    banner: "https://fr.web.img5.acsta.net/c_400_200/pictures/22/03/14/10/02/5779594.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2023,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5189543" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5195992" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5202174" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5210902" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5216507" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5570461" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5228026" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5233256" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5237851" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5245671" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5251863" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257239" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5791860" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5797462" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5803066" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5807819" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5813527" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5820691" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5827418" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5835093" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5840875" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5847431" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5853060" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5891811" },
+  { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5891826" }
+			 ]
+      }
+    ]
+  },
+	{
+    title: "Nabari",
+    description: "Rokuju Miharu mène une vie de lycéen banal jusqu'au jour où il se fait attaquer par un groupe de ninjas qui en a après un hijutsu, une technique cachée renfermée dans son corps. Cet hijutsu est le pouvoir de création, convoité par tout ninja ayant l'ambition d'imposer sa volonté sur tous ces combattants de l'ombre.",
+    poster: "https://media.senscritique.com/media/000006545146/0/nabari.jpg",
+    banner: "https://media.senscritique.com/media/000006545146/0/nabari.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2008,
+    rating: 8.5,
+    type: "serie",
+    status: "Terminé",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257540" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257541" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257543" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257544" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257546" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257547" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257548" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257549" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257550" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257551" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257552" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257553" },
+  { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257554" },
+  { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257555" },
+  { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257556" },
+  { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257557" },
+  { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257558" },
+  { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257560" },
+  { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257561" },
+  { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257563" },
+  { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257564" },
+  { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257565" },
+  { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257567" },
+  { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257568" },
+  { title: "Épisode 25", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257569" },
+  { title: "Épisode 26", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5257570" }
+			]
+      }
+    ]
+  },
       {
     title: "Naruto",
     description: "Naruto Uzumaki est un ninja adolescent qui cherche à devenir Hokage.",
