@@ -13100,6 +13100,162 @@ const animeConfigs: SimpleAnimeConfig[] = [
       }
     ]
   },
+	{
+    title: "Mushoku Tensei",
+    description: "Un NEET japonais de 34 ans est percuté par un camion en excès de vitesse qui se dirigeait vers un groupe d'adolescents mais sauve l'un d'entre eux avant de décéder. Se réveillant dans le corps d'un bébé, il se rend compte qu'il a été réincarné dans un monde d'épée et de sorcellerie.",
+    poster: "https://fr.web.img5.acsta.net/pictures/20/12/29/17/25/0832191.jpg",
+    banner: "https://fr.web.img6.acsta.net/c_400_200/pictures/23/07/31/17/13/5558890.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2021,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671027" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671030" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671032" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671036" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671038" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671041" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671047" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671052" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671058" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671063" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671068" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671071" },
+  { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671075" },
+  { title: "Épisode 14", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671078" },
+  { title: "Épisode 15", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671080" },
+  { title: "Épisode 16", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671081" },
+  { title: "Épisode 17", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671084" },
+  { title: "Épisode 18", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671086" },
+  { title: "Épisode 19", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671087" },
+  { title: "Épisode 20", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671088" },
+  { title: "Épisode 21", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671089" },
+  { title: "Épisode 22", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671092" },
+  { title: "Épisode 23", videoUrl: "https://video.sibnet.ru/shell.php?videoid=4671095" },
+  { title: "Épisode 24", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5114213" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5243279" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5243289" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5249507" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5249510" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5255614" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5255616" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5277735" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5260626" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5277737" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5277740" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5277751" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5277762" },
+  { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5282423" }
+        ]
+      },
+      {
+        number: 3,
+        title: "Saison 3",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5519873" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5527541" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5534589" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5540510" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5547436" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5552697" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5565322" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5574499" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5582205" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5589753" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5597254" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5605561" }
+		 ]
+      }
+    ]
+  },
+	{
+    title: "My Deamon",
+    description: "Dans un futur proche, une explosion nucléaire a causé la fusion temporaire de la Terre et des Enfers – avec une pollution causée par la poussière de cet autre monde.",
+    poster: "https://fr.web.img5.acsta.net/pictures/23/11/03/14/51/4292461.jpg",
+    banner: "https://fr.web.img5.acsta.net/pictures/23/11/03/14/51/4292461.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2023,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580335" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580337" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580341" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580342" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580345" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580348" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580351" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580352" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580352" }, // doublon
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580354" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580357" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580360" },
+  { title: "Épisode 13", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5580362" }
+			 ]
+      }
+    ]
+  },
+	{
+    title: "My Dress-Up Darling",
+    description: "Wakana Gojo est un lycéen solitaire. Son rêve est de devenir artisan et de fabriquer les poupées traditionnelles pour le Hina Matsuri. Mais comme cette passion n'est pas très virile, il la cache et ne se fait pas remarquer.",
+    poster: "https://fr.web.img4.acsta.net/pictures/21/12/20/17/56/1830087.jpg",
+    banner: "https://fr.web.img5.acsta.net/c_400_200/pictures/22/03/14/10/02/5779594.jpg",
+    genre: ["Action", "Aventure", "Fantaisie"],
+    year: 2022,
+    rating: 8.5,
+    type: "serie",
+    status: "En cours",
+    seasons: [
+      {
+        number: 1,
+        title: "Saison 1",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5154250" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5161071" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5167362" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5174870" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5180435" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5185531" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5192235" },
+  { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5198973" },
+  { title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5205077" },
+  { title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5211665" },
+  { title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5219782" },
+  { title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5226783" }
+        ]
+      },
+      {
+        number: 2,
+        title: "Saison 2",
+        episodes: [
+  { title: "Épisode 1", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5975684" },
+  { title: "Épisode 2", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5981121" },
+  { title: "Épisode 3", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5987749" },
+  { title: "Épisode 4", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5991889" },
+  { title: "Épisode 5", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5996978" },
+  { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=6002481" },
+  { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=6011158" }
+			]
+      }
+    ]
+  },
       {
     title: "Naruto",
     description: "Naruto Uzumaki est un ninja adolescent qui cherche à devenir Hokage.",
