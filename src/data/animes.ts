@@ -1,4 +1,4 @@
-// src/data/animes.ts
+fff// src/data/animes.ts
 import { Anime } from '../types';
 // ------------------------------
 // 1. Types simplifiés pour config
@@ -410,7 +410,10 @@ const animeConfigs: SimpleAnimeConfig[] = [
   { title: "Épisode 4", videoUrl: "https://vidmoly.net/jf8skal7bamj" },
   { title: "Épisode 5", videoUrl: "https://vidmoly.net/q3ryjyq3o1dt" },
   { title: "Épisode 6", videoUrl: "https://vidmoly.net/gujjmxogt466" },
-  { title: "Épisode 7", videoUrl: "https://vidmoly.net/s11nqg53tp20" }
+  { title: "Épisode 7", videoUrl: "https://vidmoly.net/s11nqg53tp20" },
+  { title: "Épisode 8", videoUrl: "https://vidmoly.net/5v2fo3950xld" },
+  { title: "Épisode 9", videoUrl: "https://vidmoly.net/42w7fy0c9vuf" },
+  { title: "Épisode 10", videoUrl: "https://vidmoly.net/3x4btjmx4gov" }
     ]
       }
     ]
@@ -2206,6 +2209,10 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982859" },
 { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982860" },
 { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5982863" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=6000126" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=6000129" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=6000133" },
+{ title: "Épisode 12", videoUrl: "https://vidmoly.net/htqme99oky9g" },
      ]
       }
     ]
@@ -2919,6 +2926,10 @@ const animeConfigs: SimpleAnimeConfig[] = [
 { title: "Épisode 6", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5984178" },
 { title: "Épisode 7", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5989934" },
 { title: "Épisode 8", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5994118" },
+{ title: "Épisode 9", videoUrl: "https://video.sibnet.ru/shell.php?videoid=5999821" },
+{ title: "Épisode 10", videoUrl: "https://video.sibnet.ru/shell.php?videoid=6004329" },
+{ title: "Épisode 11", videoUrl: "https://video.sibnet.ru/shell.php?videoid=6011736" },
+{ title: "Épisode 12", videoUrl: "https://video.sibnet.ru/shell.php?videoid=6015249" },
 	        ]
       }
     ]
@@ -15330,7 +15341,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
     year: 2015,
     rating: 8.5,
     type: "serie",
-    status: "Terminé",
+    status: "En cours",
     seasons: [
       {
         number: 1,
