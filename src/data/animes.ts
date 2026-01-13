@@ -362,7 +362,7 @@ const animeConfigs: SimpleAnimeConfig[] = [
   },
 	{
     title: "Arknights VOSTFR",
-    description: "Alors qu'une maladie mortelle qui transforme ses victimes en cristaux se propage, Rhodes Island Pharmaceuticals Inc. se lance dans la recherche d'un remède",
+    description: "Alors qu'une maladie mortelle qui transforme ses victimes en cristaux se propage, Rhodes Island Pharmaceuticals Inc. se lance dans la recherche d'un remède.",
     poster: "https://fr.web.img2.acsta.net/pictures/22/10/19/10/05/4846939.jpg",
     banner: "https://fr.web.img3.acsta.net/c_400_200/img/2c/66/2c66a3138f1b8fefc0251079ac57f98f.jpg",
     genre: ["Action", "Aventure", "Fantaisie"],
