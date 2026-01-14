@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://acscdn.com/script/aclib.js';
-    script.async = true;
+    script.async = true; 
 
     script.onload = () => {
       console.log('Adcash chargé');
