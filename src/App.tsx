@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import ScrollingMessage from './components/ScrollingMessage';
 import HomePage from './components/HomePage';
@@ -13,6 +13,28 @@ import { saveContinueWatching } from './utils/cookies';
 type AppState = 'home' | 'series' | 'films' | 'catalog' | 'detail' | 'player';
 
 function App() {
+  /** 🔐 Chargement PROPRE d’Adcash (ne bloque JAMAIS React) */
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://acscdn.com/script/aclib.js';
+    script.async = true;
+
+    script.onload = () => {
+      console.log('Adcash chargé');
+    };
+
+    script.onerror = () => {
+      console.warn('Adcash bloqué ou inaccessible');
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  /** États */
   const [currentState, setCurrentState] = useState<AppState>('home');
   const [filter, setFilter] = useState<'all' | 'serie' | 'film' | 'catalog'>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -57,7 +79,7 @@ function App() {
   /** Lecture */
   const handlePlayAnime = (anime: Anime) => {
     const firstSeason = anime.seasons[0];
-    const firstEpisode = firstSeason.episodes;
+    const firstEpisode = firstSeason.episodes[0];
     setSelectedAnime(anime);
     setSelectedSeason(firstSeason);
     setSelectedEpisode(firstEpisode);
@@ -71,12 +93,10 @@ function App() {
     scrollToTop();
   };
 
-  // NOTE : ordre corrigé ici : (anime, season, episode)
   const handlePlayEpisode = (anime: Anime, season: Season, episode: Episode) => {
-    console.log('Lecture épisode:', { anime, season, episode }); // debug
-    setSelectedEpisode(episode);
-    setSelectedSeason(season);
     setSelectedAnime(anime);
+    setSelectedSeason(season);
+    setSelectedEpisode(episode);
     setCurrentState('player');
     scrollToTop();
   };
@@ -105,18 +125,16 @@ function App() {
 
   /** Sauvegarde progression */
   const handleProgress = (progress: number) => {
-    if (selectedAnime && selectedSeason && selectedEpisode) {
-      if (progress > 0.01) {
-        saveContinueWatching({
-          animeId: selectedAnime.id,
-          seasonId: selectedSeason.id,
-          episodeId: selectedEpisode.id,
-          animeTitle: selectedAnime.title,
-          episodeTitle: selectedEpisode.title,
-          progress,
-          timestamp: Date.now(),
-        });
-      }
+    if (selectedAnime && selectedSeason && selectedEpisode && progress > 0.01) {
+      saveContinueWatching({
+        animeId: selectedAnime.id,
+        seasonId: selectedSeason.id,
+        episodeId: selectedEpisode.id,
+        animeTitle: selectedAnime.title,
+        episodeTitle: selectedEpisode.title,
+        progress,
+        timestamp: Date.now(),
+      });
     }
   };
 
@@ -133,7 +151,7 @@ function App() {
           />
         </>
       )}
-      {/* Pages */}
+
       {currentState === 'home' && (
         <HomePage
           filter={filter}
@@ -143,6 +161,7 @@ function App() {
           onPlayEpisode={handlePlayEpisode}
         />
       )}
+
       {currentState === 'series' && (
         <SeriesPage
           searchQuery={searchQuery}
@@ -150,6 +169,7 @@ function App() {
           onAnimeDetail={handleAnimeDetail}
         />
       )}
+
       {currentState === 'films' && (
         <FilmsPage
           searchQuery={searchQuery}
@@ -157,6 +177,7 @@ function App() {
           onAnimeDetail={handleAnimeDetail}
         />
       )}
+
       {currentState === 'catalog' && (
         <CatalogPage
           searchQuery={searchQuery}
@@ -164,6 +185,7 @@ function App() {
           onAnimeDetail={handleAnimeDetail}
         />
       )}
+
       {currentState === 'detail' && selectedAnime && (
         <AnimeDetail
           anime={selectedAnime}
@@ -171,6 +193,7 @@ function App() {
           onPlayEpisode={handlePlayEpisode}
         />
       )}
+
       {currentState === 'player' && selectedEpisode && selectedSeason && selectedAnime && (
         <VideoPlayer
           animeId={selectedAnime.id}
